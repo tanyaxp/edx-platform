@@ -61,7 +61,8 @@ DJFS = {
 ################################# CELERY ######################################
 
 # By default don't use a worker, execute tasks as if they were local functions
-CELERY_ALWAYS_EAGER = True
+CELERY_ALWAYS_EAGER = False
+FEATURES['ENABLE_SERVICE_STATUS'] = True
 
 ################################ DEBUG TOOLBAR ################################
 INSTALLED_APPS += ('debug_toolbar', 'debug_toolbar_mongo')

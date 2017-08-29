@@ -1,0 +1,9 @@
+<%! from django.utils.translation import ugettext as _ %>
+% if success:
+${_("Your bulk update on the {course_name} course has successfully completed. Previously published problems have been automatically republished.").format(course_name=course_name)}
+
+${_("The following settings were modified:")}
+
+% for key, value in modified_settings.iteritems():
+  ${_("{key}: {value}").format(key=key, value=value)}
+% endfor

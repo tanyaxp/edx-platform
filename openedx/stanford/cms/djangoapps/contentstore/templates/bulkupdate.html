@@ -1,0 +1,104 @@
+<%inherit file="base.html" />
+<%!
+  from django.utils.translation import ugettext as _
+  from openedx.core.djangolib.js_utils import js_escaped_string
+%>
+<%block name="title">Utilities - Bulk Update</%block>
+<%block name="bodyclass">is-signedin course view-bulkupdate view-settings</%block>
+
+<%namespace name='static' file='static_content.html'/>
+
+<%block name="content">
+  <div class="wrapper-mast wrapper">
+    <header class="mast has-actions has-subtitle">
+      <h1 class="page-header">
+        <small class="subtitle">${_("Tools / Course Utilities")}</small>
+        <span class="sr">&gt; </span>${_("Bulk Update")}
+      </h1>
+    </header>
+  </div>
+
+  <div class="wrapper-content wrapper">
+    <section class="content">
+      <article class="content-primary" role="main">
+        <section class="course-utility group-settings basic" id="bulk-update">
+          <form id="bulk-update-settings-input" class="list-input">
+            <header class="section-header">Problem Settings</header>
+              <p>
+                <strong>Warning: </strong>
+                Any changes applied here will also modify the defaults for future problems in
+                <a href="${advanced_settings_url}">Advanced Settings</a>.
+              </p>
+              <p>
+                <strong>Warning: </strong>
+                Public problems will automatically be republished. Please verify any drafts for public problems are ready to be published in
+                <a href="${course_outline_url}">Course Outline</a>.
+              </p>
+            <div id="max-attempts" class="setting-input-block field-group">
+              <input type="checkbox" class="apply-checkbox" name="apply-checkbox" value="max-attempts" />
+              <h3 class="setting-input-label" title="Max Attempts Setting">Max Attempts</h3>
+              <input class="input setting-input setting-input-number" type="number" value="${default_max_attempts}" min="0.0000" step="1">
+            </div>
+            <div id="show-answer" class="setting-input-block">
+              <input type="checkbox" class="apply-checkbox" name="apply-checkbox" value="show-answer" />
+              <h3 class="setting-input-label" title="Show Answer Setting">Show Answer</h3>
+              <select class="input setting-input">
+                % for option in show_answer_options:
+                  % if option == default_show_answer:
+                    <option value="${option}" selected>${option}</option>
+                  % else:
+                    <option value="${option}">${option}</option>
+                  % endif
+                % endfor
+              </select>
+            </div>
+            <div class="list-actions">
+              <input type="submit" value="${_('Apply checked settings')}" class="submit-button action action-primary"/>
+            </div>
+          </form>
+        </section>
+
+        <div class="server-message-wrapper">
+          <div class="server-message error-server-message is-hidden">
+            <span class="deco status-visual">
+              <i class="icon fa fa-warning"></i>
+            </span>
+            <div class="status-detail">
+              <p class="error-message-text"></p>
+            </div>
+          </div>
+          <div class="server-message success-server-message is-hidden">
+            <span class="deco status-visual">
+              <i class="icon fa fa-check-circle"></i>
+            </span>
+            <div class="status-detail">
+              <p>
+                ${_("We have received your Bulk Update request and have begun the process of updating your problems and advanced settings. We will automatically republish problems that have previously been published.")}
+                ${_("This process might take longer with larger courses. You will receive an email when your update has completed.")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <aside class="content-supplementary" role="complimentary">
+        <div class="bit">
+          <h3 class="title title-3">${_("What is Bulk Update?")}</h3>
+          <p>
+            ${_("The Bulk Update page provides a way to update settings for all existing problems of the current course. This operation also sets the default settings for all future problems of the current course. You can alter this default by going to Advanced Settings.")}
+          </p>
+        </div>
+      </aside>
+    </section>
+  </div>
+</%block>
+
+<script src="${static.url('js/factories/bulkupdate.js')}"></script>
+
+<%block name="requirejs">
+  require(["js/factories/bulkupdate"], function(BulkUpdateFactory) {
+    BulkUpdateFactory(
+      "${bulkupdate_url | n, js_escaped_string}"
+    );
+  });
+</%block>

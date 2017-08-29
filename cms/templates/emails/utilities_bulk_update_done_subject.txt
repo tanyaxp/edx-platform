@@ -1,0 +1,16 @@
+<%! from django.utils.translation import ugettext as _ %>
+<<<<<<< HEAD
+<<<<<<< HEAD
+${_("{username}'s bulk update on {course_name}").format(
+    username=username,
+    course_name=course_name,
+=======
+${_("{username}'s bulk update on {course}").format(
+    username=user_username, course=course_name,
+>>>>>>> 3ebe803270... Send email on celery bulk update task completion
+=======
+${_("{username}'s bulk update on {course_name}").format(
+    username=username,
+    course_name=course_name,
+>>>>>>> 076cb86b8e... Respond to stv's feedback backend
+)}
