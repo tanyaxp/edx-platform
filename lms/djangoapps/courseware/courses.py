@@ -34,6 +34,8 @@ from openedx.core.djangoapps.content.course_overviews.models import CourseOvervi
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from static_replace import replace_static_urls
 from student.models import CourseEnrollment
+from util.date_utils import get_default_time_display
+from util.keyword_substitution import substitute_keywords_with_data
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.exceptions import ItemNotFoundError
 from xmodule.x_module import STUDENT_VIEW

@@ -37,6 +37,7 @@ from ipware.ip import get_ip
 from markupsafe import escape
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import CourseKey, UsageKey
+from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from pytz import utc
 from rest_framework import status
 from web_fragments.fragment import Fragment
