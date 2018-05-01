@@ -390,7 +390,10 @@ def get_courses(user, org=None, filter_=None):
     # In the event we don't want any course tiles displayed
     if not getattr(settings, 'DISPLAY_COURSE_TILES', False):
         return []
-    courses = CourseOverview.get_all_courses(org=None, filter_=None)
+    orgs = []
+    if org:
+        orgs.append(org)
+    courses = CourseOverview.get_all_courses(orgs=orgs, filter_=None)
     filtered_by_db = TileConfiguration.objects.filter(
         enabled=True,
     ).values('course_id').order_by('-change_date')
