@@ -17,7 +17,7 @@ import os
 # want to import all variables from base settings files
 # pylint: disable=wildcard-import, unused-wildcard-import
 if 'BOK_CHOY_HOSTNAME' in os.environ:
-    from cms.envs.devstack_docker import *
+    from openedx.stanford.cms.envs.devstack_docker import *  # pylint: disable=wildcard-import, unused-wildcard-import
 else:
     from openedx.stanford.cms.envs.devstack import *
 

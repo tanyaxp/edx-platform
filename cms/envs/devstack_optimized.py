@@ -23,7 +23,7 @@ import os
 ########################## Devstack settings ###################################
 
 if 'BOK_CHOY_HOSTNAME' in os.environ:
-    from .devstack_docker import *  # pylint: disable=wildcard-import, unused-wildcard-import
+    from openedx.stanford.cms.envs.devstack_docker import *  # pylint: disable=wildcard-import, unused-wildcard-import
 else:
     from openedx.stanford.cms.envs.devstack import *  # pylint: disable=wildcard-import, unused-wildcard-import
 

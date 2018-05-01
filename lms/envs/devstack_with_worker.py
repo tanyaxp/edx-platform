@@ -17,7 +17,7 @@ import os
 # want to import all variables from base settings files
 # pylint: disable=wildcard-import, unused-wildcard-import
 if 'BOK_CHOY_HOSTNAME' in os.environ:
-    from lms.envs.devstack_docker import *
+    from openedx.stanford.lms.envs.devstack_docker import *  # pylint: disable=wildcard-import, unused-wildcard-import
 else:
     from openedx.stanford.lms.envs.devstack import *  # pylint: disable=wildcard-import, unused-wildcard-import
 

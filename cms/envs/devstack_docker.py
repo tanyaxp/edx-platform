@@ -1,6 +1,6 @@
 """ Overrides for Docker-based devstack. """
 
-from .devstack import *  # pylint: disable=wildcard-import, unused-wildcard-import
+from openedx.stanford.cms.envs.devstack import *  # pylint: disable=wildcard-import, unused-wildcard-import
 
 # Docker does not support the syslog socket at /dev/log. Rely on the console.
 LOGGING['handlers']['local'] = LOGGING['handlers']['tracking'] = {
