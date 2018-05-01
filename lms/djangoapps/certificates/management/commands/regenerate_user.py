@@ -1,8 +1,9 @@
 """Django management command to force certificate regeneration for one user"""
 
-import logging
 import copy
+import logging
 from optparse import make_option
+
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.management.base import BaseCommand, CommandError
@@ -12,8 +13,8 @@ from opaque_keys.edx.locations import SlashSeparatedCourseKey
 
 from badges.utils import badges_enabled
 from badges.events.course_complete import get_completion_badge
-from xmodule.modulestore.django import modulestore
 from certificates.api import regenerate_user_certificates
+from xmodule.modulestore.django import modulestore
 
 if 'openedx.stanford.djangoapps.register_cme' in settings.INSTALLED_APPS:
     from openedx.stanford.djangoapps.register_cme.models import ExtraInfo
