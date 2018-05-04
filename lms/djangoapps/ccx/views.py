@@ -576,7 +576,6 @@ def ccx_grades_csv(request, course, ccx=None):
 
                 row_percents = [percents.get(label, 0.0) for label in header]
                 rows.append([student.id, student.email, student.username,
-                             student.profile.name,
                              course_grade.percent] + row_percents)
 
         buf = StringIO()
