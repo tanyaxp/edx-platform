@@ -958,7 +958,7 @@ def _progress(request, course_key, student_id):
     course_grade = CourseGradeFactory().create(student, course)
     courseware_summary = []
     if settings.FEATURES['ENABLE_PROGRESS_SUMMARY']:
-        courseware_summary = course_grade.chapter_grades
+        courseware_summary = course_grade.chapter_grades.values()
     grade_summary = course_grade.summary
 
     studio_url = get_studio_url(course, 'settings/grading')
