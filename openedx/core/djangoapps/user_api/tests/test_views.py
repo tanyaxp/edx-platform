@@ -773,7 +773,7 @@ class PasswordResetViewTest(UserAPITestCase):
 
 
 @ddt.ddt
-@skipUnless(settings.ROOT_URLCONF == 'lms.urls', 'Test only valid in lms')
+@skip_unless_lms
 class RegistrationViewValidationErrorTest(ThirdPartyAuthTestMixin, ApiTestCase):
     """
     Tests for catching duplicate email and username validation errors within
