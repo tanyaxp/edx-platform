@@ -155,6 +155,9 @@
 
     // Style the courseware's slim version of the header
     &.slim {
+        .nav-global {
+            display: none;
+        }
         .wrapper-header {
             height: 60px;
 
