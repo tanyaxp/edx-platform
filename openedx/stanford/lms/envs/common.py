@@ -40,6 +40,18 @@ FEATURES.update({
     #   with user.email in xqueue (Stanford does)
     'SEND_USERS_EMAILADDR_WITH_CODERESPONSE': False,
 })
+FOOTER_DISCLAIMER_TEXT = (
+    'Stanford University pursues the science of learning. '
+    'Online learners are important participants in that pursuit. '
+    'The information we gather from your engagement with our '
+    'instructional offerings makes it possible for faculty, '
+    'researchers, designers and engineers to continuously improve '
+    'their work and, in that process, build learning science.'
+)
+FOOTER_EXTERNAL_COURSES_LINK = {
+    'text': 'Take more courses at online.stanford.edu',
+    'url': 'https://online.stanford.edu',
+}
 # Set this to the TPA provider_id if you want the entire site to be behind TPA
 FORCED_TPA_PROVIDER_ID = ''
 FORUM_MONGO_PARAMS = {

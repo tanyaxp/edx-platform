@@ -89,6 +89,9 @@ def run():
     # validate configurations on startup
     validate_lms_config(settings)
 
+    from branding_stanford.api import patch as patch_stanford_branding
+    patch_stanford_branding()
+
 
 def add_mimetypes():
     """
