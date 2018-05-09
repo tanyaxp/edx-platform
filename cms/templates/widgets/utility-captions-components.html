@@ -6,7 +6,7 @@ This def will enumerate through a passed in video components and list them all.
 
   <li class="courseware-unit unit is-draggable" data-locator=${component['location']}>
 
-    <%include file="_ui-dnd-indicator-before.html" />
+    <span class="draggable-drop-indicator draggable-drop-indicator-before"><i class="icon fa fa-caret-right"></i></span>
 
     <label class="section-item">
 
@@ -37,7 +37,7 @@ This def will enumerate through a passed in video components and list them all.
 
     </label>
 
-    <%include file="_ui-dnd-indicator-after.html" />
+    <span class="draggable-drop-indicator draggable-drop-indicator-after"><i class="icon fa fa-caret-right"></i></span>
   </li>
   % endfor
 </%def>
