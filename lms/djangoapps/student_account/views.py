@@ -144,7 +144,6 @@ def login_and_registration_form(request, initial_mode="login"):
             'third_party_auth_hint': third_party_auth_hint or '',
             'platform_name': configuration_helpers.get_value('PLATFORM_NAME', settings.PLATFORM_NAME),
             'support_link': configuration_helpers.get_value('SUPPORT_SITE_LINK', settings.SUPPORT_SITE_LINK),
-            'privacy_policy_url': marketing_link('PRIVACY'),
             'password_reset_support_link': configuration_helpers.get_value(
                 'PASSWORD_RESET_SUPPORT_LINK', settings.PASSWORD_RESET_SUPPORT_LINK
             ) or settings.SUPPORT_SITE_LINK,

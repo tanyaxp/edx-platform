@@ -37,7 +37,6 @@
                     this.errorMessage = data.thirdPartyAuth.errorMessage || '';
                     this.platformName = data.platformName;
                     this.autoSubmit = data.thirdPartyAuth.autoSubmitRegForm;
-                    this.privacyPolicyUrl = data.privacyPolicyUrl;
                     this.hideAuthWarnings = data.hideAuthWarnings;
 
                     this.listenTo(this.model, 'sync', this.saveSuccess);
@@ -56,7 +55,6 @@
                             currentProvider: this.currentProvider,
                             providers: this.providers,
                             hasSecondaryProviders: this.hasSecondaryProviders,
-                            privacyPolicyUrl: this.privacyPolicyUrl,
                             platformName: this.platformName
                         }
                     }));
