@@ -78,10 +78,11 @@
     $grid-columns: 12;
     background: $white;
     min-height: 100%;
+    margin: 0 auto;
     padding-left: ($baseline/2);
     padding-right: ($baseline/2);
     $third-party-button-height: ($baseline*1.75);
-    display: inline-block;
+    display: block;
     max-width: 500px;
 
     .instructions {
