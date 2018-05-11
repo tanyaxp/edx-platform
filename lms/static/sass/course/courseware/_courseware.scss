@@ -674,25 +674,6 @@ section.self-assessment {
   }
 }
 
-.sneakpeek-warning {
-  position: relative;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 5px;
-  border: none;
-  background-color: $black;
-  color: $white;
-  line-height: 2em;
-  font-weight: bold;
-  text-align: center;
-}
-.sneakpeek-warning a {
-  padding: 5px;
-  background-color: $white;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
 h4.problem-feedback-label{
   margin-top: 1em;
 }
@@ -708,3 +689,5 @@ h4.problem-feedback-label{
         color: $gray-d3 !important;
     }
 }
+
+@import '../stanford/course/_sneakpeek_courseware.scss';
