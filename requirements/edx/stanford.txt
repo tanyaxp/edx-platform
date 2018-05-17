@@ -10,7 +10,7 @@ xblock-image-modal==0.4.0
 -e git+https://github.com/Stanford-Online/edx-analytics-data-api-client.git@1b8260ce8dd6edb999fffc46b09f77c83f87e1f9#egg=edx-analytics-data-api-client
 -e git+https://github.com/openlearninginitiative/xblock-inline-dropdown.git@d4d527211ac843cb490ac9c9a40b90de624001e1#egg=inline_dropdown
 -e git+https://github.com/Stanford-Online/xblock-in-video-quiz.git@release/v0.1.6#egg=invideoquiz_xblock
-ubcpi-xblock==0.5.3
+ubcpi-xblock==0.6.2
 -e git+https://github.com/Stanford-Online/XBlockStattutor.git@5d704b665dca35305468863a906863b86d065c9b#egg=stattutor_xblock
 -e git+https://github.com/Stanford-Online/EdxAdaptXBlock.git@35ad130a30a682fe06c44acc0735d72296c4e0ff#egg=edxadapt-xblock
 -e git+https://github.com/oppia/xblock.git@9f6b95b7eb7dbabb96b77198a3202604f96adf65#egg=oppia-xblock
