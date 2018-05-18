@@ -19,6 +19,7 @@ html.video-fullscreen {
   @extend %ui-print-excluded;
 
   margin: ($baseline/2) ($baseline/4) 0 0;
+  float: right;
   overflow: hidden;
 
   &.studio-view {
