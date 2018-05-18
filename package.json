@@ -10,7 +10,7 @@
     "coffee-loader": "^0.7.3",
     "coffee-script": "1.6.1",
     "edx-bootstrap": "~0.1.6",
-    "edx_pattern_library": "git://github.com/Stanford-Online/ux-pattern-library.git#master",
+    "edx_pattern_library": "git://github.com/Stanford-Online/ux-pattern-library.git#v0.18.2-stanford.3",
     "edx-ui-toolkit": "1.5.2",
     "exports-loader": "^0.6.4",
     "hls.js": "0.7.2",
