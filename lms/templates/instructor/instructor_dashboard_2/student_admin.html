@@ -62,10 +62,11 @@
 
     %if settings.FEATURES.get('ENABLE_INSTRUCTOR_BACKGROUND_TASKS'):
         <h5 class="hd hd-5">${_("Rescore")}</h5>
-        <label for="rescore-actions-single">${_("For the specified problem, rescore the learner's responses.")}</label>
+        <label for="rescore-actions-single">${_("For the specified problem, rescore the learner's responses. The 'Rescore Only If Score Improves' option updates the learner's score only if it improves in the learner's favor.")}</label>
         <br>
         <span name="rescore-actions-single">
             <input type="button" name="rescore-problem-single" value="${_('Rescore Learner\'s Submission')}" data-endpoint="${ section_data['rescore_problem_url'] }">
+            <input type="button" name="rescore-problem-if-higher-single" value="${_('Rescore Only If Score Improves')}" data-endpoint="${ section_data['rescore_problem_url'] }">
         </span>
     %endif
 
@@ -120,6 +121,7 @@
         <br>
         <span name="rescore-actions-entrance-exam">
             <input type="button" name="rescore-entrance-exam" value="${_('Rescore All Problems')}" data-endpoint="${ section_data['rescore_entrance_exam_url'] }">
+            <input type="button" name="rescore-entrance-exam-if-higher" value="${_('Rescore All Problems Only If Score Improves')}" data-endpoint="${ section_data['rescore_entrance_exam_url'] }">
         </span>
         <br><br>
     %endif
@@ -169,10 +171,11 @@
     <br><br>
 
     <h5 class="hd hd-5">${_("Rescore")}</h5>
-    <label for="rescore-actions-all">${_("Rescore submitted responses.")}</label>
+    <label for="rescore-actions-all">${_("Rescore submitted responses. The 'Rescore Only If Scores Improve' option updates a learner's score only if it improves in the learner's favor.")}</label>
     <br>
     <span name="rescore-actions-all">
         <input type="button" class="molly-guard" name="rescore-problem-all" value="${_('Rescore All Learners\' Submissions')}" data-endpoint="${ section_data['rescore_problem_url'] }">
+        <input type="button" class="molly-guard" name="rescore-problem-all-if-higher" value="${_('Rescore Only If Scores Improve')}" data-endpoint="${ section_data['rescore_problem_url'] }">
     </span>
     <br><br>
 
