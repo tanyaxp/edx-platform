@@ -3,6 +3,7 @@ URLs for the Enrollment API
 
 """
 from django.conf import settings
+from django.conf.urls import include
 from django.conf.urls import patterns, url
 
 from .views import (
@@ -38,4 +39,7 @@ urlpatterns = patterns(
         EnrollmentCourseDetailView.as_view(),
         name='courseenrollmentdetails'
     ),
+)
+urlpatterns += (
+    url(r'', include('openedx.stanford.common.djangoapps.enrollment.urls')),
 )

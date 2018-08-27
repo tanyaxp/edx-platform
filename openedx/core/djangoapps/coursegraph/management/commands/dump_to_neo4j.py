@@ -115,7 +115,16 @@ class ModuleStoreSerializer(object):
         # create nodes
         nodes = []
         for item in items:
-            fields, block_type = self.serialize_item(item)
+            try:
+                fields, block_type = self.serialize_item(item)
+            except Exception as error:
+                log.info(
+                    "error serializing: course=%s: error=%s: item=%s",
+                    course_key,
+                    error,
+                    item,
+                )
+                continue
 
             for field_name, value in six.iteritems(fields):
                 fields[field_name] = self.coerce_types(value)
