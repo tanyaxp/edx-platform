@@ -141,13 +141,6 @@ def get_enrollment(user_id, course_id):
     return _data_api().get_course_enrollment(user_id, course_id)
 
 
-def get_roster(course_id):
-    """
-    Retrieve a list of users enrolled in a course
-    """
-    return _data_api().get_roster(course_id)
-
-
 def add_enrollment(user_id, course_id, mode=None, is_active=True):
     """Enrolls a user in a course.
 
