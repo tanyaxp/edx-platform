@@ -77,32 +77,6 @@ class EnrollmentRosterView(APIView, ApiKeyPermissionMixIn):
         roster = get_roster(course_id)
         return Response(data=json.dumps({'roster': roster}))
 
-    @method_decorator(ensure_csrf_cookie_cross_domain)
-    def post(self, request, course_id):
-        """
-        Enroll/unenroll a user in a course; requires staff access
-
-        **Example Request**
-            POST /api/enrollment/v1/roster/course-v1:foo+bar+foobar
-            {
-                'email': 'foo@bar.com',
-                'action': 'enroll',
-                'email_students': false,
-                'auto_enroll': true
-            }
-        """
-        action = request.data.get('action')
-        if action == 'enroll':
-            return self.put(request, course_id)
-        if action == 'unenroll':
-            return self.delete(request, course_id)
-        return Response(
-            status=status.HTTP_400_BAD_REQUEST,
-            data={
-                'message': u'Unrecognized action',
-            },
-        )
-
     def put(self, request, course_id):
         """
         Enroll a user in a course; requires staff access
