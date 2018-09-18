@@ -16,6 +16,7 @@ from courseware.courses import get_course_info_section_module, get_course_with_a
 from lms.djangoapps.courseware.views.views import CourseTabView
 from openedx.core.djangoapps.plugin_api.views import EdxFragmentView
 from openedx.features.course_experience import default_course_url_name
+from util.date_utils import get_default_time_display
 
 
 class CourseUpdatesView(CourseTabView):
@@ -85,8 +86,18 @@ class CourseUpdatesFragmentView(EdxFragmentView):
             key=lambda item: (self.safe_parse_date(item['date']), item['id']),
             reverse=True
         )
+        keyword_context = {
+            'username': request.user.username,
+            'user_id': request.user.id,
+            'name': request.user.profile.name,
+            'course_title': course.display_name,
+            'course_id': course.id,
+            'course_start_date': get_default_time_display(course.start),
+            'course_end_date': get_default_time_display(course.end),
+        }
         for update in ordered_updates:
             update['content'] = info_block.system.replace_urls(update['content'])
+            update['content'] = info_block.system.substitute_keywords_with_data(update['content'], keyword_context)
         return ordered_updates
 
     @classmethod
@@ -102,7 +113,18 @@ class CourseUpdatesFragmentView(EdxFragmentView):
         """
         info_module = get_course_info_section_module(request, request.user, course, 'updates')
         info_block = getattr(info_module, '_xmodule', info_module)
-        return info_block.system.replace_urls(info_module.data) if info_module else ''
+        update_content = info_block.system.replace_urls(info_module.data) if info_module else ''
+        keyword_context = {
+            'username': request.user.username,
+            'user_id': request.user.id,
+            'name': request.user.profile.name,
+            'course_title': course.display_name,
+            'course_id': course.id,
+            'course_start_date': get_default_time_display(course.start),
+            'course_end_date': get_default_time_display(course.end),
+        }
+        update_content = info_block.system.substitute_keywords_with_data(update_content, keyword_context)
+        return update_content
 
     @staticmethod
     def safe_parse_date(date):
