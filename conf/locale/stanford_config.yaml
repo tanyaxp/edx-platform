@@ -1,0 +1,153 @@
+# Configuration for i18n workflow.
+
+locales:
+    - en  # English - Source Language
+    # - am  # Amharic
+    #- ar  # Arabic
+    # - az  # Azerbaijani
+    # - bg_BG  # Bulgarian (Bulgaria)
+    # - bn_BD  # Bengali (Bangladesh)
+    # - bn_IN  # Bengali (India)
+    # - bs  # Bosnian
+    # - ca  # Catalan
+    # - ca@valencia  # Catalan (Valencia)
+    # - cs  # Czech
+    # - cy  # Welsh
+    # - da  # Danish
+    # - de_DE  # German (Germany)
+    # - el  # Greek
+    # - en_GB  # English (United Kingdom)
+    # # Don't pull these until we figure out why pages randomly display in these locales,
+    # # when the user's browser is in English and the user is not logged in.
+    # #- en@lolcat  # LOLCAT English
+    # #- en@pirate  # Pirate English
+    #- es_419  # Spanish (Latin America)
+    # - es_AR  # Spanish (Argentina)
+    # - es_EC  # Spanish (Ecuador)
+    # - es_ES  # Spanish (Spain)
+    # - es_MX  # Spanish (Mexico)
+    # - es_PE  # Spanish (Peru)
+    # - et_EE  # Estonian (Estonia)
+    # - eu_ES  # Basque (Spain)
+    # - fa  # Persian
+    # - fa_IR  # Persian (Iran)
+    # - fi_FI  # Finnish (Finland)
+    # - fil  # Filipino
+    #- fr  # French
+    # - gl  # Galician
+    # - gu  # Gujarati
+    #- he  # Hebrew
+    #- hi  # Hindi
+    # - hr  # Croatian
+    # - hu  # Hungarian
+    # - hy_AM  # Armenian (Armenia)
+    # - id  # Indonesian
+    # - it_IT  # Italian (Italy)
+    # - ja_JP  # Japanese (Japan)
+    # - kk_KZ  # Kazakh (Kazakhstan)
+    # - km_KH  # Khmer (Cambodia)
+    # - kn  # Kannada
+    #- ko_KR  # Korean (Korea)
+    # - lt_LT  # Lithuanian (Lithuania)
+    # - ml  # Malayalam
+    #- mn  # Mongolian
+    # - mr  # Marathi
+    # - ms  # Malay
+    # - nb  # Norwegian Bokmål
+    # - ne  # Nepali
+    # - nl_NL  # Dutch (Netherlands)
+    # - or  # Oriya
+    # - pl  # Polish
+    #- pt_BR  # Portuguese (Brazil)
+    # - pt_PT  # Portuguese (Portugal)
+    # - ro  # Romanian
+    #- ru  # Russian
+    # - si  # Sinhala
+    # - sk  # Slovak
+    # - sl  # Slovenian
+    # - sq  # Albanian
+    # - sr  # Serbian
+    # - sv  # Swedish
+    # - sw  # Swahili
+    # - ta  # Tamil
+    # - te  # Telugu
+    # - th  # Thai
+    # - tr_TR  # Turkish (Turkey)
+    # - uk  # Ukranian
+    # - ur  # Urdu
+    # - uz  # Uzbek
+    # - vi  # Vietnamese
+    #- zh_CN  # Chinese (China)
+    # - zh_HK  # Chinese (Hong Kong)
+    # - zh_TW  # Chinese (Taiwan)
+
+# Directories we don't search for strings.
+ignore_dirs:
+    - common/static/xmodule/modules
+    - common/static/xmodule/descriptors
+    # Directories with no user-facing code.
+    - '*/migrations'
+    # Directories that are not our code.
+    - node_modules
+    # Directories containing files that can't have strings in them.
+    - conf
+    - docs
+    - '*/fonts'
+    - '*/img'
+    - '*/images'
+    - '*/sass'
+    - '*/css'
+    # Directories that only contain tests.
+    - common/test
+    - test_root
+    - '*/terrain'
+    - '*/spec'
+    - '*/tests'
+    - '*/features'
+    # Directories full of auto-generated JS
+    - lms/static/js/i18n
+    - cms/static/js/i18n
+    # Features not used by Stanford
+    - 'cms'
+    - 'common/djangoapps/course_mode'
+    - '*/management/commands'
+    - 'common/djangoapps/xblock_django'
+    - 'lms/djangoapps/dashboard'
+    - 'lms/djangoapps/instructor*'
+    - 'lms/djangoapps/teams'
+    - 'lms/templates/wiki'
+    - '*/word_cloud'
+    - 'openedx/stanford/lms/djangoapps/instructor'
+
+# Third-party installed apps that we also extract strings from.  When adding a
+# file here, also add it to the django.po merge files below, and to the
+# .tx/config file so that it will be pushed to and pulled from transifex.
+#third_party:
+#    - wiki
+
+# Segment out theme legalese strings which are commissioned to Geotext.
+# See pavelib/utils/stanford_i18n_helpers.py for details.
+segment:
+    theme.po:
+        - tos.po:
+            - lagunita/lms/templates/static_templates/tos.html
+        - privacy.po:
+            - lagunita/lms/templates/static_templates/privacy.html
+        - honor.po:
+            - lagunita/lms/templates/static_templates/honor.html
+        - copyright.po:
+            - lagunita/lms/templates/static_templates/copyright.html
+
+# How should the generate step merge files?
+generate_merge:
+    theme.po:
+        - tos.po
+        - privacy.po
+        - honor.po
+        - copyright.po
+        - theme.po
+        - stanford_django.po
+        - stanford_mako.po
+    djangojs.po:
+        - stanford_djangojs.po
+        - stanford_underscore.po

@@ -1,0 +1,5329 @@
+# #-#-#-#-#  stanford_djangojs.po (stanford-openedx)  #-#-#-#-#
+# Stanford OpenEdX translation file.
+# Copyright (C) 2018 Stanford University
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# Stanford OpenEdX Team, 2018.
+# 
+# Translators:
+# kluo <kevluo@stanford.edu>, 2018
+# Hang Pham <hpham3@stanford.edu>, 2018
+# Kayure Patel <youthleadership@stanford.edu>, 2018
+# mondiaz <mondiaz@stanford.edu>, 2018
+# #-#-#-#-#  stanford_underscore.po (stanford-openedx)  #-#-#-#-#
+# Stanford OpenEdX translation file
+# Copyright (C) 2018 Stanford University
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# Stanford OpenEdX Team, 2018.
+# 
+# Translators:
+# Kayure Patel <youthleadership@stanford.edu>, 2018
+# kluo <kevluo@stanford.edu>, 2018
+# Hang Pham <hpham3@stanford.edu>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: stanford-openedx\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-17 20:34+0000\n"
+"PO-Revision-Date: 2018-03-17 20:34:40.876233\n"
+"Last-Translator: Hang Pham <hpham3@stanford.edu>, 2018\n"
+"Language-Team: Mongolian (https://www.transifex.com/stanford-online/teams/22259/mn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"Language: mn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: common/lib/xmodule/xmodule/assets/library_content/public/js/library_content_edit.js
+#: common/lib/xmodule/xmodule/js/public/js/library_content_edit.js
+msgid "Updating with latest library content"
+msgstr "Хамгийн сүүлийн үеийн номын сангийн агуулгыг шинэчлэх"
+
+#: common/lib/xmodule/xmodule/assets/split_test/public/js/split_test_author_view.js
+#: common/lib/xmodule/xmodule/js/public/js/split_test_author_view.js
+msgid "Creating missing groups"
+msgstr "Алдагдсан бүлгийг үүсгэх"
+
+#: common/lib/xmodule/xmodule/js/src/annotatable/display.js
+msgid "Show Annotations"
+msgstr "Аннотацийг харуулах"
+
+#: common/lib/xmodule/xmodule/js/src/annotatable/display.js
+msgid "Hide Annotations"
+msgstr "Товчлолыг нуух"
+
+#: common/lib/xmodule/xmodule/js/src/annotatable/display.js
+msgid "Expand Instructions"
+msgstr "Тэмдэглэлийг өргөтгөж харуулах"
+
+#: common/lib/xmodule/xmodule/js/src/annotatable/display.js
+msgid "Collapse Instructions"
+msgstr "Зааврыг дэлгэх"
+
+#: common/lib/xmodule/xmodule/js/src/annotatable/display.js
+msgid "Commentary"
+msgstr "Тайлбар"
+
+#: common/lib/xmodule/xmodule/js/src/annotatable/display.js
+msgid "Reply to Annotation"
+msgstr "Тэмдэглэлд хариулах"
+
+#. Translators: %(num_points)s is the number of points possible (examples: 1,
+#. 3, 10).;
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "%(num_points)s point possible (graded, results hidden)"
+msgid_plural "%(num_points)s points possible (graded, results hidden)"
+msgstr[0] "%(num_points)s боломжтой гэж үзсэн (graded, results hidden)"
+msgstr[1] "%(num_points)s боломжтой гэж үзсэн (graded, results hidden)"
+
+#. Translators: %(num_points)s is the number of points possible (examples: 1,
+#. 3, 10).;
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "%(num_points)s point possible (ungraded, results hidden)"
+msgid_plural "%(num_points)s points possible (ungraded, results hidden)"
+msgstr[0] "%(num_points)sболомжтой гэж үзсэн (ungraded, results hidden)"
+msgstr[1] "%(num_points)s боломжтой гэж үзсэн  (ungraded, results hidden)"
+
+#. Translators: %(num_points)s is the number of points possible (examples: 1,
+#. 3, 10).;
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "%(num_points)s point possible (graded)"
+msgid_plural "%(num_points)s points possible (graded)"
+msgstr[0] "%(num_points)sболомжтой гэж үзсэн (graded)"
+msgstr[1] "%(num_points)sболомжтой гэж үзсэн (graded)"
+
+#. Translators: %(num_points)s is the number of points possible (examples: 1,
+#. 3, 10).;
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "%(num_points)s point possible (ungraded)"
+msgid_plural "%(num_points)s points possible (ungraded)"
+msgstr[0] " %(num_points)sболомжтой гэж үзсэн (ungraded)"
+msgstr[1] "%(num_points)s боломжтой гэж үзсэн (ungraded)"
+
+#. Translators: %(earned)s is the number of points earned. %(possible)s is the
+#. total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
+#. points will always be at least 1. We pluralize based on the total number of
+#. points (example: 0/1 point; 1/2 points);
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "%(earned)s/%(possible)s point (graded)"
+msgid_plural "%(earned)s/%(possible)s points (graded)"
+msgstr[0] "%(earned)s/%(possible)s цэг (graded)"
+msgstr[1] "%(earned)s/%(possible)s цэг (graded)"
+
+#. Translators: %(earned)s is the number of points earned. %(possible)s is the
+#. total number of points (examples: 0/1, 1/1, 2/3, 5/10). The total number of
+#. points will always be at least 1. We pluralize based on the total number of
+#. points (example: 0/1 point; 1/2 points);
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "%(earned)s/%(possible)s point (ungraded)"
+msgid_plural "%(earned)s/%(possible)s points (ungraded)"
+msgstr[0] "%(earned)s/%(possible)s point (ungraded)"
+msgstr[1] "%(earned)s/%(possible)s цэг (ungraded)"
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "The grading process is still running. Refresh the page to see updates."
+msgstr ""
+"Дүн гаргах ажиллагаа явагдаж байна. Хуудсаа ахин уншуулж шинэчлэлийг харна "
+"уу."
+
+#. Translators: A timestamp of when a task (eg, sending email) was submitted
+#. appears after this
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Submitted"
+msgstr "Илгээгдсэн"
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "Timer has expired"
+msgstr "Хугацаа дууслаа"
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "Could not grade your answer. The submission was aborted."
+msgstr "Таны хариултыг дүгнэж чадсангүй. Хариулт илгээх явц цуцлагдлаа."
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid ""
+"Submission aborted! Sorry, your browser does not support file uploads. If "
+"you can, please use Chrome or Safari which have been verified to support "
+"file uploads."
+msgstr ""
+"Хариулт илгээх явц цуцлагдлаа! Уучлаарай, таны ашиглаж буй браузер файл "
+"байршуулах үйлдлийг дэмжихгүй байна.Хэрвээ боломжтой бол файл байхшуулах "
+"үйлдлийг дэмжих нь батлагдсан Chrome эсвэл Safari ашиглана уу. "
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "You submitted {filename}; only {allowedFiles} are allowed."
+msgstr "Та {filename}илгээсэн байна, зөвхөн {allowedFiles} зөвшөөрөгдсөн. "
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "Your file {filename} is too large (max size: {maxSize}MB)."
+msgstr ""
+"Таны {filename} файл хэтэрхий том хэмжээтэй байна. Дээд хэмжээ: (max size: "
+"{maxSize}MB)"
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "You did not submit the required files: {requiredFiles}."
+msgstr "Та шаардлагатай файлыг илгээгээгүй байна {requiredFiles}"
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "You did not select any files to submit."
+msgstr "Та илгээхээр ямар ч файл сонгоогүй байна."
+
+#. Translators: This is only translated to allow for reordering of label and
+#. associated status.;
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "{label}: {status}"
+msgstr "{label}: {status}"
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "This problem has been reset."
+msgstr "Энэ асуудлыг шийдвэрлэв."
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid ""
+"Answers to this problem are now shown. Navigate through the problem to "
+"review it with answers inline."
+msgstr ""
+"Энэхүү асуудлын хариултыг одоо харуулж байна. Асуултан дээгүүр сумаараа зааж"
+" цахимаар хариултыг нь харна уу."
+
+#: common/lib/xmodule/xmodule/js/src/capa/display.js
+msgid "unsubmitted"
+msgstr "илгээгээгүй"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Paragraph"
+msgstr "Догол мөр"
+
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Preformatted"
+msgstr "Урьдчилан хэлбэрт оруулсан"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Heading 3"
+msgstr "Гарчиг 3"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Heading 4"
+msgstr "Гарчиг 4"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Heading 5"
+msgstr "Гарчиг 5"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Heading 6"
+msgstr "Гарчиг 6"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Add to Dictionary"
+msgstr "Толь бичигт нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Advanced"
+msgstr "Ахисан түвшин"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Align center"
+msgstr "Голлуулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Align left"
+msgstr "Зүүн талд шахаж байрлуулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Align right"
+msgstr "Баруун талд шахаж байрлуулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Alignment"
+msgstr "Тэгшлэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Alternative source"
+msgstr "Өөр эх сурвалж"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Anchor"
+msgstr "Бэхлэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Anchors"
+msgstr "Бэхэлгээнүүд"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Author"
+msgstr "Зохиогч"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Background color"
+msgstr "Арын дэвсгэр өнгө"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: lms/static/js/Markdown.Editor.js
+msgid "Blockquote"
+msgstr "Blockquote"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Blocks"
+msgstr "Block"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Body"
+msgstr "Их бие"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Bold"
+msgstr "Тод"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Border color"
+msgstr "Захын өнгө"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Border"
+msgstr "Зах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Bottom"
+msgstr "Доод хэсэг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Bullet list"
+msgstr "тэмдэглэсэн жагсаалт"
+
+#. #-#-#-#-#  stanford_djangojs.po (stanford-openedx)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/common/js/components/utils/view_utils.js
+#: lms/static/js/Markdown.Editor.js
+#: common/static/common/templates/discussion/new-post.underscore
+#: common/static/common/templates/discussion/response-comment-edit.underscore
+#: common/static/common/templates/discussion/thread-edit.underscore
+#: common/static/common/templates/discussion/thread-response-edit.underscore
+msgid "Cancel"
+msgstr "Болих"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Caption"
+msgstr "Гарчиг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Cell padding"
+msgstr "нүдний зай тодруулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Cell properties"
+msgstr "нүдний шинж чанар"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Cell spacing"
+msgstr "нүдний зай"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Cell type"
+msgstr "нүдний төрөл"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Cell"
+msgstr "нүд"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Center"
+msgstr "дунд"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Circle"
+msgstr "тойрог"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Clear formatting"
+msgstr "форматыг арилгах"
+
+#. #-#-#-#-#  stanford_djangojs.po (stanford-openedx)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/common/templates/image-modal.underscore
+#: common/static/common/templates/discussion/alert-popup.underscore
+#: common/static/common/templates/discussion/forum-action-close.underscore
+#: common/static/common/templates/discussion/search-alert.underscore
+#: lms/templates/student_profile/share_modal.underscore
+msgid "Close"
+msgstr "Хаах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Code block"
+msgstr "кодыг хориглох"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Code"
+msgstr "Код "
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Color"
+msgstr "өнгө"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Cols"
+msgstr "эгнээ"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Column group"
+msgstr "эгнээний бүлэг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Column"
+msgstr "эгнээ"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Constrain proportions"
+msgstr "Харьцааг шахах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Copy row"
+msgstr "мөрийг хуулбарлах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Copy"
+msgstr "хуулбарлах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Could not find the specified string."
+msgstr "тухайн холбоосыг олж чадсангүй"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Custom color"
+msgstr "өнгө өөрчлөх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Custom..."
+msgstr "өөрчлөх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Cut row"
+msgstr "мөрийг хайчлан авах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Cut"
+msgstr "хайчлан авах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Decrease indent"
+msgstr "догол мөрийг багасгах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Default"
+msgstr "идэвхигүй"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Delete column"
+msgstr "эгнээг устгах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Delete row"
+msgstr "мөрийг устгах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Delete table"
+msgstr "хүснэгтийг устгах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Description"
+msgstr "тайлбар"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Dimensions"
+msgstr "хэмжээс"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Disc"
+msgstr "диск"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Div"
+msgstr "див"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Document properties"
+msgstr "Бичиг баримтын шинж чанар"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Edit HTML"
+msgstr "HTML засварлах"
+
+#. #-#-#-#-#  stanford_djangojs.po (stanford-openedx)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/js/vendor/ova/catch/js/catch.js
+#: common/static/common/templates/discussion/forum-action-edit.underscore
+msgid "Edit"
+msgstr "Засварлах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Embed"
+msgstr "шигтгэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Emoticons"
+msgstr "сэтгэл хөдлөлийн тэмдэг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Encoding"
+msgstr "кодоор шифрлэж байна"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "File"
+msgstr "файл"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Find and replace"
+msgstr "файлд хийгээд өөр газар байхшуулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Find next"
+msgstr "дараагийнхийг олох"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Find previous"
+msgstr "өмнөхийг олох"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Find"
+msgstr "олох"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Finish"
+msgstr "дуусгах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Font Family"
+msgstr "фонт"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Font Sizes"
+msgstr "фонтны хэмжээ"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Footer"
+msgstr "footer"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Format"
+msgstr "формат"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Formats"
+msgstr "форматууд"
+
+#. #-#-#-#-#  stanford_djangojs.po (stanford-openedx)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/common/templates/image-modal.underscore
+msgid "Fullscreen"
+msgstr "бүтэн дэлгэц"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "General"
+msgstr "ерөнхий"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "H Align"
+msgstr "H тэнцвэржүүлэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Header 1"
+msgstr "Гарчиг 1"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Header 2"
+msgstr "Гарчиг 2"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Header 3"
+msgstr "Гарчиг 3"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Header 4"
+msgstr "Гарчиг 4"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Header 5"
+msgstr "Гарчиг 5"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Header 6"
+msgstr "Гарчиг 6"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Header cell"
+msgstr "Гарчгийн нүд"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/lib/xmodule/xmodule/js/src/problem/edit.js
+msgid "Header"
+msgstr "Гарчиг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Headers"
+msgstr "Гарчгууд"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Heading 1"
+msgstr "Гарчиг 1"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Heading 2"
+msgstr "Гарчиг 2"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Headings"
+msgstr "гарчиг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Height"
+msgstr "Өндөр"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Horizontal line"
+msgstr "Хэвтээ шугам"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Horizontal space"
+msgstr "Хэвтээ зай"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "HTML source code"
+msgstr "HTML сурвалжийн код"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Ignore all"
+msgstr "Бүгдийг эс зөвшөөрөх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Ignore"
+msgstr "Эс зөвшөөрөх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Image description"
+msgstr "Зургийн тайлбар"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Increase indent"
+msgstr "Догол мөрийг ихэсгэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Inline"
+msgstr "Доторлох дүрс"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert column after"
+msgstr "Ард нь эгнээ нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert column before"
+msgstr "Урд нь эгнээ нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert date/time"
+msgstr "Огноо/цаг оруулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert image"
+msgstr "Дүрс нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert link"
+msgstr "Холбоос нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert row after"
+msgstr "Ард нь мөр нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert row before"
+msgstr "Урд нь мөр нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert table"
+msgstr "Хүснэгт нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert template"
+msgstr "Загвар нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert video"
+msgstr "Дүрс бичлэг нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert"
+msgstr "Нэмэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert/edit image"
+msgstr "Дүрс нэмэх/засварлах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert/edit link"
+msgstr "Холбоос нэмэх/засварлах "
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Insert/edit video"
+msgstr "Дүрс бичлэг нэмэх/засварлах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Italic"
+msgstr "бичмэл"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Justify"
+msgstr "Мөр тэгшлэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Keywords"
+msgstr "Түлхүүр үг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Left to right"
+msgstr "Зүүнээс баруун"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Left"
+msgstr "Зүүн "
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Lower Alpha"
+msgstr "жижиг альфа"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Lower Greek"
+msgstr "жижиг грек"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Lower Roman"
+msgstr "жижиг ром"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Match case"
+msgstr "кейстэй тааруулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Merge cells"
+msgstr "нүднүүдийг нэгтгэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Middle"
+msgstr "дунд"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Name"
+msgstr "Нэр"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "New document"
+msgstr "шинэ баримт бичиг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "New window"
+msgstr "шинэ цонх"
+
+#. #-#-#-#-#  stanford_djangojs.po (stanford-openedx)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/common/templates/components/paging-footer.underscore
+#: common/static/common/templates/discussion/pagination.underscore
+msgid "Next"
+msgstr "дараагийнхийг олох"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "No color"
+msgstr "өнгөгүй"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Nonbreaking space"
+msgstr "дундаа зай авахгүй"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "None"
+msgstr "аль нь ч бус"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Numbered list"
+msgstr "дугаарласан жагсаалт"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Ok"
+msgstr "Ок"
+
+#. #-#-#-#-#  stanford_djangojs.po (stanford-openedx)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: lms/static/js/Markdown.Editor.js
+#: common/static/common/templates/discussion/alert-popup.underscore
+msgid "OK"
+msgstr "Ок"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Page break"
+msgstr "Хуудас авах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Paste as text"
+msgstr "Эх болгон хуулбарласнаа тавих"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid ""
+"Paste is now in plain text mode. Contents will now be pasted as plain text "
+"until you toggle this option off."
+msgstr ""
+"Хуулбарласан зүйл хоосон горим дээр байна. Контентууд таныг энэ сонголтоо "
+"болиултал хоосноор хуулбарлагдах болно"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Paste row after"
+msgstr "Дараагийн эгнээнд хуулбарласнаа тавих"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Paste row before"
+msgstr "Өмнөх эгнээнд хуулбарласнаа тавих"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Paste your embed code below:"
+msgstr "Өөрийн кодоо доор хуулбарлаж тавих :"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Paste"
+msgstr "Хуулбарлаж тавих"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Poster"
+msgstr "Үзүүлэн"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Pre"
+msgstr "Өмнөх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Prev"
+msgstr "Өмнөх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: lms/static/coffee/src/customwmd.js
+msgid "Preview"
+msgstr "Урьдчилан харах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Print"
+msgstr "Хэвлэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Redo"
+msgstr "Ахин янзлах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Remove link"
+msgstr "Цахим холбоосыг арилгах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Replace all"
+msgstr "Бүгдийг орлуулж тавих"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Replace with"
+msgstr "Үүгээр орлуулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Replace"
+msgstr "Орлуулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Restore last draft"
+msgstr "Сүүлийн нооргийг хадгалах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid ""
+"Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press "
+"ALT-0 for help"
+msgstr ""
+"Эхээр баялаг хэсэг байна. Цэс рүү очихын тулд ALT-F9 -г дарна уу. Зэмсэг рүү"
+" очихын тулд ALT-F10 дарна уу. Тусламж авахыг хүсвэл ALT-0 дарна уу."
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Right to left"
+msgstr "Баруунаас зүүн рүү"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Right"
+msgstr "Баруун"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Robots"
+msgstr "Робот"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Row group"
+msgstr "Эгнээний бүлэг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Row properties"
+msgstr "Эгнээний шинж чанар"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Row type"
+msgstr "Эгнээний төрөл"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Row"
+msgstr "Эгнээ"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Rows"
+msgstr "Эгнээнүүд"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Save"
+msgstr "Хадгалах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Scope"
+msgstr "Хамрах хүрээ"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Select all"
+msgstr "Бүгдийг сонгох"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Show blocks"
+msgstr "Блокуудыг харуулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Show invisible characters"
+msgstr "Харагдахгүй байгаа үсгүүдийг харуулах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Source code"
+msgstr "Кодын эх сурвалж"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Source"
+msgstr "Эх сурвалж"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Special character"
+msgstr "Тусгай үсгүүд"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Spellcheck"
+msgstr "Үг үсгийн алдааг шалгах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Split cell"
+msgstr "Нүднүүдийг салгах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Square"
+msgstr "Дөрвөлжин"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Start search"
+msgstr "Хайлтыг эхлүүлэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Strikethrough"
+msgstr "Дундуур нь зураас татах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Style"
+msgstr "Загвар"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Subscript"
+msgstr "Доор байх жижиг тоо ба үсэг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Superscript"
+msgstr "Дээр байх жижиг тоо ба үсэг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Table properties"
+msgstr "Хүснэгтийн шинж чанар"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Table"
+msgstr "Хүснэгт"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Target"
+msgstr "Бай"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Templates"
+msgstr "Бэлэн загвар"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Text color"
+msgstr "Эхийн өнгө"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Text to display"
+msgstr "Үзүүлэх эх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid ""
+"The URL you entered seems to be an email address. Do you want to add the "
+"required mailto: prefix?"
+msgstr ""
+"Таны оруулсан цахим хаяг и-мэйл байна. Та шаардлагатай и-мэйлийг нэмэх үү ?"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid ""
+"The URL you entered seems to be an external link. Do you want to add the "
+"required http:// prefix?"
+msgstr ""
+"Таны оруулсан цахим хаяг гадны цахим хаяг байна. Та шаардлагатай http://-г "
+"нэмэх үү? "
+
+#. #-#-#-#-#  stanford_djangojs.po (stanford-openedx)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: common/static/common/templates/discussion/new-post.underscore
+#: common/static/common/templates/discussion/thread-edit.underscore
+msgid "Title"
+msgstr "Гарчиг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Tools"
+msgstr "Багаж хэрэгсэл"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Top"
+msgstr "Дээд хэсэг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Underline"
+msgstr "Доогуур нь зурах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Undo"
+msgstr "Болих"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Upper Alpha"
+msgstr "Дээд альфа"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Upper Roman"
+msgstr "Дээд ром"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Url"
+msgstr "цахим холбоос"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "V Align"
+msgstr "V тэгшлэх"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Vertical space"
+msgstr "Босоо зай"
+
+#. #-#-#-#-#  stanford_djangojs.po (stanford-openedx)  #-#-#-#-#
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+#: lms/templates/bookmarks/bookmarks-list.underscore
+#: lms/templates/search/course_search_item.underscore
+#: lms/templates/search/dashboard_search_item.underscore
+msgid "View"
+msgstr "Харах"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Visual aids"
+msgstr "Харааны тусламжууд"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Whole words"
+msgstr "Бүтэн үг"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Width"
+msgstr "Өргөн"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "Words: {0}"
+msgstr "Үгнүүд: {0}"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid "You have unsaved changes are you sure you want to navigate away?"
+msgstr ""
+"Та үарим өөрчлөлтүүдээ хадгалаагүй байна, та өөр зүйл рүү шилжихдээ итгэлтэй"
+" байна уу?"
+
+#. Translators: this is a message from the raw HTML editor displayed in the
+#. browser when a user needs to edit HTML
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid ""
+"Your browser doesn't support direct access to the clipboard. Please use the "
+"Ctrl+X/C/V keyboard shortcuts instead."
+msgstr ""
+"Таны браузер clipboard руу шууд орохыг дэмжихгүй байна. Үүний оронд богихо "
+"холбоос ашиглахын тулд Ctrl+X/C/V товчлуурыг ашиглана уу."
+
+#: common/lib/xmodule/xmodule/js/src/html/edit.js
+msgid ""
+"There are invalid keywords in your email. Please check the following "
+"keywords and try again:"
+msgstr ""
+"Таны и-мэйл хяагт алдаатай түлхүүр үгнүүд байна. Дараах түлхүүр үгнүүдийг "
+"шалгаад ахин оролдоно уу"
+
+#: common/lib/xmodule/xmodule/js/src/lti/lti.js
+msgid ""
+"Click OK to have your username and e-mail address sent to a 3rd party application.\n"
+"\n"
+"Click Cancel to return to this page without sending your information."
+msgstr ""
+"Гуравдагч этгээдийн аппликэйшн рүү өөрийн хэрэглэгчийн нэр болон и-мэйл "
+"хаягаа явуулахын тулд OK товчийг дарна уу. Өөрийн мэдээллээ явуулахгүйгээр "
+"энэ хуудсандаа эргэн очихын тулд Cancel товчийг дарна уу."
+
+#: common/lib/xmodule/xmodule/js/src/lti/lti.js
+msgid ""
+"Click OK to have your username sent to a 3rd party application.\n"
+"\n"
+"Click Cancel to return to this page without sending your information."
+msgstr ""
+"Гуравдагч этгээдийн аппликэйшн рүү өөрийн хэрэглэгчийн нэр болон и-мэйл "
+"хаягаа явуулахын тулд OK товчийг дарна уу. Өөрийн мэдээллээ явуулахгүйгээр "
+"энэ хуудсандаа эргэн очихын тулд Cancel товчийг дарна уу."
+
+#: common/lib/xmodule/xmodule/js/src/lti/lti.js
+msgid ""
+"Click OK to have your e-mail address sent to a 3rd party application.\n"
+"\n"
+"Click Cancel to return to this page without sending your information."
+msgstr ""
+"Гуравдагч этгээдийн аппликэйшн рүү өөрийн хэрэглэгчийн нэр болон и-мэйл "
+"хаягаа явуулахын тулд OK товчийг дарна уу. Өөрийн мэдээллээ явуулахгүйгээр "
+"энэ хуудсандаа эргэн очихын тулд Cancel товчийг дарна уу."
+
+#: common/lib/xmodule/xmodule/js/src/problem/edit.js
+msgid "incorrect"
+msgstr "Буруу байна"
+
+#: common/lib/xmodule/xmodule/js/src/problem/edit.js
+msgid "correct"
+msgstr "Зөв байна"
+
+#: common/lib/xmodule/xmodule/js/src/problem/edit.js
+msgid "answer"
+msgstr "Хариулт"
+
+#: common/lib/xmodule/xmodule/js/src/problem/edit.js
+msgid "Short explanation"
+msgstr "Богино тайлбар"
+
+#: common/lib/xmodule/xmodule/js/src/problem/edit.js
+msgid ""
+"If you use the Advanced Editor, this problem will be converted to XML and you will not be able to return to the Simple Editor Interface.\n"
+"\n"
+"Proceed to the Advanced Editor and convert this problem to XML?"
+msgstr ""
+"Гуравдагч этгээдийн аппликэйшн рүү өөрийн хэрэглэгчийн нэр болон и-мэйл "
+"хаягаа явуулахын тулд OK товчийг дарна уу. Өөрийн мэдээллээ явуулахгүйгээр "
+"энэ хуудсандаа эргэн очихын тулд Cancel товчийг дарна уу."
+
+#: common/lib/xmodule/xmodule/js/src/problem/edit.js
+msgid "Explanation"
+msgstr "Тайлбар"
+
+#: common/lib/xmodule/xmodule/js/src/sequence/display.js
+msgid ""
+"Sequence error! Cannot navigate to %(tab_name)s in the current "
+"SequenceModule. Please contact the course staff."
+msgstr ""
+"Sequence алдаа гарлаа. Одоогийн SequenceModule дээр %(tab_name) руу шилжих "
+"боломжгүй. Сургалтын мэргэжилтэнтэй холбогдоно уу."
+
+#: common/lib/xmodule/xmodule/js/src/sequence/display.js
+#: lms/static/js/bookmarks/views/bookmark_button.js
+msgid "Bookmarked"
+msgstr "Тэмдэглэсэн"
+
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+#: common/lib/xmodule/xmodule/js/src/video/09_play_pause_control.js
+#: common/lib/xmodule/xmodule/js/src/video/09_play_skip_control.js
+msgid "Play"
+msgstr "Тоглуулах"
+
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+#: common/lib/xmodule/xmodule/js/src/video/09_play_pause_control.js
+msgid "Pause"
+msgstr "Завсарлах"
+
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+msgid "Mute"
+msgstr "Дуу хаах"
+
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+msgid "Unmute"
+msgstr "Дуу нээх"
+
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+#: common/lib/xmodule/xmodule/js/src/video/04_video_full_screen.js
+msgid "Exit full browser"
+msgstr "Браузерын бүтэн төлвөөс гарах"
+
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+#: common/lib/xmodule/xmodule/js/src/video/04_video_full_screen.js
+msgid "Fill browser"
+msgstr "Браузерыг бөглөх"
+
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+#: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
+msgid "Speed"
+msgstr "Хурд"
+
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+#: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
+msgid "Volume"
+msgstr "Дууны түвшин"
+
+#. Translators: Volume level equals 0%.
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+msgid "Muted"
+msgstr "Дууг хаасан"
+
+#. Translators: Volume level in range ]0,20]%
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+msgid "Very low"
+msgstr "Маш бага"
+
+#. Translators: Volume level in range ]20,40]%
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+msgid "Low"
+msgstr "Бага"
+
+#. Translators: Volume level in range ]40,60]%
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+msgid "Average"
+msgstr "Дунд"
+
+#. Translators: Volume level in range ]60,80]%
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+msgid "Loud"
+msgstr "Чанга"
+
+#. Translators: Volume level in range ]80,99]%
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+msgid "Very loud"
+msgstr "Маш чанга"
+
+#. Translators: Volume level equals 100%.
+#: common/lib/xmodule/xmodule/js/src/video/00_i18n.js
+msgid "Maximum"
+msgstr "Дээд хэмжээ"
+
+#: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
+msgid ""
+"VideoPlayer: Element corresponding to the given selector was not found."
+msgstr "Видеү тоглуулах: Өгөгдсөн selector-той холбоотой элемент олдсонгүй"
+
+#: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
+msgid "This browser cannot play .mp4, .ogg, or .webm files."
+msgstr "Энэ браузер .mp4, .ogg, эсвэл .webm тоглуулж чадахгүй"
+
+#: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
+msgid "Try using a different browser, such as Google Chrome."
+msgstr "Google Chrome зэрэг өөр браузер ашиглана уу"
+
+#: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
+msgid "High Definition"
+msgstr "Өндөр нягтрал"
+
+#: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
+msgid "off"
+msgstr "Унтраах"
+
+#: common/lib/xmodule/xmodule/js/src/video/05_video_quality_control.js
+msgid "on"
+msgstr "Асаах"
+
+#: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
+msgid "Video position"
+msgstr "Видеоны байрлал"
+
+#: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
+msgid "Video ended"
+msgstr "Видео дууслаа"
+
+#: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
+msgid "%(value)s hour"
+msgid_plural "%(value)s hours"
+msgstr[0] " %(value)sцаг"
+msgstr[1] "%(value)s hцаг"
+
+#: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
+msgid "%(value)s minute"
+msgid_plural "%(value)s minutes"
+msgstr[0] "%(value)sминут"
+msgstr[1] "%(value)sминут"
+
+#: common/lib/xmodule/xmodule/js/src/video/06_video_progress_slider.js
+msgid "%(value)s second"
+msgid_plural "%(value)s seconds"
+msgstr[0] "%(value)sсекунд"
+msgstr[1] "секунд%(value)s"
+
+#: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
+msgid ""
+"Click on this button to mute or unmute this video or press UP or DOWN "
+"buttons to increase or decrease volume level."
+msgstr ""
+"Энэ товчлуур дээр даран видеоны дууг хааж эсвэл нээнэ үү. Мөн дууг нь "
+"ихэсгэх болон багасгахдаа ДЭЭШ ба ДООШ гэсэн дээр дарна уу"
+
+#: common/lib/xmodule/xmodule/js/src/video/07_video_volume_control.js
+msgid "Adjust video volume"
+msgstr "Видеоны дууг тохируулах"
+
+#: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
+msgid ""
+"Press UP to enter the speed menu then use the UP and DOWN arrow keys to "
+"navigate the different speeds, then press ENTER to change to the selected "
+"speed."
+msgstr ""
+"ДЭЭШ гэсэн товчлуур дээр даран хурдны цэс рүү орон дараагаар нь хурдаа "
+"солихын тулд ДЭЭШ ба ДООШ гэсэн сум заасан товчлууруудыг даран сонгосон "
+"хурдан дээрээ тааруулахын тулд ENTER товчийг дарна уу"
+
+#: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
+msgid "Adjust video speed"
+msgstr "Видеоны хурдыг тохируулах"
+
+#: common/lib/xmodule/xmodule/js/src/video/08_video_speed_control.js
+msgid "Video speed: "
+msgstr "Видеоны хурд: "
+
+#: common/lib/xmodule/xmodule/js/src/video/09_play_skip_control.js
+msgid "Skip"
+msgstr "Алгасах "
+
+#: common/lib/xmodule/xmodule/js/src/video/09_poster.js
+msgid "Play video"
+msgstr "Видеог тоглуулах "
+
+#: common/lib/xmodule/xmodule/js/src/video/09_skip_control.js
+msgid "Do not show again"
+msgstr "Ахин бүү харуул"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Open language menu"
+msgstr "Хэлний цэсийг нээх"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Transcript will be displayed when you start playing the video."
+msgstr "Та видеог тоглуулж эхэлмэгц галигаар бичсэн зүйл харагдах болно"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid ""
+"Activating a link in this group will skip to the corresponding point in the "
+"video."
+msgstr ""
+"Энэхүү бүлэн дэхь цахим холбоосыг идэвхижүүлснээр видеон дэхь холбогдох цэг "
+"рүү алгасан очих болно"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Video transcript"
+msgstr "Видеоэы галиг"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Start of transcript. Skip to the end."
+msgstr "Галигийн эхлэл. Төгсгөл хүртэл алгасах"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "End of transcript. Skip to the start."
+msgstr "Галигийн төгсгөл. Эхлэл хүртэл алгасах"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid ""
+"Press the UP arrow key to enter the language menu then use UP and DOWN arrow"
+" keys to navigate language options. Press ENTER to change to the selected "
+"language."
+msgstr ""
+"ДЭЭШ гэсэн суман дээр дараад хэлний цэс рүү орон дараа нь ДЭЭШ ба ДООш гэсэн"
+" сумыг ашиглан хэлний сонголтуудаа тохируулна уу. Сонгосныхоо дараа ENTER "
+"товчлуурыг дарна уу"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Hide closed captions"
+msgstr "Галигийг нуух"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "(Caption will be displayed when you start playing the video.)"
+msgstr "(Видео тоглуулж эхэлмэгц галиг гарах болно)"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Turn on closed captioning"
+msgstr "Галигийг асаах"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Turn on transcripts"
+msgstr "Галигийг идэвхижүүлэх"
+
+#: common/lib/xmodule/xmodule/js/src/video/09_video_caption.js
+msgid "Turn off transcripts"
+msgstr "Галигийг идэвхигүйжүүлэх"
+
+#: common/static/common/js/components/utils/view_utils.js
+msgid "Required field."
+msgstr "Шаардлагатай "
+
+#: common/static/common/js/components/utils/view_utils.js
+msgid "Please do not use any spaces in this field."
+msgstr "Энэ хэсэгт зай бүү аваарай"
+
+#: common/static/common/js/components/utils/view_utils.js
+msgid "Please do not use any spaces or special characters in this field."
+msgstr "Энэ хэсэгт зай болон тусгай тэмдэглэгээ бүү ашиглаарай"
+
+#: common/static/common/js/components/views/paginated_view.js
+#: common/static/common/js/components/views/paging_footer.js
+msgid "Pagination"
+msgstr "Хуудсыг тоолох"
+
+#: common/static/common/js/components/views/paginated_view.js
+msgid ""
+"Your request could not be completed. Reload the page and try again. If the "
+"issue persists, click the Help tab to report the problem."
+msgstr ""
+"Таны хүсэлтийг биелүүлэх боломжгүй. Хуудсаа ахин уншуулаад оролдоно уу. "
+"Хэрвээ асуудал шийдэгдээгүй бол асуудлыг Тусламж цонхон дээр дарж мэдээлнэ "
+"үү"
+
+#: common/static/common/js/components/views/paging_header.js
+msgid "Showing {firstIndex} out of {numItems} total"
+msgstr "Нийт {numItems}-с {firstIndex}-г харуулж байна"
+
+#: common/static/common/js/components/views/paging_header.js
+msgid "Showing {firstIndex}-{lastIndex} out of {numItems} total"
+msgstr "Нийт {numItems}-с {firstIndex}-{lastIndex} г харуулж байна"
+
+#: common/static/common/js/discussion/utils.js
+msgid "Loading content"
+msgstr "Уншиж байна"
+
+#: common/static/common/js/discussion/utils.js
+#: common/static/common/js/discussion/views/discussion_inline_view.js
+#: common/static/common/js/discussion/views/discussion_thread_list_view.js
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+#: common/static/common/js/discussion/views/response_comment_view.js
+#: lms/static/js/student_account/views/FinishAuthView.js
+#: lms/static/js/verify_student/views/payment_confirmation_step_view.js
+#: lms/static/js/verify_student/views/step_view.js
+#: lms/static/js/views/fields.js
+msgid "Error"
+msgstr "Алдаа"
+
+#: common/static/common/js/discussion/utils.js
+msgid "Your request could not be processed. Refresh the page and try again."
+msgstr ""
+"Таны хүсэлтийг биелүүлэх боломжгүй. Хуудсаа ахин уншуулаад оролдоно уу."
+
+#: common/static/common/js/discussion/utils.js
+#: common/static/common/templates/discussion/pagination.underscore
+msgid "…"
+msgstr "…"
+
+#: common/static/common/js/discussion/utils.js
+msgid "Some images in this post have been omitted"
+msgstr "Энэ нийтлэлийн зарим зургууд орхигдсон байна"
+
+#: common/static/common/js/discussion/utils.js
+msgid "image omitted"
+msgstr "зураг орхигдсон"
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "there is currently {numVotes} vote"
+msgid_plural "there are currently {numVotes} votes"
+msgstr[0] "Одоогоор {numVotes} санал байна"
+msgstr[1] "Одоогоор {numVotes} санал байна"
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "{numVotes} Vote"
+msgid_plural "{numVotes} Votes"
+msgstr[0] "{numVotes} санал"
+msgstr[1] "{numVotes} санал"
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid ""
+"You could not be subscribed to this post. Refresh the page and try again."
+msgstr ""
+"Та энэ нийтлэлийг дагах боломжгүй. Хуудсаа ахин уншуулаад оролдоно уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid ""
+"You could not be unsubscribed from this post. Refresh the page and try "
+"again."
+msgstr ""
+"Та энэ нийтлэлийг дагахаа болих боломжгүй. Хуудсаа ахин уншуулаад оролдоно "
+"уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid ""
+"This response could not be marked as an answer. Refresh the page and try "
+"again."
+msgstr ""
+"Энэ хариултыг хариултаар хүлээн авах боломжгүй. Хуудсаа ахин уншуулаад "
+"оролдоно уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid ""
+"This response could not be unmarked as an answer. Refresh the page and try "
+"again."
+msgstr ""
+"Энэ хариултыг хариултаар хүлээн авахаа болих боломжгүй. Хуудсаа ахин "
+"уншуулаад оролдоно уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid ""
+"This response could not be marked as endorsed. Refresh the page and try "
+"again."
+msgstr ""
+"Энэ хариултыг тэмдэглэх боломжгүй. Хуудсаа ахин уншуулаад оролдоно уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "This response could not be unendorsed. Refresh the page and try again."
+msgstr ""
+"Энэ хариултыг тэмдэглэхээ болих боломжгүй. Хуудсаа ахин уншуулаад оролдоно "
+"уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "This vote could not be processed. Refresh the page and try again."
+msgstr ""
+"Энэ саналыг хүлээн авах боломжгүй. Хуудсаа ахин уншуулаад оролдоно уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "This post could not be pinned. Refresh the page and try again."
+msgstr "Энэ нийтлэлийг онцгойлж болохгүй. Хуудсаа ахин уншуулаад оролдоно уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "This post could not be unpinned. Refresh the page and try again."
+msgstr ""
+"Энэ нийтлэлийг онцгойлохоо больж болохгүй. Хуудсаа ахин уншуулаад оролдоно "
+"уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid ""
+"This post could not be flagged for abuse. Refresh the page and try again."
+msgstr ""
+"Энэ нийтлэлийг дүрэм зөрчсөн гэж мэдээлэх боломжгүй. Хуудсаа ахин уншуулаад "
+"оролдоно уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid ""
+"This post could not be unflagged for abuse. Refresh the page and try again."
+msgstr ""
+"Энэ нийтлэлийг дүрэм зөрчсөн гэж мэдээлэхээ болих боломжгүй. Хуудсаа ахин "
+"уншуулаад оролдоно уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "This post could not be closed. Refresh the page and try again."
+msgstr "Энэ нийтлэлийг хааж болохгүй. Хуудсаа ахин уншуулаад оролдоно уу."
+
+#: common/static/common/js/discussion/views/discussion_content_view.js
+msgid "This post could not be reopened. Refresh the page and try again."
+msgstr ""
+"Энэ нийтлэлийг ахин нээж болохгүй. Хуудсаа ахин уншуулаад оролдоно уу."
+
+#: common/static/common/js/discussion/views/discussion_inline_view.js
+msgid "Hide Discussion"
+msgstr "Хэлэлцүүлгийг нуух"
+
+#: common/static/common/js/discussion/views/discussion_inline_view.js
+msgid "This discussion could not be loaded. Refresh the page and try again."
+msgstr ""
+"Энэ хэлэлцүүлгийг уншуулж болохгүй байна. Хуудсаа ахин уншуулаад оролдоно "
+"уу."
+
+#: common/static/common/js/discussion/views/discussion_inline_view.js
+msgid "Show Discussion"
+msgstr "Хэлэлцүүлгийг харуулах"
+
+#: common/static/common/js/discussion/views/discussion_thread_list_view.js
+msgid "Loading more threads"
+msgstr "Уншиж байна"
+
+#: common/static/common/js/discussion/views/discussion_thread_list_view.js
+msgid "Additional posts could not be loaded. Refresh the page and try again."
+msgstr "Нэмэлт нийтлэлийг унших боломжгүй. Хуудсаа уншуулаад ахин оролдоно уу"
+
+#: common/static/common/js/discussion/views/discussion_thread_list_view.js
+msgid "Current conversation"
+msgstr "Одоогийн харилцан яриа"
+
+#: common/static/common/js/discussion/views/discussion_thread_list_view.js
+msgid "Loading posts list"
+msgstr "Нийтлэлийн жагсаалтыг уншиж байна"
+
+#: common/static/common/js/discussion/views/discussion_thread_list_view.js
+msgid ""
+"No results found for {original_query}. Showing results for "
+"{suggested_query}."
+msgstr ""
+"{original_query}хайлтад илэрц олдсонгүй. {suggested_query}-ий илэрцийг "
+"харуулж байна "
+
+#: common/static/common/js/discussion/views/discussion_thread_list_view.js
+msgid "No posts matched your query."
+msgstr "Таны хүсэлттэй таарах нийтлэл олдсонгүй"
+
+#: common/static/common/js/discussion/views/discussion_thread_list_view.js
+msgid "Show posts by {username}."
+msgstr "{username}-ий нийтлэлийг харуулах"
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "The post you selected has been deleted."
+msgstr "таны сонгосон нийтлэлүүдийг устгалаа"
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "Responses could not be loaded. Refresh the page and try again."
+msgstr "Хариултыг унших боломжгүй. Хуудсаа уншуулаад ахин оролдоно уу"
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid ""
+"Additional responses could not be loaded. Refresh the page and try again."
+msgstr "Нэмэлт Хариултыг унших боломжгүй. Хуудсаа уншуулаад ахин оролдоно уу"
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "{numResponses} other response"
+msgid_plural "{numResponses} other responses"
+msgstr[0] "{numResponses} бусад хариултууд"
+msgstr[1] "{numResponses} бусад хариултууд"
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "{numResponses} response"
+msgid_plural "{numResponses} responses"
+msgstr[0] "{numResponses} Хариултууд"
+msgstr[1] " {numResponses} Хариултууд"
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "Showing all responses"
+msgstr "Бүх хариултыг харуулж байна"
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "Showing first response"
+msgid_plural "Showing first {numResponses} responses"
+msgstr[0] "Эхний хариултыг харуулах"
+msgstr[1] "Эхний Эхний {numResponses} хариултыг харуулах"
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "Load all responses"
+msgstr "бүх хариултыг уншуулах"
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "Load next {numResponses} responses"
+msgstr "{numResponses} дараагийн хариултыг уншуулах"
+
+#: common/static/common/js/discussion/views/discussion_thread_view.js
+msgid "Are you sure you want to delete this post?"
+msgstr "Та энэ нийтлэлийг устгахдаа итгэлтэй байна уу?"
+
+#: common/static/common/js/discussion/views/new_post_view.js
+msgid "Your post will be discarded."
+msgstr "Таны нийтлэл устгагдах болно"
+
+#: common/static/common/js/discussion/views/response_comment_show_view.js
+#: common/static/common/templates/discussion/post-user-display.underscore
+#: common/static/common/templates/discussion/profile-thread.underscore
+msgid "anonymous"
+msgstr "Нэргүй"
+
+#: common/static/common/js/discussion/views/response_comment_view.js
+msgid "Are you sure you want to delete this comment?"
+msgstr "Та энэ сэтгэгдлийг устгахдаа итгэлтэй байна уу?"
+
+#: common/static/common/js/discussion/views/response_comment_view.js
+msgid "This comment could not be deleted. Refresh the page and try again."
+msgstr "Энэ сэтгэгдлийг устгах боломжгүй. Хуудсаа уншуулаад ахин оролдоно уу"
+
+#: common/static/common/js/discussion/views/thread_response_view.js
+msgid "Are you sure you want to delete this response?"
+msgstr "Та энэ хариултаа устгахдаа итгэлтэй байна уу?"
+
+#: common/static/common/js/utils/edx.utils.validate.js
+msgid "The email address you've provided isn't formatted correctly."
+msgstr "Таны оруулсан цахим хаягийн формат алдаатай байна"
+
+#: common/static/common/js/utils/edx.utils.validate.js
+msgid "%(field)s must have at least %(count)d characters."
+msgstr "%(field)s хамгийн багадаа %(count)d үсэгтэй байх шаардлагатай"
+
+#: common/static/common/js/utils/edx.utils.validate.js
+msgid "%(field)s can only contain up to %(count)d characters."
+msgstr "%(field)s зөвхөн %(count)d үсэгтэй байх шаардлагатай"
+
+#: common/static/common/js/utils/edx.utils.validate.js
+msgid "Please enter your %(field)s."
+msgstr " %(field)s. -аа оруулна уу"
+
+#: common/static/js/capa/drag_and_drop/base_image.js
+msgid "Drop target image"
+msgstr "Бай зургийг хасах"
+
+#: common/static/js/capa/drag_and_drop/draggable_events.js
+msgid "dragging out of slider"
+msgstr "Слайднаас гаргаж байна"
+
+#: common/static/js/capa/drag_and_drop/draggable_events.js
+msgid "dragging"
+msgstr "Гаргах"
+
+#: common/static/js/capa/drag_and_drop/draggable_events.js
+msgid "dropped in slider"
+msgstr "Слайданд оруулав"
+
+#: common/static/js/capa/drag_and_drop/draggable_events.js
+msgid "dropped on target"
+msgstr "Бай дээр оруулав"
+
+#. Translators: %s will be a time quantity, such as "4 minutes" or "1 day"
+#: common/static/js/src/jquery.timeago.locale.js
+#, javascript-format
+msgid "%s ago"
+msgstr "%s өмнө"
+
+#. Translators: %s will be a time quantity, such as "4 minutes" or "1 day"
+#: common/static/js/src/jquery.timeago.locale.js
+#, javascript-format
+msgid "%s from now"
+msgstr "%s үүнээс хойш"
+
+#: common/static/js/src/jquery.timeago.locale.js
+msgid "less than a minute"
+msgstr "Нэг минутаас бага хугацааны өмнө"
+
+#: common/static/js/src/jquery.timeago.locale.js
+msgid "about a minute"
+msgstr "Нэг минут орчим"
+
+#: common/static/js/src/jquery.timeago.locale.js
+#, javascript-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%dминут"
+msgstr[1] "%dминут"
+
+#: common/static/js/src/jquery.timeago.locale.js
+msgid "about an hour"
+msgstr "ойролцоогоор нэг цаг"
+
+#: common/static/js/src/jquery.timeago.locale.js
+#, javascript-format
+msgid "about %d hour"
+msgid_plural "about %d hours"
+msgstr[0] "about %d hour"
+msgstr[1] "%dорчим цаг"
+
+#: common/static/js/src/jquery.timeago.locale.js
+msgid "a day"
+msgstr "өдөр"
+
+#: common/static/js/src/jquery.timeago.locale.js
+#, javascript-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d өдөр"
+msgstr[1] "%d days"
+
+#: common/static/js/src/jquery.timeago.locale.js
+msgid "about a month"
+msgstr "нэг сар орчмын өмнө"
+
+#: common/static/js/src/jquery.timeago.locale.js
+#, javascript-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d сар"
+msgstr[1] "%d cap"
+
+#: common/static/js/src/jquery.timeago.locale.js
+msgid "about a year"
+msgstr "нэг жил орчим"
+
+#: common/static/js/src/jquery.timeago.locale.js
+#, javascript-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d жил"
+msgstr[1] "%dжил"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "User"
+msgstr "Хэрэглэгч"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Annotation"
+msgstr "тэмдэглэгээ"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Start"
+msgstr "эхлэл"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "End"
+msgstr "төгсгөл"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "#Replies"
+msgstr "хариултууд"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Date posted"
+msgstr "нийтэлсэн огноо"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+#: lms/static/js/courseware/credit_progress.js
+#: common/static/common/templates/discussion/forum-actions.underscore
+#: lms/templates/discovery/facet.underscore
+#: lms/templates/edxnotes/note-item.underscore
+msgid "More"
+msgstr "илүү"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "My Notes"
+msgstr "миний тэмдэглэлүүд"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Instructor"
+msgstr "сургагч"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Public"
+msgstr "олон нийтийн"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+#: common/static/common/templates/components/search-field.underscore
+#: lms/djangoapps/discussion/static/discussion/templates/search.underscore
+msgid "Search"
+msgstr "Хайх "
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Users"
+msgstr "Хэрэглэгчид "
+
+#. Translators: 'Tags' is the name of the view (noun) within the Student Notes
+#. page that shows all
+#. notes organized by the tags the student has associated with them (if any).
+#. When defining a
+#. note in the courseware, the student can choose to associate 1 or more tags
+#. with the note
+#. in order to group similar notes together and help with search.
+#: common/static/js/vendor/ova/catch/js/catch.js
+#: lms/static/js/edxnotes/views/tabs/tags.js
+msgid "Tags"
+msgstr "зүүлт"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Annotation Text"
+msgstr "тэмдэглэсэн эх"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Clear"
+msgstr "устгах"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Text"
+msgstr "Эх"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Video"
+msgstr "Видео"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+#: lms/static/js/views/image_field.js
+msgid "Image"
+msgstr "зураг "
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+#: common/static/common/templates/discussion/forum-action-delete.underscore
+msgid "Delete"
+msgstr "Устгах"
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+msgid "Reply"
+msgstr "Хариулт "
+
+#: common/static/js/vendor/ova/catch/js/catch.js
+#: lms/templates/edxnotes/note-item.underscore
+msgid "Tags:"
+msgstr "зүүлт "
+
+#. Translators: please note that this is not a literal flag, but rather a
+#. report
+#: common/static/js/vendor/ova/flagging-annotator.js
+msgid "Check the box to remove all flags."
+msgstr "бүх дарцгийг арилгахын тулд хайрцган дээр дарна уу"
+
+#. Translators: 'totalFlags' is the number of flags solely for that annotation
+#: common/static/js/vendor/ova/flagging-annotator.js
+msgid "Check the box to remove %(totalFlags)s flag."
+msgid_plural "Check the box to remove %(totalFlags)s flags."
+msgstr[0] " %(totalFlags)s тугуудыг арилгахын тулд хайрцгийг шалгана уу"
+msgstr[1] "Check the box to remove %(totalFlags)s flags."
+
+#. Translators: 'count' is the number of flags solely for that annotation that
+#. will be removed
+#: common/static/js/vendor/ova/flagging-annotator.js
+msgid "Check the box to remove %(count)s flag."
+msgid_plural "Check the box to remove %(count)s flags."
+msgstr[0] " %(count)sтугуудыг арилгахын тулд хайрцгийг шалгана уу"
+msgstr[1] "%(count)s тугуудыг арилгахын тулд хайрцгийг шалгана уу"
+
+#: common/static/js/vendor/ova/flagging-annotator.js
+msgid "All flags have been removed. To undo, uncheck the box."
+msgstr "Бүх дарцгийг арилгалаа. "
+
+#: common/static/js/vendor/ova/flagging-annotator.js
+msgid "You have already reported this annotation."
+msgstr "Та энэ тэмдэглэгээг урд нь мэдээлж байсан байна"
+
+#: common/static/js/vendor/ova/flagging-annotator.js
+msgid "Report annotation as inappropriate or offensive."
+msgstr "Тэмдэглэгээг ес бус, зохимжгүй гэж мэдээлэх"
+
+#. Translators: 'count' is the number of flags solely for that annotation
+#: common/static/js/vendor/ova/flagging-annotator.js
+msgid "This annotation has %(count)s flag."
+msgid_plural "This annotation has %(count)s flags."
+msgstr[0] "Энэ тэмдэглэл нь %(count)sтуг байна."
+msgstr[1] "Энэ тэмдэглэл %(count)s далбаатай."
+
+#: lms/djangoapps/support/static/support/js/views/certificates.js
+msgid "An unexpected error occurred.  Please try again."
+msgstr "Алдаа гарлаа. Ахин оролдоно уу"
+
+#: lms/djangoapps/support/static/support/js/views/enrollment.js
+msgid "Financial Assistance"
+msgstr "Санхүүгийг дэмжлэг"
+
+#: lms/djangoapps/support/static/support/js/views/enrollment.js
+msgid "Upset Learner"
+msgstr "Суралцагч сэтгэл ханамжгүй"
+
+#: lms/djangoapps/support/static/support/js/views/enrollment.js
+msgid "Teaching Assistant"
+msgstr "Туслах багш"
+
+#: lms/djangoapps/support/static/support/js/views/enrollment_modal.js
+msgid "Please specify a reason."
+msgstr "Шалтгаанаа тодруулна уу"
+
+#: lms/djangoapps/support/static/support/js/views/enrollment_modal.js
+msgid "Something went wrong changing this enrollment. Please try again."
+msgstr "Сургалтанд хамрагдах явцад алдаа гарлаа. Ахин оролдоно уу"
+
+#: lms/static/coffee/src/calculator.js
+msgid "Open Calculator"
+msgstr "Тооны машин Нээх "
+
+#: lms/static/coffee/src/calculator.js
+msgid "Close Calculator"
+msgstr "Тооны машин хаах"
+
+#: lms/static/coffee/src/customwmd.js
+msgid "HTML preview of post"
+msgstr "энэ нийтлэлийн HTML харах "
+
+#: lms/static/coffee/src/customwmd.js
+msgid "Post body"
+msgstr "Эх биеийг нийтлэх"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Insert Hyperlink"
+msgstr "Hyperlink оруулах"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "e.g. 'http://google.com'"
+msgstr "жишээ нь 'http://google.com'"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Link Description"
+msgstr "Тайлбартай холбох"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "e.g. 'google'"
+msgstr "жишээ нь 'google'"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Please provide a description of the link destination."
+msgstr "Холбоосын байрлалын талаар тайлар оруулна уу"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Insert Image (upload file or type URL)"
+msgstr "Зураг оруулах (файл оруулах эсвэл URL бичих)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid ""
+"Type in a URL or use the \"Choose File\" button to upload a file from your "
+"machine. (e.g. 'http://example.com/img/clouds.jpg')"
+msgstr ""
+"URL бичих эсвэл “Сонгосон файл” товчлуурыг ашиглаад өөрийн машинаасаа файл "
+"оруулна. (жишээ нь 'http://example.com/img/clouds.jpg')"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Image Description"
+msgstr "Зургийн тайлбар"
+
+#: lms/static/js/Markdown.Editor.js
+msgid ""
+"Please describe this image or agree that it has no contextual value by "
+"checking the checkbox."
+msgstr ""
+"Зурагт тайлар өгнө үү эсвэл чагт зурах хайрцаг дээр чагт зуран ямар нэгэн ес"
+" зүйн алдаа байхгүй гэдгийг баталгаажуулна уу"
+
+#: lms/static/js/Markdown.Editor.js
+msgid ""
+"e.g. 'Sky with clouds'. The description is helpful for users who cannot see "
+"the image."
+msgstr ""
+"жишээ нь “Үүлтэй тэнгэр” Энэ нь зургийг харах боломжгүй хэрэглэгчдэд тус "
+"болно."
+
+#: lms/static/js/Markdown.Editor.js
+msgid "How to create useful text alternatives."
+msgstr "Хэрхэн хэрэгтэй эх үүсгэх вэ?"
+
+#: lms/static/js/Markdown.Editor.js
+msgid ""
+"This image is for decorative purposes only and does not require a "
+"description."
+msgstr "Энэ үураг нь зөвхөн чимэглэлийн зориулалттай ба тайлбар шаардлагагүй"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Markdown Editing Help"
+msgstr "Засварлахад туслах"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "URL"
+msgstr "URL"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Please provide a valid URL."
+msgstr "идэвхитэй URL оруулна уу"
+
+#. Translators: 'errorCount' is the number of errors found in the form.
+#: lms/static/js/Markdown.Editor.js
+msgid "%(errorCount)s error found in form."
+msgid_plural "%(errorCount)s errors found in form."
+msgstr[0] " Маягтанд олдсон %(errorCount)s алдаа."
+msgstr[1] "%(errorCount)s errors found in form."
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Choose File"
+msgstr "Файл сонгох"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Bold (Ctrl+B)"
+msgstr "Тод (Ctrl+B)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Italic (Ctrl+I)"
+msgstr "Бичмэл (Ctrl+I)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Hyperlink (Ctrl+L)"
+msgstr "Hyperlink (Ctrl+L)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Blockquote (Ctrl+Q)"
+msgstr "Blockquote (Ctrl+Q)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Code Sample (Ctrl+K)"
+msgstr "Жишиг код (Ctrl+K)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Image (Ctrl+G)"
+msgstr "Зураг (Ctrl+G)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Numbered List (Ctrl+O)"
+msgstr "Дугаарласан жагсаалт (Ctrl+O)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Bulleted List (Ctrl+U)"
+msgstr "Тэмдэглэгээ тавьсан жагсаалт (Ctrl+U)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Heading (Ctrl+H)"
+msgstr "Гарчиг (Ctrl+H)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Horizontal Rule (Ctrl+R)"
+msgstr "Хэвтээ шугам (Ctrl+R)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Undo (Ctrl+Z)"
+msgstr "Үйлдлийг буцаах (Ctrl+Z)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Redo (Ctrl+Y)"
+msgstr "Үйлдлийг ахин хийх (Ctrl+Y)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Redo (Ctrl+Shift+Z)"
+msgstr "Үйлдлийг ахин хийх (Ctrl+Shift+Z)"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "strong text"
+msgstr "хүчтэй эх"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "emphasized text"
+msgstr "тодруулсан эх"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "enter link description here"
+msgstr "холбоосны тайлбарыг энд оруулна уу"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "enter code here"
+msgstr "кодыг энд оруулна уу"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "List item"
+msgstr "зүйлсийг жагсаах"
+
+#: lms/static/js/Markdown.Editor.js
+msgid "Heading"
+msgstr "гарчиг"
+
+#: lms/static/js/ajax-error.js
+msgid ""
+"You have been logged out of your edX account. Click Okay to log in again "
+"now. Click Cancel to stay on this page (you must log in again to save your "
+"work)."
+msgstr ""
+"Та edX аккаунтаасаа гарсан байна. Okay дээр дарж буцаж нэвтрэн орно уу. Энэ "
+"хуудсан дээрээ үлдэхийн тулд Болих дээр дарна уу. (та ажлаа хадгалахын тулд "
+"ахин нэвтрэн орох шаардлагатай)"
+
+#: lms/static/js/api_admin/views/catalog_preview.js
+msgid "Preview this query"
+msgstr "энэ query-г харах"
+
+#: lms/static/js/bookmarks/views/bookmark_button.js
+#: lms/static/js/bookmarks/views/bookmarks_list.js
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "An error has occurred. Please try again."
+msgstr "Алдаа гарлаа. Ахин оролдоод үзнэ үү"
+
+#: lms/static/js/bookmarks/views/bookmark_button.js
+msgid "Click to add"
+msgstr "Нэмэхийн тулд дарна уу"
+
+#: lms/static/js/bookmarks/views/bookmark_button.js
+msgid "Bookmark this page"
+msgstr "Энэ хуудсыг тэмдэглэх"
+
+#: lms/static/js/bookmarks/views/bookmark_button.js
+msgid "Click to remove"
+msgstr "Устгахын тулд дарна уу"
+
+#: lms/static/js/bookmarks/views/bookmarks_list.js
+#: lms/static/js/instructor_dashboard/data_download.js
+#: lms/templates/search/search_loading.underscore
+msgid "Loading"
+msgstr "Уншиж байна"
+
+#: lms/static/js/ccx/schedule.js
+msgid "All subsections"
+msgstr "Бүх дэд бүлгүүд"
+
+#: lms/static/js/ccx/schedule.js
+msgid "All units"
+msgstr "Бүх нэгжүүд"
+
+#: lms/static/js/ccx/schedule.js
+msgid "Click to change"
+msgstr "Өөрчлөхийн тулд дарна уу"
+
+#: lms/static/js/ccx/schedule.js
+msgid "Select a chapter"
+msgstr "Бүлэг сонгоно уу"
+
+#: lms/static/js/ccx/schedule.js lms/static/js/views/fields.js
+msgid "Saving"
+msgstr "Хадгалж байна"
+
+#: lms/static/js/ccx/schedule.js
+msgid "Save changes"
+msgstr "Өөрчлөлтийг хадгалах"
+
+#: lms/static/js/ccx/schedule.js
+msgid "Please enter valid start date and time."
+msgstr "Эхлэх хүчинтэй огноо ба цаг оруулна уу"
+
+#: lms/static/js/ccx/schedule.js
+msgid "Due date cannot be before start date."
+msgstr "Дуусах хугацаа эхлэх хугацаанаасаа өмнө байх боломжгүй"
+
+#: lms/static/js/ccx/schedule.js
+msgid "Enter Due Date and Time"
+msgstr "Дуусах огноо ба цаг оруулна уу"
+
+#: lms/static/js/ccx/schedule.js
+msgid "Enter Start Date and Time"
+msgstr "Эхлэх огноо ба цаг оруулна уу"
+
+#: lms/static/js/certificates/models/certificate_exception.js
+msgid ""
+"Student username/email field is required and can not be empty. Kindly fill "
+"in username/email and then press \"Add to Exception List\" button."
+msgstr ""
+"Суралцагчийн хэрэглэгчийн нэр ба цахим хаяг шаардлагатай ба энэ мөр хоосон "
+"байж болохгүй. Хэрэглэгчийн нэр ба цахим хаягаа оруулаад “Жагсаалтанд нэмэх”"
+" товчлуур дээр дарна уу"
+
+#: lms/static/js/certificates/models/certificate_invalidation.js
+msgid ""
+"Student username/email field is required and can not be empty. Kindly fill "
+"in username/email and then press \"Invalidate Certificate\" button."
+msgstr ""
+"Суралцагчийн хэрэглэгчийн нэр ба цахим хаяг шаардлагатай ба энэ мөр хоосон "
+"байж болохгүй. Хэрэглэгчийн нэр ба цахим хаягаа оруулаад “Батламжаа "
+"баталгаажуулах” товчлуур дээр дарна уу"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid "Uploaded file issues. Click on \"+\" to view."
+msgstr "Файлыг орууллаа. + дээр дарж харна уу"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners are successfully added to exception list"
+msgstr "суралцагчдыг жагсаалтанд амжилттай нэмлээ"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner is successfully added to the exception list"
+msgstr "суралцагчдыг жагсаалтанд амжилттай нэмлээ"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " records are not in correct format and not added to the exception list"
+msgstr "бүртгэл зөв бус форматтай байна тийм учраас жагсаалтанд нэмэгдэхгүй"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " record is not in correct format and not added to the exception list"
+msgstr "бүртгэл зөв бус форматтай байна тийм учраас жагсаалтанд нэмэгдэхгүй"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners do not exist in LMS and not added to the exception list"
+msgstr "суралцагчид LMS -т байхгүй байна тийм учраас жагсаалтанд нэмэгдэхгүй"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner does not exist in LMS and not added to the exception list"
+msgstr "суралцагчид LMS -т байхгүй байна тийм учраас жагсаалтанд нэмэгдэхгүй"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learners are already white listed and not added to the exception list"
+msgstr ""
+"суралцагчид хүлээлгийн жагсаалтанд байна тийм учраас жагсаалтанд нэмэгдэхгүй"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner is already white listed and not added to the exception list"
+msgstr ""
+"суралцагчид хүлээлгийн жагсаалтанд байна тийм учраас жагсаалтанд нэмэгдэхгүй"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid ""
+" learners are not enrolled in course and not added to the exception list"
+msgstr ""
+"суралцагчид хсургалтанд хамрагдаагүй байна тийм учраас жагсаалтанд "
+"нэмэгдэхгүй"
+
+#: lms/static/js/certificates/views/certificate_bulk_whitelist.js
+msgid " learner is not enrolled in course and not added to the exception list"
+msgstr ""
+"суралцагчид сургалтанд хамрагдаагүй байна тийм учраас жагсаалтанд "
+"нэмэгдэхгүй"
+
+#: lms/static/js/certificates/views/certificate_invalidation_view.js
+msgid ""
+"Certificate of <%= user %> has already been invalidated. Please check your "
+"spelling and retry."
+msgstr ""
+"<% = Хэрэг%%> гэрчилгээ аль хэдийн хүчингүй болсон. Өөрийн алдаа шалгах ба "
+"дахин оролдоно уу."
+
+#: lms/static/js/certificates/views/certificate_invalidation_view.js
+msgid "Certificate has been successfully invalidated for <%= user %>."
+msgstr "Сертификат амжилттай хүчингүй болсон байна <% = хэрэглэгч%>."
+
+#: lms/static/js/certificates/views/certificate_invalidation_view.js
+#: lms/static/js/certificates/views/certificate_whitelist.js
+#: lms/static/js/certificates/views/certificate_whitelist_editor.js
+msgid "Server Error, Please refresh the page and try again."
+msgstr "Серверийн алдаа, хуудсыг дахин ачаалж дахин оролдоно уу."
+
+#: lms/static/js/certificates/views/certificate_invalidation_view.js
+msgid ""
+"The certificate for this learner has been re-validated and the system is re-"
+"running the grade for this learner."
+msgstr ""
+"Энэ суралцагчийн гэрчилгээ дахин баталгаажсан бөгөөд систем нь энэ "
+"суралцагчийн зэрэглэлийг дахин ажиллуулж байна"
+
+#: lms/static/js/certificates/views/certificate_invalidation_view.js
+msgid ""
+"Could not find Certificate Invalidation in the list. Please refresh the page"
+" and try again"
+msgstr ""
+"Жагсаалтанд Гэрчилгээ хүчингүй болсон ийг олж чадсангүй. Хуудсыг дахин "
+"ачаалж дахин оролдоно уу"
+
+#: lms/static/js/certificates/views/certificate_whitelist.js
+msgid "Student Removed from certificate white list successfully."
+msgstr "Сурагчийн цагаан жагсаалтаас амжилттай хасагдсан сурагч "
+
+#: lms/static/js/certificates/views/certificate_whitelist.js
+msgid ""
+"Could not find Certificate Exception in white list. Please refresh the page "
+"and try again"
+msgstr ""
+"Сертификатын бус зүйлийг цагаан жагсаалтаас олж чадсангүй. Хуудсыг дахин "
+"ачаалж дахин оролдоно уу"
+
+#: lms/static/js/certificates/views/certificate_whitelist_editor.js
+msgid "<%= user %> already in exception list."
+msgstr "<% = хэрэглэгч%> аль хэдийн алга байна."
+
+#: lms/static/js/certificates/views/certificate_whitelist_editor.js
+msgid ""
+"<%= user %> has been successfully added to the exception list. Click "
+"Generate Exception Certificate below to send the certificate."
+msgstr ""
+"<% = хэрэглэгч%> нь үл хамаарах жагсаалт руу амжилттай нэмэгдлээ. "
+"Сертификатыг илгээх бол дээр дарна уу."
+
+#: lms/static/js/course_survey.js
+msgid "There has been an error processing your survey."
+msgstr "Таны судалгааг боловсруулах явцад алдаа гарсан байна."
+
+#: lms/static/js/courseware/credit_progress.js
+#: lms/templates/discovery/facet.underscore
+#: lms/templates/edxnotes/note-item.underscore
+msgid "Less"
+msgstr "Бага байна"
+
+#: lms/static/js/dashboard/donation.js
+msgid "Please enter a valid donation amount."
+msgstr "Зөв хандивын дүнг оруулна уу."
+
+#: lms/static/js/dashboard/donation.js
+msgid "Your donation could not be submitted."
+msgstr "Таны хандивыг өгөх боломжгүй."
+
+#: lms/static/js/dashboard/legacy.js
+msgid "An error occurred. Please try again later."
+msgstr "Алдаа гарлаа. Дараа дахин оролдоорой. "
+
+#: lms/static/js/discovery/views/search_form.js
+#, javascript-format
+msgid "Viewing %s course"
+msgid_plural "Viewing %s courses"
+msgstr[0] "%sхичээлийг үзэх"
+msgstr[1] "хичээлийг үзэх%s"
+
+#: lms/static/js/discovery/views/search_form.js
+#, javascript-format
+msgid "We couldn't find any results for \"%s\"."
+msgstr "Бид ямар ч үр дүнг \"%s\" олж чадсангүй."
+
+#: lms/static/js/discovery/views/search_form.js
+#: lms/templates/search/search_error.underscore
+msgid "There was an error, try searching again."
+msgstr "Алдаа гарсан тул дахин хайж үзээрэй."
+
+#: lms/static/js/edxnotes/views/notes_visibility_factory.js
+#: lms/static/js/edxnotes/views/search_box.js
+msgid ""
+"An error has occurred. Make sure that you are connected to the Internet, and"
+" then try refreshing the page."
+msgstr ""
+"Алдаа гарсан байна. Интернетэд холбогдсон эсэхийг шалгаарай, дараа нь "
+"хуудсыг сэргээгчийг оролдоорой."
+
+#: lms/static/js/edxnotes/views/notes_visibility_factory.js
+msgid "Hide notes"
+msgstr "Тэмдэглэлийг нуух"
+
+#: lms/static/js/edxnotes/views/notes_visibility_factory.js
+msgid "Notes visible"
+msgstr "Тэмдэглэл харагдаж байна"
+
+#: lms/static/js/edxnotes/views/notes_visibility_factory.js
+msgid "Show notes"
+msgstr "Тэмдэглэл харуулах"
+
+#: lms/static/js/edxnotes/views/notes_visibility_factory.js
+msgid "Notes hidden"
+msgstr "Тэмдэглэл нуусан"
+
+#: lms/static/js/edxnotes/views/search_box.js
+msgid "Please enter a term in the {anchorStart} search field{anchorEnd}."
+msgstr "{anchorStart} хайлтын талбарт нэр томъёо оруулна уу {anchorEnd}."
+
+#: lms/static/js/edxnotes/views/tab_item.js
+msgid "Current tab"
+msgstr "Одоогийн таб"
+
+#: lms/static/js/edxnotes/views/tabs/course_structure.js
+msgid "Location in Course"
+msgstr "Курс дахь байршил"
+
+#: lms/static/js/edxnotes/views/tabs/recent_activity.js
+msgid "Recent Activity"
+msgstr "Сүүлийн үеийн үйл ажиллагаа"
+
+#: lms/static/js/edxnotes/views/tabs/search_results.js
+msgid "No results found for \"%(query_string)s\". Please try searching again."
+msgstr "%(query_string)s-ийн үр дүн олдсонгүй.  Дахин оролдоно уу."
+
+#: lms/static/js/edxnotes/views/tabs/search_results.js
+#: lms/templates/search/course_search_results.underscore
+#: lms/templates/search/dashboard_search_results.underscore
+msgid "Search Results"
+msgstr "Хайлтын үр дүн"
+
+#. Translators: this is a title shown before all Notes that have no associated
+#. tags. It is put within
+#. brackets to differentiate it from user-defined tags, but it should still be
+#. translated.
+#: lms/static/js/edxnotes/views/tabs/tags.js
+msgid "[no tags]"
+msgstr "[no tags]"
+
+#: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
+msgid "Unable to submit application"
+msgstr "Програмыг өгөх боломжгүй байна"
+
+#: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
+#: lms/static/js/student_account/views/LoginView.js
+msgid "An error has occurred. Check your Internet connection and try again."
+msgstr "Алдаа гарсан байна. Интернет холболтоо шалгаад дахин оролдоно уу."
+
+#: lms/static/js/financial-assistance/views/financial_assistance_form_view.js
+msgid "Choose one"
+msgstr "Нэгийг сонго"
+
+#: lms/static/js/groups/views/cohort_discussions.js
+#: lms/static/js/groups/views/cohort_discussions_course_wide.js
+#: lms/static/js/groups/views/cohort_discussions_inline.js
+#: lms/static/js/groups/views/cohort_form.js
+#: lms/static/js/groups/views/cohorts.js
+msgid "We've encountered an error. Refresh your browser and then try again."
+msgstr "Бид алдаа гарлаа. Хөтөчөө сэргээж, дахин оролдоно уу."
+
+#: lms/static/js/groups/views/cohort_discussions_course_wide.js
+#: lms/static/js/groups/views/cohort_discussions_inline.js
+#: lms/static/js/views/fields.js
+msgid "Your changes have been saved."
+msgstr "Таны өөрчлөлтүүд хадгалагдсан байна."
+
+#: lms/static/js/groups/views/cohort_editor.js
+msgid "Selected tab"
+msgstr "selected tab"
+
+#: lms/static/js/groups/views/cohort_editor.js
+msgid "Saved cohort"
+msgstr "Бүх алдааг харах"
+
+#: lms/static/js/groups/views/cohort_editor.js
+msgid "Error adding students."
+msgstr "Шинэ оюутан нэмэхэд алдаа гардаг"
+
+#: lms/static/js/groups/views/cohort_editor.js
+msgid "Enter a username or email."
+msgstr "Хэрэглэгчийн нэр эсвэл имэйл оруулна уу."
+
+#: lms/static/js/groups/views/cohort_editor.js
+msgid "{numUsersAdded} student has been added to this cohort"
+msgid_plural "{numUsersAdded} students have been added to this cohort"
+msgstr[0] "{numUsersAdded} оюутнууд энэ кохорт нэмэгдсэн"
+msgstr[1] "{numUsersAdded} оюутнууд энэ кохорт нэмэгдсэн"
+
+#: lms/static/js/groups/views/cohort_editor.js
+msgid "{numMoved} student was removed from {oldCohort}"
+msgid_plural "{numMoved} students were removed from {oldCohort}"
+msgstr[0] "{numMoved} оюутнууд  {oldCohort}-с хасагдсан"
+msgstr[1] "{numMoved} оюутнууд {oldCohort} -с хасагдсан"
+
+#: lms/static/js/groups/views/cohort_editor.js
+msgid "{numPresent} student was already in the cohort"
+msgid_plural "{numPresent} students were already in the cohort"
+msgstr[0] "{numPresent} ийн оюутнууд аль хэдийн цуг байдаг"
+msgstr[1] "{numPresent} ийн оюутнууд аль хэдийн цуг байдаг"
+
+#: lms/static/js/groups/views/cohort_editor.js
+msgid "Unknown user: {user}"
+msgstr "үл мэдэгдэх хэрэглэгч: {user}"
+
+#: lms/static/js/groups/views/cohort_editor.js
+msgid "There was an error when trying to add students:"
+msgid_plural "There were {numErrors} errors when trying to add students:"
+msgstr[0] "Оюутнуудад нэмэхийг оролдоход алдаа байсан:"
+msgstr[1] "Оюутнуудад нэмэхийг оролдоход  {numErrors}  алдаа байсан:"
+
+#: lms/static/js/groups/views/cohort_editor.js
+msgid "View all errors"
+msgstr "Бүх алдааг харах"
+
+#: lms/static/js/groups/views/cohort_form.js
+msgid "You must specify a name for the cohort"
+msgstr "та бүлгийн нэрийг оруулах ёстой"
+
+#: lms/static/js/groups/views/cohort_form.js
+msgid "You did not select a content group"
+msgstr "Та агуулгын бүлэг сонгоогүй байна"
+
+#: lms/static/js/groups/views/cohort_form.js
+msgid "The selected content group does not exist"
+msgstr "Сонгогдсон бүлэг байхгүй байна"
+
+#: lms/static/js/groups/views/cohort_form.js
+msgid "The cohort cannot be saved"
+msgstr "Кохорт хадгалагдах боломжгүй"
+
+#: lms/static/js/groups/views/cohort_form.js
+msgid "The cohort cannot be added"
+msgstr "Кохортыг нэмэх боломжгүй"
+
+#: lms/static/js/groups/views/cohorts.js
+msgid "You currently have no cohorts configured"
+msgstr "Та одоогоор ямар ч бүлэгт тохируулаагүй байна"
+
+#: lms/static/js/groups/views/cohorts.js
+msgid "Add Cohort"
+msgstr "Кохорт нэмэх"
+
+#: lms/static/js/groups/views/cohorts.js
+msgid ""
+"The {cohortGroupName} cohort has been created. You can manually add students"
+" to this cohort below."
+msgstr ""
+"{cohortGroupName} когорт үүсгэгдсэн байна. Та оюутнууд гараар доорх энэ "
+"когорт руу гараар оруулж болно."
+
+#: lms/static/js/groups/views/cohorts.js
+msgid "Assign students to cohorts by uploading a CSV file."
+msgstr "CSV файлыг байршуулж оюутнуудыг группүүдэд оноож өгөх."
+
+#: lms/static/js/groups/views/cohorts.js
+msgid "Choose a .csv file"
+msgstr ".csv файлыг сонгоно уу"
+
+#: lms/static/js/groups/views/cohorts.js
+msgid "Only properly formatted .csv files will be accepted."
+msgstr "Зөвхөн зөв форматыг хүлээн авна. Csv файл"
+
+#: lms/static/js/groups/views/cohorts.js
+msgid "Upload File and Assign Students"
+msgstr "Файл оруулах ба оюутнуудаа оноох"
+
+#: lms/static/js/groups/views/cohorts.js
+msgid ""
+"Your file '{file}' has been uploaded. Allow a few minutes for processing."
+msgstr ""
+"Таны файл '{file}' нь байршуулагдсан байна. Боловсруулахаар хэдэн минут "
+"хүлээж аваарай."
+
+#: lms/static/js/groups/views/course_cohort_settings_notification.js
+msgid "Cohorts Enabled"
+msgstr "Cohorts нь идэвхжсэн байна"
+
+#: lms/static/js/groups/views/course_cohort_settings_notification.js
+msgid "Cohorts Disabled"
+msgstr "Cohorts-г идэвхгүй болгосон"
+
+#: lms/static/js/groups/views/verified_track_settings_notification.js
+msgid ""
+"This course uses automatic cohorting for verified track learners. You cannot"
+" disable cohorts, and you cannot rename the manual cohort named "
+"'{verifiedCohortName}'. To change the configuration for verified track "
+"cohorts, contact your edX partner manager."
+msgstr ""
+
+#: lms/static/js/groups/views/verified_track_settings_notification.js
+msgid ""
+"This course has automatic cohorting enabled for verified track learners, but"
+" the required cohort does not exist. You must create a manually-assigned "
+"cohort named '{verifiedCohortName}' for the feature to work."
+msgstr ""
+"Энэ курс нь баталгаажсан замын суралцагчдад зориулсан автомат координаттай "
+"байдаг боловч шаардлагатай кохорт байхгүй. Та энэ функцийг ажиллуулахын тулд"
+" '{verifiedCohortName}' нэртэй гар аргаар байгуулсан кохорт үүсгэх ёстой."
+
+#: lms/static/js/groups/views/verified_track_settings_notification.js
+msgid ""
+"This course has automatic cohorting enabled for verified track learners, but"
+" cohorts are disabled. You must enable cohorts for the feature to work."
+msgstr ""
+"Энэ курс нь баталгаажсан замын суралцагчдад зориулсан автомат координатыг "
+"идэвхжүүлсэн боловч когортууд идэвхгүй болсон. Та энэ функцийг ажиллуулах "
+"боломжтой байх ёстой."
+
+#: lms/static/js/inline_analytics.js
+msgid "Last Attempt"
+msgstr "Сүүлийн оролдлого"
+
+#: lms/static/js/inline_analytics.js
+msgid "First Attempt"
+msgstr "Анхны оролдлого"
+
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Allow students to generate certificates for this course?"
+msgstr "Суралцагчдад энэ курс сертификат үүсгэхийг зөвшөөрөх үү?"
+
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Prevent students from generating certificates in this course?"
+msgstr "Энэ курсд сертификат үүсгэхийг оюутнуудаас хориглох уу?"
+
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Start generating certificates for all students in this course?"
+msgstr "Энэ курсийн бүх оюутнуудад зориулсан сертификат үүсгэх эхлэх үү?"
+
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Error while generating certificates. Please try again."
+msgstr "Гэрчилгээ үүсгэх явцад алдаа гарлаа. Дахин оролдоно уу."
+
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Start regenerating certificates for students in this course?"
+msgstr "Энэ курсэд суралцагсдад зориулсан сертификатуудыг сэргээх үү?"
+
+#: lms/static/js/instructor_dashboard/certificates.js
+msgid "Error while regenerating certificates. Please try again."
+msgstr "Сертификатыг сэргээх үед алдаа гарлаа. Дахин оролдоно уу."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Loading data..."
+msgstr "Өгөгдлийг ачаалж байна ..."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error getting issued certificates list."
+msgstr "гэрчилгээ авахад алдаа гарлаа."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating proctored exam results. Please try again."
+msgstr "Шалгалтын үр дүнг бий болгох алдаа. Дахин оролдоно уу"
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating survey results. Please try again."
+msgstr "Судалгааны үр дүнг бий болгох алдаа. Дахин оролдоно уу"
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating student profile information. Please try again."
+msgstr "Оюутны профайл мэдээллийг бий болгох алдаа. Дахин оролдоно уу."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error getting student list."
+msgstr "Оюутны жагсаалтыг авах алдаа."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating list of students who may enroll. Please try again."
+msgstr "Суралцаж болох оюутнуудын жагсаалтыг үүсгэх алдаа. Дахин оролдоно уу."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error retrieving grading configuration."
+msgstr "Бид grading тохиргоог дахин эхлүүлэх үед алдаа гарлаа."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating grades. Please try again."
+msgstr "Агуулга бий болгох алдаа. Дахин оролдоно уу."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating problem grade report. Please try again."
+msgstr "Асуудлын зэрэглэлийг үүсгэх алдаа. Дахин оролдоно уу."
+
+#: lms/static/js/instructor_dashboard/data_download.js
+msgid "Error generating ORA data report. Please try again."
+msgstr "ORA-ийн өгөгдлийн тайланг үүсгэх үед алдаа гардаг. Дахин оролдоно уу."
+
+#: lms/static/js/instructor_dashboard/ecommerce.js
+msgid ""
+"There was a problem creating the report. Select \"Create Executive Summary\""
+" to try again."
+msgstr "Тайланг үүсгэхэд алдаа гарлаа. "
+
+#: lms/static/js/instructor_dashboard/ecommerce.js
+msgid "Enter the enrollment code."
+msgstr "сургалтанд хамрагдах кодыг оруулах"
+
+#: lms/static/js/instructor_dashboard/ecommerce.js
+msgid "Cancel enrollment code"
+msgstr "сургалтанд хамрагдах кодыг цуцлах"
+
+#: lms/static/js/instructor_dashboard/ecommerce.js
+msgid "Restore enrollment code"
+msgstr "сургалтанд хамрагдах кодыг ахин сэргээх"
+
+#: lms/static/js/instructor_dashboard/ecommerce.js
+msgid "Mark enrollment code as unused"
+msgstr "сургалтанд хамрагдах кодыг хэрэглээгүй болгох"
+
+#: lms/static/js/instructor_dashboard/membership.js
+#: lms/static/js/student_account/views/account_settings_factory.js
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid "Username"
+msgstr "Хэрэглэгчийн нэр "
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Email"
+msgstr "Цахим хаяг"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Revoke access"
+msgstr "хандалтыг цуцлах"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Enter username or email"
+msgstr "хэрэглэгчийн нэр эсвэл цахим хаягаа оруулна уу"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Please enter a username or email."
+msgstr "хэрэглэгчийн нэр эсвэл цахим хаягаа оруулна уу"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Error changing user's permissions."
+msgstr "хэрэглэгчийн зөвшөөрлийг солиход алдаа гарсан"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Could not find a user with username or email address '<%- identifier %>'."
+msgstr ""
+"Could not find a user with username or email address '<%- identifier %>'.\n"
+"'<%- identifier %>'. хэрэглэгчийн нэртэй эсвэл цахим хаягтай хэрэглэгч олдсонгүй"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Error: User '<%- username %>' has not yet activated their account. Users "
+"must create and activate their accounts before they can be assigned a role."
+msgstr ""
+"Алдаа: '<%- username %>' хэрэглэгч аккаунтаа идэвхижүүлээгүй байна. "
+"Хэрэглэгчдэд үүрэг өгөхөөс өмнө тэд аккаунтаа үүсгэж идэвхижүүлсэн байх "
+"шаардлагатай "
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Error: You cannot remove yourself from the Instructor group!"
+msgstr "Алдаа : Та өөрийгөө сургагч багшийн бүлгэмээс хасаж болохгүй"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Errors"
+msgstr "Алдаа"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "The following errors were generated:"
+msgstr "Эдгээр алдааг олов"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Warnings"
+msgstr "Анхааруулга"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "The following warnings were generated:"
+msgstr "Эдгээр алдааг олов"
+
+#: lms/static/js/instructor_dashboard/membership.js
+#: lms/static/js/views/fields.js
+msgid "Success"
+msgstr "Амжилттай "
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "All accounts were created successfully."
+msgstr "Бүх аккаунтыг амжилттай үүсгэсэн"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Error adding/removing users as beta testers."
+msgstr "Хэрэглэгчийг бета шалгалтанд нэмэх/хасахад алдаа гарсан"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users were successfully added as beta testers:"
+msgstr "Элгээр хэрэглэгчийг бета шалгалтанд амжилттай нэмсэн"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users were successfully removed as beta testers:"
+msgstr "Элгээр хэрэглэгчийг бета шалгалтнаас амжилттай хассан"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users were not added as beta testers:"
+msgstr "Эдгээр хэрэглэгчийг бета шалгалтанд нэмээгүй"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users were not removed as beta testers:"
+msgstr "Эдгээр хэрэглэгчийг бета шалгалтнаас хасаагүй"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Users must create and activate their account before they can be promoted to "
+"beta tester."
+msgstr ""
+"Хэрэглэгчид бета шалгалтанд хамраглахынхаа өмнө өөрсдийн аккаунтаа үүсгэж, "
+"идэвхижүүлсэн байх шаардлагатай"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Could not find users associated with the following identifiers:"
+msgstr "Дараахи зүйлтэй холбоотой хэрэглэгч олсонгүй"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Reason field should not be left blank."
+msgstr "Тус талбайг хоосон орхихгүй байх шалтгаан"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Error enrolling/unenrolling users."
+msgstr "Хэрэглэгчийг хамруулах/ хамруулахаа болмход алдаа гарсан"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "The following email addresses and/or usernames are invalid:"
+msgstr "Дараахи цахим шуудан ба хэрэглэгчийн нэр алдаатай байна"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Successfully enrolled and sent email to the following users:"
+msgstr "Амжилттай хамрагдаж цахим шуудан илгээгдсэн"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "Successfully enrolled the following users:"
+msgstr "Эдгээр суралцагчид амжилттай хамгадсан"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Successfully sent enrollment emails to the following users. They will be "
+"allowed to enroll once they register:"
+msgstr ""
+"Цахим шууданг дараахи суралцагчид руу амжилттай илгээлээ.Эдгээр суралцагчид "
+"бүртгүүлснийхээ дараа сургалтанд хамрагдах эрхтэй болно"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users will be allowed to enroll once they register:"
+msgstr "Эдгээр суралцагчид бүртгүүлснийхээ дараа сургалтанд хамрагдана"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Successfully sent enrollment emails to the following users. They will be "
+"enrolled once they register:"
+msgstr ""
+"Цахим шууданг дараахи суралцагчид руу амжилттай илгээлээ.Эдгээр суралцагчид "
+"бүртгүүлснийхээ дараа сургалтанд хамрагдана"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "These users will be enrolled once they register:"
+msgstr "Эдгээр суралцагчид бүртгүүлснийхээ дараа сургалтанд хамрагдана"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"Emails successfully sent. The following users are no longer enrolled in the "
+"course:"
+msgstr ""
+"Цахим шууданг амжилттай илгээлээ. Дараахи суралцагчид энэ сургалтанд "
+"хамрагдахаа больсон"
+
+#. Translators: A list of users appears after this sentence;
+#: lms/static/js/instructor_dashboard/membership.js
+msgid "The following users are no longer enrolled in the course:"
+msgstr "Дараахи суралцагчид энэ сургалтанд хамрагдахаа больсон"
+
+#: lms/static/js/instructor_dashboard/membership.js
+msgid ""
+"These users were not affiliated with the course so could not be unenrolled:"
+msgstr ""
+"Эдгээр хэрэглэгчид сургалттай хамааралгүй тул сургалтаас гарах боломжгүй"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Your message must have a subject."
+msgstr "Таны захиа гарчигтай байх естой"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Your message cannot be blank."
+msgstr "Таны захиа хоосон байж болохгүй"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Your message must have at least one target."
+msgstr "Таны захиа хамгийн багадаа нэг байтай байх естой"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid ""
+"There are invalid keywords in your email. Check the following keywords and "
+"try again."
+msgstr ""
+"Таны цахим шууданд алдаатай түлхүүр үг байна. Дараахи түлхүүр үгүүдийг "
+"шалгаад ахин оролдоно уу"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Yourself"
+msgstr "Өөрөө"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Everyone who has staff privileges in this course"
+msgstr "Энэ сургалтын ажилтаны эрхтэй бүх хүмүүс"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "All learners who are enrolled in this course"
+msgstr "Энэ сургалтанд хамрагдсан бүх сцралцагчид"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "All learners in the {cohort_name} cohort"
+msgstr "{cohort_name} бүлэгт байгаа бүх суралцагчид "
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid ""
+"Your email message was successfully queued for sending. In courses with a "
+"large number of learners, email messages to learners might take up to an "
+"hour to be sent."
+msgstr ""
+"Таны цахим шууданг илгээх дараалалд амжилттай орууллаа. Олон тооны "
+"суралцагчидтай сургалтуудын цахим шуудан нэг цаг хүртэлхи хугацааны дараа "
+"явж болно"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid ""
+"You are sending an email message with the subject {subject} to the following"
+" recipients."
+msgstr "Та доорхи хүн рүү {subject} ийм гарчигтай цахим шуудан илгээж байна "
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Is this OK?"
+msgstr "Энэ зүгээр үү?"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Error sending email."
+msgstr "Цахим шуудан илгээхэд алдаа гарлаа"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "There is no email history for this course."
+msgstr "Энэ сургалтанд цахим шууангийн түүх байхгүй байна"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "There was an error obtaining email task history for this course."
+msgstr ""
+"Энэ сургалтын түүхийн даалгаврын цахим шууданг олж авахад алдаа гарлаа"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "There was an error obtaining email content history for this course."
+msgstr "Энэ сургалтын түүхийн агуулгын цахим шууданг олж авахад алдаа гарлаа"
+
+#: lms/static/js/instructor_dashboard/send_email.js
+msgid "Send to:"
+msgstr "Илгээх: "
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Please enter a student email address or username."
+msgstr "Суралцагчийн хэрэглэгчийн нэр эсвэл цахим хаягийг оруулна уу"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error getting student progress url for '<%- student_id %>'. Make sure that "
+"the student identifier is spelled correctly."
+msgstr ""
+"Суралцагчийн дэвшилтийн url-г авахад алдаа гарав '<% - student_id%>'. Оюутны"
+" таних код зөв бичигдсэн эсэхийг шалгаарай."
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Please enter a problem location."
+msgstr "Бодлогын байршлыг оруулна уу"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Success! Problem attempts reset for problem '<%- problem_id %>' and student "
+"'<%- student_id %>'."
+msgstr ""
+"Амжилттай! <%- student_id %>суралцагчийн '<%- problem_id %>’ бодлогын "
+"оролдлогыг засварлалаа"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error resetting problem attempts for problem '<%= problem_id %>' and student"
+" '<%- student_id %>'. Make sure that the problem and student identifiers are"
+" complete and correct."
+msgstr ""
+"<%- student_id %>суралцагчийн '<%- problem_id %>’ бодлогын оролдлогыг "
+"засварлахад алдаа гарлаа. Мэдээлэл үнэн зөв ба бүрэн эсэхийг шалгаарай"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Delete student '<%- student_id %>'s state on problem '<%- problem_id %>'?"
+msgstr ""
+"'<%- student_id %>суралцагчийн '<%- problem_id %>’ бодлого дахь төлвийг "
+"устгах уу?"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error deleting student '<%- student_id %>'s state on problem '<%- problem_id"
+" %>'. Make sure that the problem and student identifiers are complete and "
+"correct."
+msgstr ""
+"'<%- student_id %>суралцагчийн '<%- problem_id %>’ бодлого дахь төлвийг "
+"устгахад алдаа гарлаа. Мэдээлэл үнэн зөв ба бүрэн эсэхийг шалгаарай"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Module state successfully deleted."
+msgstr "Модулийн төлвийг амжилттай устгалаа"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error getting task history for problem '<%- problem_id %>' and student '<%- "
+"student_id %>'. Make sure that the problem and student identifiers are "
+"complete and correct."
+msgstr ""
+"'<%- problem_id %>' бодлого ба '<%- student_id %>'суралцагчийн даалгаврын "
+"түүхийг харуулахад алдаа гарлаа"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Entrance exam attempts is being reset for student '{student_id}'."
+msgstr ""
+"'{student_id}' суралцагчийн элсэлтийн шалгалтын оролдлогыг засварлаж байна "
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error resetting entrance exam attempts for student '{student_id}'. Make sure"
+" student identifier is correct."
+msgstr ""
+"{student_id}'суралцагчийн элсэлтийн шалгалтын төлвийг устгахад алдаа гарлаа."
+" "
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Enter a student's username or email address."
+msgstr "Суралцагчийн хэрэглэгчийн нэр эсвэл цахим хаягийг оруулна уу"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Do you want to allow this student ('{student_id}') to skip the entrance "
+"exam?"
+msgstr "Та ('{student_id}') суралцагчийг элсэлтийн шалгалтаас чөлөөлөх үү?"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"An error occurred. Make sure that the student's username or email address is"
+" correct and try again."
+msgstr ""
+"Алдаа гарлаа.Суралцагчийн хэрэглэгчийн нэр ба цахим хаяг зөв эсэхийг шалгаад"
+" ахин оролдож үзнэ үү"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Entrance exam state is being deleted for student '{student_id}'."
+msgstr "{student_id}'суралцагчийн элсэлтийн шалгалтын төлвийг устгаж байна"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error deleting entrance exam state for student '{student_id}'. Make sure "
+"student identifier is correct."
+msgstr ""
+"{student_id}'суралцагчийн элсэлтийн шалгалтын төлвийг устгахад алдаа гарлаа."
+" "
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error getting entrance exam task history for student '{student_id}'. Make "
+"sure student identifier is correct."
+msgstr ""
+"{student_id}'суралцагчийн элсэлтийн шалгалтын түүхийг харахад алдаа гарлаа. "
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Reset attempts for all students on problem '<%- problem_id %>'?"
+msgstr ""
+"'<%- problem_id %>'бодлого дээр бүх суралцагчийн оролдлогыг ахин засах уу"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Successfully started task to reset attempts for problem '<%- problem_id %>'."
+" Click the 'Show Task Status' button to see the status of the task."
+msgstr ""
+"'<%- problem_id %>'бодлого дээр бүх суралцагчийн оролдлогыг ахин засах "
+"даалгавар амжилттай эхэллээ. Мэдээлэл үнэн зөв ба бүрэн эсэхийг шалгаарай"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error starting a task to reset attempts for all students on problem '<%- "
+"problem_id %>'. Make sure that the problem identifier is complete and "
+"correct."
+msgstr ""
+"'<%- problem_id %>'бодлого дээр бүх суралцагчийн оролдлогыг ахин засахад "
+"алдаа гарлаа. Мэдээлэл үнэн зөв ба бүрэн эсэхийг шалгаарай"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Error listing task history for this student and problem."
+msgstr ""
+"Энэхүү суралцагч ба бодлогоны даалгаврын түүхийг жагсаахад алдаа гарлаа"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Started rescore problem task for problem '<%- problem_id %>' and student "
+"'<%- student_id %>'. Click the 'Show Task Status' button to see the status "
+"of the task."
+msgstr ""
+"'<%- problem_id %>' бодлого ба '<%- student_id %>'суралцагчийг ахин үнэлэх "
+"даалгавар эхэлсэн. Даалгаврын төлвийг харахын тулд “Даалгаврын төлвийг "
+"харуулах” дээр дарна уу"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error starting a task to rescore problem '<%- problem_id %>' for student "
+"'<%- student_id %>'. Make sure that the the problem and student identifiers "
+"are complete and correct."
+msgstr ""
+"'<%- student_id %>’ суралцагчийн<%- problem_id %>'Бодлогонд ахин дүн өгөх "
+"даалгаврыг эхлүүлэхэд алдаа гарлаа. Мэдээлэл үнэн зөв ба бүрэн эсэхийг "
+"шалгаарай"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Started entrance exam rescore task for student '{student_id}'. Click the "
+"'Show Task Status' button to see the status of the task."
+msgstr ""
+"{student_id}’ суралцагчийн элсэлтийн шалгалтыг ахин дүгнэх даалгаврыг "
+"эхлүүллээ. Даалгаврын төлвийг харахын тулд “'Show Task Status' дээр дарна уу"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error starting a task to rescore entrance exam for student '{student_id}'. "
+"Make sure that entrance exam has problems in it and student identifier is "
+"correct."
+msgstr ""
+"{student_id}’ суралцагчийн элсэлтийн шалгалтыг ахин дүгнэх даалгаврыг "
+"эхлүүлэхэд алдаа гарлаа. Элсэлтийн даалгавар дотроо бодлоготой эсэхийг "
+"шалгана уу "
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid "Rescore problem '<%- problem_id %>' for all students?"
+msgstr "'<%- problem_id %>’Бодлогонд бүх суралцагчдад ахин дүн өгөх үү? "
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Successfully started task to rescore problem '<%- problem_id %>' for all "
+"students. Click the 'Show Task Status' button to see the status of the task."
+msgstr ""
+"'<%- problem_id %>’Бодлогонд бүх суралцагчдад ахин дүн өгөх даалгавар "
+"амжилттай эхэллээ. Даалгаврын төлвийг харахын тулд “Даалгаврын төлвийг "
+"харуулах” дээр дарна уу"
+
+#: lms/static/js/instructor_dashboard/student_admin.js
+msgid ""
+"Error starting a task to rescore problem '<%- problem_id %>'. Make sure that"
+" the problem identifier is complete and correct."
+msgstr ""
+"'<%- problem_id %>'Бодлогонд ахин дүн өгөх даалгаврыг эхлүүлэхэд алдаа "
+"гарлаа. Мэдээлэл үнэн зөв ба бүрэн эсэхийг шалгаарай "
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Task Type"
+msgstr "Даалгаврын төрөл"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Task inputs"
+msgstr "Даалгаврын оруулга"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Task ID"
+msgstr "Даалгаврын хувийн дугаар"
+
+#. Translators: a "Requester" is a username that requested a task such as
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Requester"
+msgstr "Хүсэлт гаргагч "
+
+#. Translators: The length of a task (eg, sending email) in seconds appears
+#. this
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Duration (sec)"
+msgstr "Хугацаа (сек)"
+
+#. Translators: The state (eg, "In progress") of a task (eg, sending email)
+#. appears after this.
+#: lms/static/js/instructor_dashboard/util.js
+msgid "State"
+msgstr "Байдал"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Task Status"
+msgstr "Даалгаврын төлөв"
+
+#. Translators: a "Task" is a background process such as grading students or
+#. sending email
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Task Progress"
+msgstr "Даалгаврын ахиц"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid ""
+"An error occurred retrieving your email. Please try again later, and contact"
+" technical support if the problem persists."
+msgstr ""
+"Таны цахим шууданг ахин хайхад алдаа гарлаа. Хэсэг хугацааны дараа ахин "
+"оролдож үзээд хэрвээ асуудал байсаар байвал техникийн багтай холбогдоно уу"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Unknown"
+msgstr "Үл мэдэгдэх"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Subject"
+msgstr "Гарчиг"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Sent By"
+msgstr "Илгээсэн хүн"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Sent To"
+msgstr "Илгээх"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Time Sent"
+msgstr "Илгээсэн хугацаа"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Number Sent"
+msgstr "Илгээсэн тоо"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Copy Email To Editor"
+msgstr "Шууданг редактор луу хуулбарлах"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Subject:"
+msgstr "Гарчиг"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Sent By:"
+msgstr "Илгээсэн хүн"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Time Sent:"
+msgstr "Илгээсэн хугацаа"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Sent To:"
+msgstr "Илгээх"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Message:"
+msgstr "Мессеж: "
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "No tasks currently running."
+msgstr "Одоогоор ажиллаж байгаа үйлдэл байхгүй байна"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "File Name"
+msgstr "Файлын нэр"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid ""
+"Links are generated on demand and expire within 5 minutes due to the "
+"sensitive nature of student information."
+msgstr ""
+"Холбоосыг шаардлагатай үед үүсгэх ба суралцагчийн мэдээллийн мэдрэг "
+"байдалтай холбоотойгоор 5 минутын дотор устгагдана"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Actions"
+msgstr "Үйлдэл"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Row actions are found here: ie. Deletion."
+msgstr "үйлдэл энд олдлоо: устгах"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Are you sure you want to delete the file "
+msgstr "Та энэ файлыг устгахдаа итгэлтэй байна уу?"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Error getting forum csv"
+msgstr "форумын csv алдаа гарлаа"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "The file "
+msgstr "файл"
+
+#: lms/static/js/instructor_dashboard/util.js
+msgid "Error deleting the file "
+msgstr "файлыг устгахад алдаа гарлаа"
+
+#: lms/static/js/search/base/views/search_results_view.js
+#, javascript-format
+msgid "%s result"
+msgid_plural "%s results"
+msgstr[0] "%sүр дүн"
+msgstr[1] "%s үр дүн"
+
+#: lms/static/js/staff_debug_actions.js
+msgid "Unknown Error Occurred."
+msgstr "Алдаа гарлаа"
+
+#: lms/static/js/staff_debug_actions.js
+msgid "Successfully reset the attempts for user {user}"
+msgstr "Хэрэглэгчийн оролдлогыг амжилттай заслаа{user}"
+
+#: lms/static/js/staff_debug_actions.js
+msgid "Failed to reset attempts for user."
+msgstr "Хэрэглэгчийн оролдлогыг засахад алдаа гарлаа"
+
+#: lms/static/js/staff_debug_actions.js
+msgid "Successfully deleted student state for user {user}"
+msgstr "{user} хэрэглэгчийн хувьд оюутны статусыг амжилттай устгасан"
+
+#: lms/static/js/staff_debug_actions.js
+msgid "Failed to delete student state for user."
+msgstr "Хэрэглэгчид хаин дүн өгөхөд алдаа гарлаа"
+
+#: lms/static/js/staff_debug_actions.js
+msgid "Successfully rescored problem for user {user}"
+msgstr ""
+"Хэрэглэгчийн оноог ахиулахын тулд бодлогонд ахин дүн өгөх амжилттай боллоо "
+"{user}"
+
+#: lms/static/js/staff_debug_actions.js
+msgid "Failed to rescore problem for user."
+msgstr "Хэрэглэгчид хаин дүн өгөхөд алдаа гарлаа"
+
+#: lms/static/js/staff_debug_actions.js
+msgid "Successfully rescored problem to improve score for user {user}"
+msgstr ""
+"Хэрэглэгчийн оноог ахиулахын тулд бодлогонд ахин дүн өгөх амжилттай боллоо "
+"{user}"
+
+#: lms/static/js/staff_debug_actions.js
+msgid "Failed to rescore problem to improve score for user."
+msgstr ""
+"Хэрэглэгчийн оноог ахиулахын тулд бодлогонд ахин дүн өгөхөд алдаа гарлаа"
+
+#: lms/static/js/student_account/account.js
+msgid "The data could not be saved."
+msgstr "Мэдээллийг хадгалж чадсангүй"
+
+#: lms/static/js/student_account/account.js
+msgid "Please enter a valid email address"
+msgstr "Идэвхитэй нууц үг оруулна уу"
+
+#: lms/static/js/student_account/account.js
+msgid "Please enter a valid password"
+msgstr "Идэвхитэй нууц үг оруулна уу"
+
+#: lms/static/js/student_account/account.js
+msgid ""
+"Password reset email sent. Follow the link in the email to change your "
+"password."
+msgstr ""
+"Нууц үг солих шууданг илгээлээ. Цахим шуудан дахь холбоосыг даган нууц үгээ "
+"солино уу"
+
+#: lms/static/js/student_account/account.js
+msgid "We weren't able to send you a password reset email."
+msgstr "Бид тан руу нууц үг солих шууданг илгээж чадсангүй"
+
+#: lms/static/js/student_account/account.js
+msgid "Please check your email to confirm the change"
+msgstr "Өөрчлөлтийг бататгахын тулд цахим шуудангаа шалгана уу"
+
+#: lms/static/js/student_account/views/FinishAuthView.js
+msgid "Saving your email preference"
+msgstr "Таны цахим шууданг хадгалж байна"
+
+#: lms/static/js/student_account/views/FinishAuthView.js
+msgid "Enrolling you in the selected course"
+msgstr "Таныг сонгосоэ сургалтанд тань бүртгэж байна"
+
+#: lms/static/js/student_account/views/FinishAuthView.js
+msgid "Adding the selected course to your cart"
+msgstr "Сонгосон сургалтыг таны сагс руу нэмж байна"
+
+#: lms/static/js/student_account/views/FinishAuthView.js
+msgid "Loading your courses"
+msgstr "Таны сургалтуудыг уншиж байна"
+
+#: lms/static/js/student_account/views/FormView.js
+#: lms/static/js/student_account/views/RegisterView.js
+msgid "An error occurred."
+msgstr "Алдаа гарлаа"
+
+#: lms/static/js/student_account/views/LoginView.js
+msgid "We couldn't sign you in."
+msgstr "Та нэвтэрч чадсангүй"
+
+#: lms/static/js/student_account/views/LoginView.js
+#, javascript-format
+msgid "An error occurred when signing you in to %s."
+msgstr " %s руу нэвтэрч байхад алдаа гарлаа"
+
+#: lms/static/js/student_account/views/LoginView.js
+msgid "Check Your Email"
+msgstr "Цахим шуудангаа шалгана уу"
+
+#: lms/static/js/student_account/views/LoginView.js
+msgid ""
+"{paragraphStart}You entered {boldStart}{email}{boldEnd}. If this email "
+"address is associated with your {platform_name} account, we will send a "
+"message with password reset instructions to this email "
+"address.{paragraphEnd}{paragraphStart}If you do not receive a password reset"
+" message, verify that you entered the correct email address, or check your "
+"spam folder.{paragraphEnd}{paragraphStart}If you need further assistance, "
+"{anchorStart}contact technical support{anchorEnd}.{paragraphEnd}"
+msgstr ""
+"{paragraphStart} {boldStart}{email}{boldEnd}та орууллаа. Хэрвээ энэ цахим "
+"хаяг таны {platform_name} аккаунттай холбоотой бол бид энэ хаяг руу тань "
+"нууц үгээ солих зааварчилгаа бүхий шууданг илгээнэ. "
+"{paragraphEnd}{paragraphStart} Хэрвээ та нууц үгээ солих зааварчилгааг "
+"хүлээж аваагүй бол цахим хаягаа зөв оруулсан эсэхээ мөн спам фолдероо "
+"шалгана уу. {paragraphEnd}{paragraphStart} Хэрвээ танд нэмэлт тусламж "
+"хэрэгтэй бол {anchorStart} техникийн туслалцаатай {anchorEnd} холбогдоно уу "
+"{paragraphEnd}"
+
+#: lms/static/js/student_account/views/LoginView.js
+msgid ""
+"An error has occurred. Try refreshing the page, or check your Internet "
+"connection."
+msgstr ""
+"Алдаа гарлаа. Хуудсыг ахин уншуулаад эсвэл интернэтийн холбоосоо шалгаад "
+"ахин оролдож үзнэ үү."
+
+#: lms/static/js/student_account/views/LoginView.js
+msgid ""
+"You have successfully signed into %(currentProvider)s, but your "
+"%(currentProvider)s account does not have a linked %(platformName)s account."
+" To link your accounts, sign in now using your %(platformName)s password."
+msgstr " "
+
+#: lms/static/js/student_account/views/RegisterView.js
+msgid "We couldn't create your account."
+msgstr "Бид таны аккаунтыг үүсгэж чадсангүй"
+
+#: lms/static/js/student_account/views/RegisterView.js
+msgid "You've successfully signed into %(currentProvider)s."
+msgstr "Та амжилттай нэвтэрлээ.%(currentProvider)s. "
+
+#: lms/static/js/student_account/views/RegisterView.js
+msgid ""
+"We just need a little more information before you start learning with "
+"%(platformName)s."
+msgstr ""
+"Таныг суралцаж эхлэхээс өмнө бидэнд бага зэрэг мэдээлэл хэрэгтэй "
+"байна%(platformName)s. "
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Basic Account Information"
+msgstr "аккаунтын ерөнхий мэдээлэл"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"These settings include basic information about your account. You can also "
+"specify additional information and see your linked social accounts on this "
+"page."
+msgstr ""
+"Энэ тохиргоонд таны аккаунтын ерөнхий мэдээллийг багтаана. Та мөн энэ "
+"хуудсан дээр нэмэлт мэдээллээ оруулж, холбосон олон нийтийн сүлжээний "
+"аккаунтуудаа харах боломжтой "
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"The name that identifies you throughout {platform_name}. You cannot change "
+"your username."
+msgstr ""
+"{platform_name} таныг таних нэр. Та хэрэглэгчийн нэрээ солих боломжгүй."
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Additional Information"
+msgstr "Нэмэлт мэдээлэл"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Education Completed"
+msgstr "Боловсрол"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Gender"
+msgstr "Хүйс"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Year of Birth"
+msgstr "Төрсөн он"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid "Preferred Language"
+msgstr "Сонгох хэл"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Full Name"
+msgstr "Бүтэн нэр"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"The name that appears on your Statements of Accomplishment. Other learners "
+"never see your full name."
+msgstr "Батламж дээр бичигдэх нэр. Бусад сурагчид таны бүтэн нэрийг харахгүй."
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Email Address"
+msgstr "Цахим хаяг"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"The email address you use to sign in. Communications from {platform_name} "
+"and your courses are sent to this address."
+msgstr ""
+"Та нэвтэрч орохдоо ашиглах цахим хаяг. {platform_name} болон сургалттай "
+"холбоотой харилцаанууд энэ цахим хаяг руу илгээгдэх болно. "
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+#: lms/templates/student_account/account.underscore
+msgid "Password"
+msgstr "Нууц үг"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Reset Your Password"
+msgstr "Нууц үгээ солих"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"When you select \"Reset Your Password\", a message will be sent to the email"
+" address for your {platform_name} account. Click the link in the message to "
+"reset your password."
+msgstr ""
+"Та \"Нууц үгээ солих\" гэдгийг сонгосон тохиолдолд таны {platform_name} "
+"аккаунтын цахим хаяг руу шуудалн илгээгдэнэ. Шуудан дахь холбоос дээр дарж "
+"нууц үгээ солиорой. "
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Language"
+msgstr "Хэл"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"The language used throughout this site. This site is currently available in "
+"a limited number of languages."
+msgstr ""
+"Энэ сайтад ашиглаж буй хэл. Энэ сайт одоогоор цөөн хэдэн хэлээр "
+"хязгаарлагдаж байна"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Country or Region"
+msgstr "Бүс нутаг"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Time Zone"
+msgstr "цагийн бүс"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"Select the time zone for displaying course dates. If you do not specify a "
+"time zone, course dates, including assignment deadlines, will be displayed "
+"in your browser's local time zone."
+msgstr ""
+"Сургалтын огноог харуулах цагийн бүсийг сонгоно уу. Хэрвээ та цагийн бүсээ "
+"сонгохгүй бол гэрийн даалгаврын сүүлийн хугацаа зэрэг нь таны орон нутгийн "
+"цагаар харагдах болно. "
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "All Time Zones"
+msgstr "Цагийн бүх бүс"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "Default (Local Time Zone)"
+msgstr "(Бүс нутгийн цаг)"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+#: lms/static/js/student_account/views/account_settings_view.js
+msgid "Linked Accounts"
+msgstr "Холбосон аккаунтууд"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"Below is a list of accounts you have linked to your {platform_name} account."
+msgstr ""
+"та өөрийн {platform_name} аккануттай холбосон аккаунтуудын жагсаалт доор "
+"байна "
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "ORDER NAME"
+msgstr "захиалгын нэр"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "ORDER PLACED"
+msgstr "захиалгын байршил"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "TOTAL"
+msgstr "Нийт"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "ORDER NUMBER"
+msgstr "захиалгын дугаар"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid "My Orders"
+msgstr "Миний захиалга"
+
+#: lms/static/js/student_account/views/account_settings_factory.js
+msgid ""
+"This page contains information about orders that you have placed with "
+"{platform_name}."
+msgstr "{platform_name} та ашиглан хийсэн захиалгыг энэ хуудас агуулж байна "
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid ""
+"We've sent a confirmation message to {new_email_address}. Click the link in "
+"the message to update your email address."
+msgstr ""
+"Бид {new_email_address}рүү баталгаажуулах шуудан илгээлээ. Өөрийн цахим "
+"хаягаа өөрчлөхийн тулд холбоос дээр дарна уу "
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid ""
+"You must sign out and sign back in before your language changes take effect."
+msgstr "сольсон хэлээ ашиглаж эхллэхийн тулд гараад эргээд буцаж орж ирнэ үү"
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid ""
+"We've sent a message to {email_address}. Click the link in the message to "
+"reset your password."
+msgstr ""
+"{email_address}бид руу шуудан илгээлээ. нууц үгээ солихын тулд холбоос дээр "
+"дараарай "
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid "Link your {accountName} account"
+msgstr "{accountName} Аккаунтаа холбох"
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid "Unlink This Account"
+msgstr "энэ аккаунтаас холбоосыг болиулах"
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid ""
+"You can use your {accountName} account to sign in to your {platformName} "
+"account."
+msgstr ""
+"өөрийн {accountName} аккаунтаа {platformName} аккаунт руу нэвтрэхдээ ашиглах"
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid "Unlink your {accountName} account"
+msgstr "{accountName} аккаунтаа холбоосыг болиулах"
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid "Link Your Account"
+msgstr "Аккаунтаа холбох"
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid ""
+"Link your {accountName} account to your {platformName} account and use "
+"{accountName} to sign in to {platformName}."
+msgstr ""
+"өөрийн {accountName} аккаунтаа {platformName} аккаунттай холбоод "
+"{platformName} нэвтрэхдээ {accountName}"
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid "Unlinking"
+msgstr "ашиглах "
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid "Linking"
+msgstr "Холбож байна"
+
+#: lms/static/js/student_account/views/account_settings_fields.js
+msgid "Successfully unlinked."
+msgstr "Амжилттай холбоосыг болиуллаа"
+
+#: lms/static/js/student_account/views/account_settings_view.js
+msgid "Account Information"
+msgstr "Аккаунтын мэдээлэл"
+
+#: lms/static/js/student_account/views/account_settings_view.js
+msgid "Order History"
+msgstr "түүх захиалах"
+
+#: lms/static/js/student_profile/views/badge_list_container.js
+msgid "Accomplishments Pagination"
+msgstr "амжилтын хуудас дугаарлах"
+
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid "{platform_name} learners can see my:"
+msgstr "{platform_name}суралцагчид миний талаар харж болох зүйлс "
+
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid "Limited Profile"
+msgstr "Хязгаарлагдсан профайл"
+
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid "Full Profile"
+msgstr "Бүтэн профайл"
+
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid "Country"
+msgstr "Улс"
+
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid "Add Country"
+msgstr "Улс нэмэх"
+
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid "Add language"
+msgstr "Хэл нэмэх"
+
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid "About me"
+msgstr "Миний тухай"
+
+#: lms/static/js/student_profile/views/learner_profile_factory.js
+msgid ""
+"Tell other learners a little about yourself: where you live, what your "
+"interests are, why you're taking courses, or what you hope to learn."
+msgstr ""
+"Бусад суралцагчдад хаана амьдардаг, ямар сонирхолтой, яагаад сургалтанд "
+"хамрагдаж байгаа, юу сурмаар байгаа зэрэг өөрийнхөө талаар багахан "
+"танилцуулга хийнэ үү"
+
+#: lms/static/js/student_profile/views/learner_profile_fields.js
+msgid "Account Settings page."
+msgstr "Аккаунт засварлах хуудас"
+
+#: lms/static/js/student_profile/views/learner_profile_fields.js
+msgid ""
+"You must specify your birth year before you can share your full profile. To "
+"specify your birth year, go to the {account_settings_page_link}"
+msgstr ""
+"Та бүтэн профайлаа хуваалцахын өмнө төрсөн оноо оруулсан байх шаардлагатай. "
+"Төрсөн оноо оруулахын тулд {account_settings_page_link} руу ороорой"
+
+#: lms/static/js/student_profile/views/learner_profile_fields.js
+msgid ""
+"You must be over 13 to share a full profile. If you are over 13, make sure "
+"that you have specified a birth year on the {account_settings_page_link}"
+msgstr ""
+"Та бүтэн профайлаа хуваалцахын тулд 13-с дээш настай байх шаардлагатай. "
+"Хэрвээ 13-с дээш настай бол та төрсөн оноо {account_settings_page_link}"
+
+#: lms/static/js/student_profile/views/learner_profile_fields.js
+msgid "Profile Image"
+msgstr "Профайлын зураг"
+
+#: lms/static/js/student_profile/views/learner_profile_fields.js
+msgid "Profile image for {username}"
+msgstr "Профайлын зураг {username}"
+
+#: lms/static/js/student_profile/views/learner_profile_view.js
+msgid "About Me"
+msgstr "Миний тухай"
+
+#: lms/static/js/student_profile/views/learner_profile_view.js
+msgid "Accomplishments"
+msgstr "Амжилтууд"
+
+#: lms/static/js/student_profile/views/learner_profile_view.js
+msgid "Profile"
+msgstr "Профайл"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "Whitelist a user"
+msgstr "хэрэглэгчийг жагсаалтанд нэмэх"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "Add a user to the whitelist for a course"
+msgstr "хэрэглэгчийг сургалтын жагсаалтанд нэмэх"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "username"
+msgstr "хэрэглэгчийн нэр "
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "course_id"
+msgstr "сургалтын хувийн дугаар"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "De-whitelist a user"
+msgstr "хэрэглэгчийг жагсаалтаас хасах"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "Remove a user from the whitelist for a course"
+msgstr "хэрэглэгчийг жагсаалтаас гаргах"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "View user whitelist"
+msgstr "Хэрэглэгчийн жагсаалтыг харах"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "View the list of whitelisted users for a course"
+msgstr "сургалтын хүлээлгийн жагсаалтанд байгаа хэрэглэгчдийг харах"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "Generate a single certificate"
+msgstr "Нэг батламж үүсгэх"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid ""
+"Put a request on the queue to recreate the certificate for a particular user"
+" in a particular course"
+msgstr ""
+"тодорхой сургалтын тодорхой хэрэглэгчийн батламжийг ахин гаргах хүсэлтээ "
+"жагсаалтанд оруулна уу"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "grade"
+msgstr "дүн"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "designation"
+msgstr "дизайн"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "template"
+msgstr "загвар"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "Update certificate status"
+msgstr "батламжийн төлвийг сайжруулах"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid ""
+"Update the status of a certificate for a particular user in a particular "
+"course"
+msgstr ""
+"тодорхой сургалтын тодорхой хэрэглэгчийн батламжийн төлдвийг сайжруулах"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "username or email"
+msgstr "хэрэглэгчийн нэр эсвэл цахим хаяг"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "status (defaults to `unavailable`)"
+msgstr "төлөв (defaults to `unavailable`)"
+
+#: lms/static/js/sysadmin/mgmt_commands.js
+msgid "Execute Command"
+msgstr "Үйлдлийг гүйцэтгэх"
+
+#: lms/static/js/verify_student/views/image_input_view.js
+msgid "Image Upload Error"
+msgstr "Зураг оруулж чадсангүй"
+
+#: lms/static/js/verify_student/views/image_input_view.js
+msgid "Please verify that you have uploaded a valid image (PNG and JPEG)."
+msgstr "Та идэвхитэй зураг оруулсан эсэхээ шалгана уу (PNG and JPEG)"
+
+#: lms/static/js/verify_student/views/incourse_reverify_view.js
+#: lms/static/js/verify_student/views/review_photos_step_view.js
+msgid "An error has occurred. Please try again later."
+msgstr "Алдаа гарлаа. Ахин оролдоно уу"
+
+#: lms/static/js/verify_student/views/incourse_reverify_view.js
+#: lms/static/js/verify_student/views/review_photos_step_view.js
+msgid "Could not submit photos"
+msgstr "Зураг оруулж чадсангүй"
+
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "Professional Education Verified Certificate"
+msgstr "Мэргэжлийн боловсрол Баталгаажсан батламж"
+
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "Professional Education"
+msgstr "Мэргэжлийн боловсрол"
+
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "Verified Certificate upgrade"
+msgstr "Баталгаажсан батламжаа сайжруулах"
+
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "Verified Certificate"
+msgstr "Баталгаажсан батламж"
+
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "Checkout"
+msgstr "Төлөх"
+
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "Checkout with PayPal"
+msgstr "Paypal-р төлөх"
+
+#. Translators: 'processor' is the name of a third-party payment processing
+#. vendor (example: "PayPal")
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "Checkout with {processor}"
+msgstr "{processor}-р дуусгах"
+
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "All payment options are currently unavailable."
+msgstr "Төлбөр төлөх бүх арга боломжгүй байна"
+
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "Try the transaction again in a few minutes."
+msgstr "Хэдэн хормын дараа шилжүүлгийг ахин хийнэ үү"
+
+#: lms/static/js/verify_student/views/make_payment_step_view.js
+msgid "Could not submit order"
+msgstr "Захиалга өгч чадсангүй"
+
+#: lms/static/js/verify_student/views/payment_confirmation_step_view.js
+msgid "Could not retrieve payment information"
+msgstr "Таны төлбөрийн мэдээллийг олсонгүй"
+
+#: lms/static/js/verify_student/views/reverify_view.js
+msgid "Take a photo of your ID"
+msgstr "Өөрийн бичиг баримтын зургийг авах"
+
+#: lms/static/js/verify_student/views/reverify_view.js
+msgid "Review your info"
+msgstr "Өөрийн мэдээллээ ахин харах"
+
+#: lms/static/js/verify_student/views/reverify_view.js
+msgid "Confirm"
+msgstr "Батлах"
+
+#: lms/static/js/verify_student/views/step_view.js
+msgid "An error has occurred. Please try reloading the page."
+msgstr "Алда агарлаа. Хуудсаа ахин уншуулах гээд оролдоод үзнэ үү"
+
+#: lms/static/js/verify_student/views/webcam_photo_view.js
+msgid "Video Capture Error"
+msgstr "Видео бичихэд алдаа гарлаа"
+
+#: lms/static/js/verify_student/views/webcam_photo_view.js
+msgid ""
+"Please verify that your webcam is connected and that you have allowed your "
+"browser to access it."
+msgstr ""
+"Та вэбкам холбогдсон мөн өөрийн браузертаа эрх өгсөн гэдгээ баталгаажуулна "
+"уу"
+
+#: lms/static/js/verify_student/views/webcam_photo_view.js
+msgid "No Webcam Detected"
+msgstr "Вэбкам олдсонгүй"
+
+#: lms/static/js/verify_student/views/webcam_photo_view.js
+msgid "You don't seem to have a webcam connected."
+msgstr "Таны вэбкам холбогдоогүй байна"
+
+#: lms/static/js/verify_student/views/webcam_photo_view.js
+msgid "Double-check that your webcam is connected and working to continue."
+msgstr ""
+"Таны вэбкам холбоотой мөн ажиллаж байгаа эсэхийг ахин шалгаад үргэлжлүүлнэ "
+"үү"
+
+#: lms/static/js/verify_student/views/webcam_photo_view.js
+msgid "Photo Captured successfully."
+msgstr "Зураг амжилттай авлаа"
+
+#: lms/static/js/verify_student/views/webcam_photo_view.js
+msgid "No Flash Detected"
+msgstr "Flash олдсонгүй"
+
+#: lms/static/js/verify_student/views/webcam_photo_view.js
+msgid ""
+"You don't seem to have Flash installed. Get Flash to continue your "
+"verification."
+msgstr "Та Flash суулгаагүй байна. Баталгаажуулахын тулд Flash-тай болно уу"
+
+#: lms/static/js/views/fields.js
+msgid "Editable"
+msgstr "Өөрчилж болно"
+
+#: lms/static/js/views/fields.js
+msgid "Validation Error"
+msgstr "Баталгаажуулахад алдаа гарлаа"
+
+#: lms/static/js/views/fields.js
+msgid "In Progress"
+msgstr "Уншиж байна"
+
+#: lms/static/js/views/fields.js
+msgid "Placeholder"
+msgstr "байршуулагч"
+
+#: lms/static/js/views/fields.js
+msgid "An error occurred. Please try again."
+msgstr "Алдаа гарлаа. Ахин оролдоно уу"
+
+#: lms/static/js/views/file_uploader.js
+msgid "Upload File"
+msgstr "Файл оруулах"
+
+#: lms/static/js/views/file_uploader.js
+msgid "Your upload of '{file}' succeeded."
+msgstr "'{file}' оруулах амжилттай боллоо"
+
+#: lms/static/js/views/file_uploader.js
+msgid "Your upload of '{file}' failed."
+msgstr "'{file}' оруулахад алдаа гарлаа"
+
+#: lms/static/js/views/image_field.js
+msgid "Upload an image"
+msgstr "Зураг оруулах"
+
+#: lms/static/js/views/image_field.js
+msgid "Change image"
+msgstr "Зургийг солих"
+
+#: lms/static/js/views/image_field.js
+msgid "Remove"
+msgstr "Устгах"
+
+#: lms/static/js/views/image_field.js
+msgid "Uploading"
+msgstr "Оруулж байна."
+
+#: lms/static/js/views/image_field.js
+msgid "Removing"
+msgstr "Устгаж байна."
+
+#: lms/static/js/views/image_field.js
+msgid "An error has occurred. Refresh the page, and then try again."
+msgstr "Алдаа гарлаа. Хуудсыг ахин уншуулаад оролдож үзнэ үү."
+
+#: lms/static/js/views/image_field.js
+msgid "The file must be at least {size} in size."
+msgstr "Файл хамгийн багадаа {size}хэмжээтэй байх ёстой. "
+
+#: lms/static/js/views/image_field.js
+msgid "The file must be smaller than {size} in size."
+msgstr "Файл {size}-с бага хэмжээтэй байх ёстой. "
+
+#: lms/static/js/views/image_field.js
+msgid ""
+"Upload is in progress. To avoid errors, stay on this page until the process "
+"is complete."
+msgstr ""
+"Нэмэлтийг хийж байна. Алдаа гарахаас сэргийлэхийн тулд энэ үйл ажиллагаа "
+"дуустал энэ хуудсан дээрээ байна уу."
+
+#: lms/static/js/views/image_field.js
+msgid ""
+"Removal is in progress. To avoid errors, stay on this page until the process"
+" is complete."
+msgstr ""
+"Устгалыг хийж байна. Алдаа гарахаас сэргийлэхийн тулд энэ үйл ажиллагаа "
+"дуустал энэ хуудсан дээрээ байна уу."
+
+#: lms/static/js/views/image_field.js
+msgid "bytes"
+msgstr "Байт"
+
+#: lms/static/js/views/image_field.js
+msgid "KB"
+msgstr "KB"
+
+#: lms/static/js/views/image_field.js
+msgid "MB"
+msgstr "MB"
+
+#: lms/static/lms/js/preview/preview_factory.js
+msgid "Course is not yet visible to students."
+msgstr "Сургалт суралцагчдад хараахан ил болоогүй"
+
+#: lms/static/lms/js/preview/preview_factory.js
+msgid ""
+"You cannot view the course as a student or beta tester before the course "
+"release date."
+msgstr ""
+"Та сургалт эхлэх огнооноос өмнө сургалтыг суралцагч эсвэл бета шалгагчийн "
+"хувиар нээж үзэх боломжгүй."
+
+#: lms/templates/class_dashboard/d3_stacked_bar_graph.js
+msgid "%(num_students)s student opened Subsection"
+msgid_plural "%(num_students)s students opened Subsection"
+msgstr[0] "%(num_students)sсурагчид дэд хэсэг нээсэн"
+msgstr[1] "%(num_students)sсурагчид дэд хэсэг нээсэн"
+
+#: lms/templates/class_dashboard/d3_stacked_bar_graph.js
+msgid "%(num_students)s student"
+msgid_plural "%(num_students)s students"
+msgstr[0] "%(num_students)s сурагчид"
+msgstr[1] "%(num_students)s students"
+
+#: lms/templates/class_dashboard/d3_stacked_bar_graph.js
+msgid "%(num_questions)s question"
+msgid_plural "%(num_questions)s questions"
+msgstr[0] "%(num_questions)sасуулт"
+msgstr[1] "%(num_questions)sасуулт"
+
+#: lms/templates/class_dashboard/d3_stacked_bar_graph.js
+msgid "Number of Students"
+msgstr "Суралцагчдын тоо"
+
+#: lms/templates/courseware/progress_graph.js
+msgid "Overall Score"
+msgstr "Нийт оноо"
+
+#: common/static/common/templates/image-modal.underscore
+msgid "Large"
+msgstr "Том"
+
+#: common/static/common/templates/image-modal.underscore
+msgid "Zoom In"
+msgstr "томруулах"
+
+#: common/static/common/templates/image-modal.underscore
+msgid "Zoom Out"
+msgstr "томруулна уу"
+
+#: common/static/common/templates/components/paging-footer.underscore
+#: common/static/common/templates/discussion/pagination.underscore
+msgid "Previous"
+msgstr "Өмнөх"
+
+#: common/static/common/templates/components/paging-footer.underscore
+#, python-format
+msgid "Page number out of %(total_pages)s"
+msgstr "%(total_pages)sдугаар хуудасны дугаар "
+
+#: common/static/common/templates/components/paging-footer.underscore
+msgid "Enter the page number you'd like to quickly navigate to."
+msgstr "Түргэн хайх хуудасны дугаараа оруулна уу."
+
+#: common/static/common/templates/components/paging-header.underscore
+msgid "Sorted by"
+msgstr "эрэмбэлсэн"
+
+#: common/static/common/templates/components/search-field.underscore
+msgid "Clear search"
+msgstr "Хайлтыг цэвэрлэ"
+
+#: common/static/common/templates/discussion/forum-action-answer.underscore
+msgid "Mark as Answer"
+msgstr "хариулт болгон тэмдэглэ"
+
+#: common/static/common/templates/discussion/forum-action-answer.underscore
+msgid "Unmark as Answer"
+msgstr "Хариултгүй гэж тэмдэглэ"
+
+#: common/static/common/templates/discussion/forum-action-close.underscore
+msgid "Open"
+msgstr "нээлттэй байна"
+
+#: common/static/common/templates/discussion/forum-action-endorse.underscore
+msgid "Endorse"
+msgstr "Дэмжих"
+
+#: common/static/common/templates/discussion/forum-action-endorse.underscore
+msgid "Unendorse"
+msgstr "Хязгаарлалтгүй"
+
+#: common/static/common/templates/discussion/forum-action-follow.underscore
+msgid "Follow"
+msgstr "Дагах"
+
+#: common/static/common/templates/discussion/forum-action-follow.underscore
+msgid "Unfollow"
+msgstr "Дахин дагахгүй"
+
+#: common/static/common/templates/discussion/forum-action-pin.underscore
+msgid "Pin"
+msgstr "хавсаргана"
+
+#: common/static/common/templates/discussion/forum-action-pin.underscore
+msgid "Unpin"
+msgstr "тусдаа"
+
+#: common/static/common/templates/discussion/forum-action-report.underscore
+msgid "Report abuse"
+msgstr "буруутгагдсан мэдүүлэг"
+
+#: common/static/common/templates/discussion/forum-action-report.underscore
+msgid "Report"
+msgstr "тайлан"
+
+#: common/static/common/templates/discussion/forum-action-report.underscore
+msgid "Unreport"
+msgstr "тайлагнахгүй"
+
+#: common/static/common/templates/discussion/forum-action-vote.underscore
+msgid "Vote for this post,"
+msgstr "Энэ нийтлэлийг саналаа"
+
+#: common/static/common/templates/discussion/nav-load-more-link.underscore
+msgid "Load more"
+msgstr "Нэмж уншуулах"
+
+#: common/static/common/templates/discussion/new-post-alert.underscore
+msgid "Error posting your message."
+msgstr "Таны зурвасыг илгээж чадахгүй байна."
+
+#: common/static/common/templates/discussion/new-post.underscore
+msgid "Add a Post"
+msgstr "Пост Нэмэх "
+
+#: common/static/common/templates/discussion/new-post.underscore
+msgid "Visible to"
+msgstr "харагдах болно"
+
+#: common/static/common/templates/discussion/new-post.underscore
+msgid ""
+"Discussion admins, moderators, and TAs can make their posts visible to all "
+"students or specify a single cohort."
+msgstr ""
+"Админ, зохицуулагчид, техникийн ажилтнууд өөрсдийн бичлэгийг бүх сурагчдад "
+"харуулах эсвэл нэг бүлэгт зааж өгөх боломжтой."
+
+#: common/static/common/templates/discussion/new-post.underscore
+msgid "All Groups"
+msgstr "бүх бүлгүүд"
+
+#: common/static/common/templates/discussion/new-post.underscore
+#: common/static/common/templates/discussion/thread-edit.underscore
+msgid "Add a clear and descriptive title to encourage participation."
+msgstr "Оролцоог дэмжихийн тулд тодорхой, тодорхойлолтын нэрийг нэмнэ үү."
+
+#: common/static/common/templates/discussion/new-post.underscore
+msgid "Your question or idea"
+msgstr "Таны асуулт, санаа"
+
+#: common/static/common/templates/discussion/new-post.underscore
+msgid "follow this post"
+msgstr "энэ бичлэгийг дагах"
+
+#: common/static/common/templates/discussion/new-post.underscore
+msgid "post anonymously"
+msgstr "нэрээ нууцлах"
+
+#: common/static/common/templates/discussion/new-post.underscore
+msgid "post anonymously to classmates"
+msgstr "ангийн хүүхдүүдэд нэрээ нууцал"
+
+#: common/static/common/templates/discussion/new-post.underscore
+#: common/static/common/templates/discussion/thread-response.underscore
+#: common/static/common/templates/discussion/thread.underscore
+msgid "Submit"
+msgstr "Илгээх"
+
+#: common/static/common/templates/discussion/post-user-display.underscore
+#: common/static/common/templates/discussion/thread-list-item.underscore
+msgid "Community TA"
+msgstr "Нийтийн Багшийн Туслах "
+
+#: common/static/common/templates/discussion/post-user-display.underscore
+#: common/static/common/templates/discussion/thread-list-item.underscore
+msgid "Staff"
+msgstr "Багш, Ажилтан"
+
+#: common/static/common/templates/discussion/profile-thread.underscore
+#: common/static/common/templates/discussion/thread.underscore
+msgid "This thread is closed."
+msgstr "Энэ утас хаалттай байна."
+
+#: common/static/common/templates/discussion/profile-thread.underscore
+msgid "View discussion"
+msgstr "Ярилцлагыг үзэх"
+
+#: common/static/common/templates/discussion/response-comment-edit.underscore
+msgid "Editing comment"
+msgstr "Сэтгэгдэл бичих"
+
+#: common/static/common/templates/discussion/response-comment-edit.underscore
+msgid "Update comment"
+msgstr "Сэтгэгдлийг шинэчлэх"
+
+#: common/static/common/templates/discussion/response-comment-show.underscore
+#, python-format
+msgid "posted %(time_ago)s by %(author)s"
+msgstr "%(time_ago)s өмнө нь байршуулсан %(author)s"
+
+#: common/static/common/templates/discussion/response-comment-show.underscore
+#: common/static/common/templates/discussion/thread-response-show.underscore
+#: common/static/common/templates/discussion/thread-show.underscore
+msgid "Reported"
+msgstr "тайлагнасан"
+
+#: common/static/common/templates/discussion/thread-edit.underscore
+msgid "Editing post"
+msgstr "Бичлэгийн засвар"
+
+#: common/static/common/templates/discussion/thread-edit.underscore
+msgid "Edit your post below."
+msgstr "Доорх бичлэгийг засна уу."
+
+#: common/static/common/templates/discussion/thread-edit.underscore
+msgid "Update post"
+msgstr "Пост шинэчлэх"
+
+#: common/static/common/templates/discussion/thread-list-item.underscore
+msgid "discussion"
+msgstr "хэлэлцүүлэг"
+
+#: common/static/common/templates/discussion/thread-list-item.underscore
+msgid "answered question"
+msgstr "гэж хариулсан асуулт"
+
+#: common/static/common/templates/discussion/thread-list-item.underscore
+msgid "unanswered question"
+msgstr "Хариултгүй асуулт"
+
+#: common/static/common/templates/discussion/thread-list-item.underscore
+#: common/static/common/templates/discussion/thread-show.underscore
+msgid "Pinned"
+msgstr "хавсаргасан"
+
+#: common/static/common/templates/discussion/thread-list-item.underscore
+msgid "Following"
+msgstr "Дагаж буй"
+
+#: common/static/common/templates/discussion/thread-list-item.underscore
+msgid "{unread_comments_count} new"
+msgstr "{unread_comments_count} шинэ"
+
+#: common/static/common/templates/discussion/thread-list-item.underscore
+#, python-format
+msgid ""
+"%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s "
+"unread comments)%(span_close)s"
+msgstr ""
+"%(comments_count)s %(span_sr_open)sсэтгэгдэл (%(unread_comments_count)s "
+"уншаагүй сэтгэгдэл)%(span_close)s"
+
+#: common/static/common/templates/discussion/thread-list-item.underscore
+#, python-format
+msgid "%(comments_count)s %(span_sr_open)scomments %(span_close)s"
+msgstr "%(comments_count)s %(span_sr_open)sсэтгэгдэл %(span_close)s"
+
+#: common/static/common/templates/discussion/thread-response-edit.underscore
+msgid "Editing response"
+msgstr "Хариултыг засварлах"
+
+#: common/static/common/templates/discussion/thread-response-edit.underscore
+msgid "Update response"
+msgstr "Хариултыг шинэчлэнэ"
+
+#: common/static/common/templates/discussion/thread-response-show.underscore
+#, python-format
+msgid "marked as answer %(time_ago)s by %(user)s"
+msgstr " %(time_ago)s -ээс %(user)s-р хариулт гэж тэмдэглэв"
+
+#: common/static/common/templates/discussion/thread-response-show.underscore
+#, python-format
+msgid "marked as answer %(time_ago)s"
+msgstr "%(time_ago)sхариу гэж тэмдэглэв"
+
+#: common/static/common/templates/discussion/thread-response-show.underscore
+#, python-format
+msgid "endorsed %(time_ago)s by %(user)s"
+msgstr "батлагдсан %(time_ago)s by %(user)s"
+
+#: common/static/common/templates/discussion/thread-response-show.underscore
+#, python-format
+msgid "endorsed %(time_ago)s"
+msgstr "батлагдсан %(time_ago)s"
+
+#: common/static/common/templates/discussion/thread-response.underscore
+#, python-format
+msgid "Show Comment (%(num_comments)s)"
+msgid_plural "Show Comments (%(num_comments)s)"
+msgstr[0] "сэтгэгдэл харуулах (%(num_comments)s)"
+msgstr[1] "сэтгэгдэл харуулах (%(num_comments)s)"
+
+#: common/static/common/templates/discussion/thread-response.underscore
+msgid "Add a comment"
+msgstr "сэтгэгдэл нэмэх"
+
+#: common/static/common/templates/discussion/thread-show.underscore
+#, python-format
+msgid "%(post_type)s posted %(time_ago)s by %(author)s"
+msgstr "%(post_type)s илгээгдсэн %(time_ago)s by %(author)s"
+
+#: common/static/common/templates/discussion/thread-show.underscore
+msgid "Closed"
+msgstr "хаалттай байна"
+
+#: common/static/common/templates/discussion/thread-show.underscore
+#, python-format
+msgid "Related to: %(courseware_title_linked)s"
+msgstr "хамааралтай: %(courseware_title_linked)s"
+
+#: common/static/common/templates/discussion/thread-show.underscore
+#, python-format
+msgid "This post is visible only to %(group_name)s."
+msgstr "Энэ нийтлэл нь зөвхөн %(group_name)sхарагдах болно"
+
+#: common/static/common/templates/discussion/thread-show.underscore
+msgid "This post is visible to everyone."
+msgstr "Энэ нийтлэл бүх хүмүүст харагдана"
+
+#: common/static/common/templates/discussion/thread-type.underscore
+msgid "Post type"
+msgstr "шуудангийн төрөл"
+
+#: common/static/common/templates/discussion/thread-type.underscore
+msgid ""
+"Questions raise issues that need answers. Discussions share ideas and start "
+"conversations."
+msgstr ""
+"Асуултанд хариулт хэрэгтэй асуудлуудыг асууна. Хэлэлцүүлэг нь санаануудыг "
+"хуваалцаж, яриа хэлэлцээ эхэлдэг."
+
+#: common/static/common/templates/discussion/thread-type.underscore
+msgid "Question"
+msgstr "Асуулт"
+
+#: common/static/common/templates/discussion/thread-type.underscore
+msgid "Discussion"
+msgstr "Ярилцлага"
+
+#: common/static/common/templates/discussion/thread.underscore
+msgid "Add a Response"
+msgstr "Хариулт нэмэх"
+
+#: common/static/common/templates/discussion/thread.underscore
+msgid "Add a response:"
+msgstr "Хариулт нэмэх:"
+
+#: common/static/common/templates/discussion/topic.underscore
+msgid "Topic area"
+msgstr "Сэдэвт бүс"
+
+#: common/static/common/templates/discussion/topic.underscore
+msgid "Add your post to a relevant topic to help others find it."
+msgstr ""
+"Хүмүүсийг олоход нь туслахын тулд холбогдох сэдэв рүү холбогдох зүйлсээ "
+"нэмээрэй."
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid "Discussion Home"
+msgstr "Хэлэлцүүлэг Нүүр"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+#, python-format
+msgid "How to use %(platform_name)s discussions"
+msgstr "Хэрхэн ашиглах талаар%(platform_name)s хэлэлцүүлэг ашиглах"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid "Find discussions"
+msgstr "Ярилцлага хай"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid "Use the All Topics menu to find specific topics."
+msgstr "Бүх сэдвийг цэс ашиглан тусгай сэдвүүдийг олох."
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+#: lms/djangoapps/discussion/static/discussion/templates/search.underscore
+msgid "Search all posts"
+msgstr "Бүх нийтлэлийг хайх"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid "Filter and sort topics"
+msgstr "Шүүлтүүр болон ангилах сэдвүүд"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid "Engage with posts"
+msgstr "Шуудантай холбоотой байх"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid "Vote for good posts and responses"
+msgstr "Сайн бичлэгүүд болон хариултуудыг санал болго"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid "Report abuse, topics, and responses"
+msgstr "Хэрэггүй байдал, сэдэв, хариултыг мэдээлэх"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid "Follow or unfollow posts"
+msgstr "Дараах эсвэл дагах бичлэгийг дагах"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid "Receive updates"
+msgstr "Шинэчлэлт хүлээж авах"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid "Toggle Notifications Setting"
+msgstr "Мэдэгдэл тохируулгыг идэвхжүүлэх"
+
+#: lms/djangoapps/discussion/static/discussion/templates/discussion-home.underscore
+msgid ""
+"Check this box to receive an email digest once a day notifying you about "
+"new, unread activity from posts you are following."
+msgstr ""
+"Энэ хайрцгийг шалгахын тулд өдөрт нэг удаа и-мэйл уншсанаа хүлээн аваад "
+"өөрийн дагаж буй шуудан дээрх шинэ, уншаагүй үйл явдлын талаар мэдэгдэнэ үү."
+
+#: lms/djangoapps/discussion/static/discussion/templates/fake-breadcrumbs.underscore
+msgid "All Topics"
+msgstr "Бүх сэдвүүд"
+
+#: lms/djangoapps/discussion/static/discussion/templates/user-profile.underscore
+msgid "All Posts"
+msgstr "Бүх бичлэгүүд"
+
+#: lms/static/js/fixtures/donation.underscore
+#: lms/templates/dashboard/donation.underscore
+msgid "Donate"
+msgstr "Хандив өргөх "
+
+#: lms/templates/bookmarks/bookmarks-list.underscore
+msgid "My Bookmarks"
+msgstr "Миний тэмдэглэгээ"
+
+#: lms/templates/bookmarks/bookmarks-list.underscore
+msgid "Bookmarked on"
+msgstr "Тэмдэглэсэн"
+
+#: lms/templates/bookmarks/bookmarks-list.underscore
+msgid "You have not bookmarked any courseware pages yet."
+msgstr "Та одоогоор сургалттай холбоотой хуудас тэмдэглэж аваагүй байна."
+
+#: lms/templates/bookmarks/bookmarks-list.underscore
+msgid ""
+"Use bookmarks to help you easily return to courseware pages. To bookmark a "
+"page, select Bookmark in the upper right corner of that page. To see a list "
+"of all your bookmarks, select Bookmarks in the upper left corner of any "
+"courseware page."
+msgstr ""
+"Та тэмдэглэгээ ашигласнаар сургалттай холбоотой хуудсууд руу эргэж хандахад "
+"хялбар болно. Хуудсыг тэмдэглэхийг хүсвэл тухайн хуудсын баруун дээд буланд "
+"байрлах Тэмдэглэгээ-г сонгоно уу. Өөрийн бүх тэмдэглэгээгээ харахын тулд "
+"сургалтын аль ч цахим хуудасны зүүн дээд буланд байрлах Тэмдэглэгээ-г "
+"сонгоно уу. "
+
+#: lms/templates/courseware/proctored-exam-controls.underscore
+msgid "Mark Exam As Completed"
+msgstr "Марк Шалгалт дууссаны адил"
+
+#: lms/templates/courseware/proctored-exam-status.underscore
+msgid "timed"
+msgstr "хугацаатай"
+
+#: lms/templates/courseware/proctored-exam-status.underscore
+msgid ""
+"To receive credit for problems, you must select \"Submit\" for each problem "
+"before you select \"End My Exam\"."
+msgstr ""
+"Асуудлын төлөө зээл авахын тулд \"End My Exam\" гэсэн сонголтыг сонгохоос "
+"өмнө асуудал тус бүрийн \"Submit\" сонголтыг сонгох хэрэгтэй."
+
+#: lms/templates/courseware/proctored-exam-status.underscore
+msgid "End My Exam"
+msgstr "Миний шалгалтыг дуусга"
+
+#: lms/templates/discovery/course_card.underscore
+msgid "LEARN MORE"
+msgstr "ИЛҮҮ ИХ СУДЛА"
+
+#: lms/templates/discovery/course_card.underscore
+#, python-format
+msgid "Starts: %(start_date)s"
+msgstr "Эхлэх: %(start_date)s"
+
+#: lms/templates/discovery/course_card.underscore
+msgid "Starts"
+msgstr "Эхлэх"
+
+#: lms/templates/discovery/filter_bar.underscore
+msgid "Clear All"
+msgstr "бүгдийг цэвэрлэ"
+
+#: lms/templates/edxnotes/note-item.underscore
+msgid "Highlighted text"
+msgstr "Тодруулсан текст"
+
+#: lms/templates/edxnotes/note-item.underscore
+msgid "Note"
+msgstr "Тэмдэглэл"
+
+#: lms/templates/edxnotes/note-item.underscore
+msgid "You commented..."
+msgstr "Чи саналаа"
+
+#: lms/templates/edxnotes/note-item.underscore
+msgid "Noted in:"
+msgstr "Тэмдэглэл:"
+
+#: lms/templates/edxnotes/note-item.underscore
+msgid "Last Edited:"
+msgstr "Хамгийн сүүлд засварласан"
+
+#: lms/templates/edxnotes/tab-item.underscore
+msgid "Clear search results"
+msgstr "Хайлтын үр дүнг арилгах"
+
+#: lms/templates/fields/field_dropdown.underscore
+#: lms/templates/fields/field_dropdown_account.underscore
+#: lms/templates/fields/field_textarea.underscore
+msgid "Click to edit"
+msgstr "Засахын тулд товшино уу"
+
+#: lms/templates/fields/field_order_history.underscore
+msgid "Order Details"
+msgstr "захиалгын мэдээлэл"
+
+#: lms/templates/learner_dashboard/certificate.underscore
+msgid "Program Certificates"
+msgstr "Хөтөлбөрийн гэрчилгээ"
+
+#: lms/templates/learner_dashboard/certificate_status.underscore
+msgid "Congratulations! You have earned a certificate for this course."
+msgstr "Баяр хүргэе! Та энэ курсын сертификат авсан."
+
+#: lms/templates/learner_dashboard/certificate_status.underscore
+msgid "View Certificate"
+msgstr "Гэрчилгээ харах"
+
+#: lms/templates/learner_dashboard/course_card.underscore
+#, python-format
+msgid "%(courseName)s Home Page."
+msgstr "%(courseName)s Нүүр хуудас."
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "enrolled"
+msgstr "Бүртгэгдсэн"
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "View Course"
+msgstr "Хичээл Үзэх "
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "View Archived Course"
+msgstr "Архивласан Хичээлийг Үзэх "
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "not enrolled"
+msgstr "бүртгүүлэхгүй байх"
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "Please select a course date"
+msgstr "Курс огноо сонгоно уу"
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "Select Course Run"
+msgstr "Курс Run сонгоно уу"
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "Choose Course Date"
+msgstr "Мэдээжийн мэдээллийг сонгоно уу"
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+#, python-format
+msgid "Starts %(start)s"
+msgstr "Эхлээд %(start)s"
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "Enroll Now"
+msgstr "Одоо элсээрэй"
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "Coming Soon"
+msgstr "Удахгүй Ирнэ "
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "Enrollment Opens on"
+msgstr "Бүртгэл нь нээлттэй байна"
+
+#: lms/templates/learner_dashboard/course_enroll.underscore
+msgid "Not Currently Available"
+msgstr "Одоогоор байхгүй байна"
+
+#: lms/templates/learner_dashboard/empty_programs_list.underscore
+msgid "You are not enrolled in any programs yet."
+msgstr "Та одоо ямар ч хөтөлбөрт хамрагдаагүй байна"
+
+#: lms/templates/learner_dashboard/empty_programs_list.underscore
+msgid "Explore Programs"
+msgstr "Хөтөлбөрүүдийг судлах"
+
+#: lms/templates/learner_dashboard/explore_new_programs.underscore
+msgid ""
+"Browse recently launched courses and see what\\'s new in your favorite "
+"subjects"
+msgstr ""
+"Саяхан эхлүүлсэн курсуудыг хайж, өөрийн дуртай сэдвээр шинэ зүйлүүдийг "
+"үзээрэй"
+
+#: lms/templates/learner_dashboard/explore_new_programs.underscore
+msgid "Explore New Programs"
+msgstr "Шинэ хөтөлбөрүүдийг хайх"
+
+#: lms/templates/learner_dashboard/program_card.underscore
+#, python-format
+msgid ""
+"You have earned certificates in %(completed_courses)s of the "
+"%(total_courses)s courses so far."
+msgstr ""
+"Та %(total_courses)sкурсын %(completed_courses)s-д нь гэрчилгээ авсан."
+
+#: lms/templates/learner_dashboard/program_card.underscore
+#, python-format
+msgid "%(programName)s Home Page."
+msgstr "%(programName)s Нүүр хуудас."
+
+#: lms/templates/learner_dashboard/program_header_view.underscore
+msgid "{organization}\\'s logo"
+msgstr "{organization}\\'s лого"
+
+#: lms/templates/learner_dashboard/program_header_view.underscore
+msgid "You are here"
+msgstr "Та энд байна"
+
+#: lms/templates/learner_dashboard/program_header_view.underscore
+msgid "Dashboard"
+msgstr "Нүүр хуудас"
+
+#: lms/templates/learner_dashboard/program_header_view.underscore
+msgid "Programs"
+msgstr "Хөтөлбөрүүд"
+
+#: lms/templates/learner_dashboard/upgrade_message.underscore
+msgid ""
+"You need a certificate in this course to be eligible for a program "
+"certificate."
+msgstr ""
+"Курс сертификат авах эрхтэй байхын тулд та энэ сертификаттай байх "
+"шаардлагатай."
+
+#: lms/templates/learner_dashboard/upgrade_message.underscore
+msgid "Upgrade Now"
+msgstr "Одоо боловсронгуй болгох"
+
+#: lms/templates/search/course_search_results.underscore
+#: lms/templates/search/dashboard_search_results.underscore
+#, python-format
+msgid "Load next %(num_items)s result"
+msgid_plural "Load next %(num_items)s results"
+msgstr[0] "Ачаалал %(num_items)sдараагийн үр дүн"
+msgstr[1] "Load next %(num_items)sүр дүн"
+
+#: lms/templates/search/course_search_results.underscore
+#: lms/templates/search/dashboard_search_results.underscore
+msgid "Sorry, no results were found."
+msgstr "Уучлаарай, ямар ч үр дүн олдсонгүй."
+
+#: lms/templates/search/dashboard_search_results.underscore
+msgid "Back to Dashboard"
+msgstr "Хянах самбар руу буцах"
+
+#: lms/templates/student_account/account.underscore
+msgid "New Address"
+msgstr "Шинэ хаяг"
+
+#: lms/templates/student_account/account.underscore
+msgid "Change My Email Address"
+msgstr "Миний И-мэйл хаяг өөрчлөх"
+
+#: lms/templates/student_account/account.underscore
+msgid "Reset Password"
+msgstr "Нууц үгээ солих"
+
+#: lms/templates/student_account/account_settings.underscore
+msgid "Account Settings"
+msgstr "Акаунтын тохиргоо"
+
+#: lms/templates/student_account/account_settings_section.underscore
+msgid "An error occurred. Please reload the page."
+msgstr "Алдаа гарлаа. Хуудсыг дахин ачааллана уу."
+
+#: lms/templates/student_account/form_field.underscore
+msgid "Forgot password?"
+msgstr "Нууц үгээ мартсан уу?"
+
+#: lms/templates/student_account/hinted_login.underscore
+#: lms/templates/student_account/login.underscore
+#: lms/templates/student_account/register.underscore
+msgid "Sign in"
+msgstr "Нэвтрэх"
+
+#: lms/templates/student_account/hinted_login.underscore
+#, python-format
+msgid "Would you like to sign in using your %(providerName)s credentials?"
+msgstr ""
+"Та өөрийн %(providerName)s итгэмжлэлийг ашиглан нэвтрэхийг хүсч байна уу?"
+
+#: lms/templates/student_account/hinted_login.underscore
+#, python-format
+msgid "Sign in using %(providerName)s"
+msgstr "%(providerName)s-р нэвтэрнэ үү "
+
+#: lms/templates/student_account/hinted_login.underscore
+#: lms/templates/student_account/institution_login.underscore
+#: lms/templates/student_account/institution_register.underscore
+msgid "or"
+msgstr "эсвэл"
+
+#: lms/templates/student_account/hinted_login.underscore
+msgid "Show me other ways to sign in or register"
+msgstr "Нэвтрэх эсвэл бүртгүүлэх өөр аргыг надад үзүүлээрэй"
+
+#: lms/templates/student_account/institution_login.underscore
+msgid "Sign in with Institution/Campus Credentials"
+msgstr "Байгууллага / Кампусын итгэмжлэлээр нэвтрэх"
+
+#: lms/templates/student_account/institution_login.underscore
+#: lms/templates/student_account/institution_register.underscore
+msgid "Choose your institution from the list below:"
+msgstr "Дараах жагсаалтаас өөрийн байгууллагаас сонгоно уу:"
+
+#: lms/templates/student_account/institution_login.underscore
+msgid "Back to sign in"
+msgstr "Нэвтрэх бол буцах"
+
+#: lms/templates/student_account/institution_register.underscore
+msgid "Register with Institution/Campus Credentials"
+msgstr "Байгууллага / Кампусын каталогийг бүртгүүлэх"
+
+#: lms/templates/student_account/institution_register.underscore
+msgid "Register through edX"
+msgstr "EdX-ээр бүртгүүлэх"
+
+#: lms/templates/student_account/login.underscore
+msgid ""
+"Sign in here using your email address and password, or use one of the "
+"providers listed below."
+msgstr ""
+"Э-мэйл хаяг, нууц үгээ ашиглан нэвтэрнэ үү, эсвэл доор жагсаасан үйлчилгээ "
+"үзүүлэгчдийг ашиглана уу."
+
+#: lms/templates/student_account/login.underscore
+msgid "Sign in here using your email address and password."
+msgstr "Э-мэйл хаяг болон нууц үгээ ашиглан энд нэвтэрнэ үү."
+
+#: lms/templates/student_account/login.underscore
+msgid "If you do not yet have an account, use the button below to register."
+msgstr "Хэрэв та данс байхгүй бол доорх товчлуурыг ашиглан бүртгүүлнэ үү."
+
+#: lms/templates/student_account/login.underscore
+msgid "or sign in with"
+msgstr "эсвэл нэвтэрч орно"
+
+#: lms/templates/student_account/login.underscore
+#, python-format
+msgid "Sign in with %(providerName)s"
+msgstr "%(providerName)s-р нэвтэрнэ үү"
+
+#: lms/templates/student_account/login.underscore
+#: lms/templates/student_account/register.underscore
+msgid "Use my institution/campus credentials"
+msgstr "Миний байгууллага / кампусын итгэмжлэлийг ашиглана уу"
+
+#: lms/templates/student_account/login.underscore
+#, python-format
+msgid "New to %(platformName)s?"
+msgstr "%(platformName)sдээр шинэ байна?"
+
+#: lms/templates/student_account/login.underscore
+msgid "Create an account"
+msgstr "Бүртгэл үүсгэх"
+
+#: lms/templates/student_account/password_reset.underscore
+msgid "Password assistance"
+msgstr "Нууц үгийн тусламж"
+
+#: lms/templates/student_account/password_reset.underscore
+msgid ""
+"Please enter your email address below and we will send you instructions for "
+"setting a new password."
+msgstr ""
+"Доорх имэйл хаягаа оруулна уу, бид шинэ нууц үг оруулах зааврыг танд илгээх "
+"болно."
+
+#: lms/templates/student_account/password_reset.underscore
+msgid "Reset my password"
+msgstr "Нууц үгээ шинэчил"
+
+#: lms/templates/student_account/register.underscore
+msgid "Create an account using"
+msgstr "Ашиглан данс үүсгэх"
+
+#: lms/templates/student_account/register.underscore
+#, python-format
+msgid "Create account using %(providerName)s."
+msgstr "%(providerName)sАшиглан данс үүсгэх"
+
+#: lms/templates/student_account/register.underscore
+msgid "or create a new one here"
+msgstr "Энд шинээр үүсгээрэй"
+
+#: lms/templates/student_account/register.underscore
+msgid "Create a new account"
+msgstr "Шинэ данс үүсгэх"
+
+#: lms/templates/student_account/register.underscore
+msgid "Create your account"
+msgstr "Өөрийн акаунтыг үүсгэх"
+
+#: lms/templates/student_account/register.underscore
+msgid "Required field"
+msgstr "Шаардлагатай мэдээлэл"
+
+#: lms/templates/student_account/register.underscore
+msgid "Already have an account?"
+msgstr "Аккаунттай юу?"
+
+#: lms/templates/student_profile/badge.underscore
+#, python-format
+msgid "Share your \"%(display_name)s\" award"
+msgstr "%(display_name)sШагналаа хуваалцана уу"
+
+#: lms/templates/student_profile/badge.underscore
+msgid "Share"
+msgstr "Хуваалцах"
+
+#: lms/templates/student_profile/badge.underscore
+#, python-format
+msgid "Earned %(created)s."
+msgstr "хүрсэн%(created)s"
+
+#: lms/templates/student_profile/badge_placeholder.underscore
+msgid "What's Your Next Accomplishment?"
+msgstr "Таны дараачийн хүрэх зүйл юу вэ?"
+
+#: lms/templates/student_profile/badge_placeholder.underscore
+msgid "Start working toward your next learning goal."
+msgstr "Дараагийн суралцах зорилгоо биелүүлэхийн тулд ажиллаж эхэл."
+
+#: lms/templates/student_profile/badge_placeholder.underscore
+msgid "Find a course"
+msgstr "Курс олох"
+
+#: lms/templates/student_profile/learner_profile.underscore
+msgid "An error occurred. Try loading the page again."
+msgstr "Алдаа гарлаа. Хуудсыг дахин ачаална уу."
+
+#: lms/templates/student_profile/section_two.underscore
+msgid "You are currently sharing a limited profile."
+msgstr "Та одоогоор хязгаарлагдмал профайл хуваалцаж байна."
+
+#: lms/templates/student_profile/section_two.underscore
+msgid "This learner is currently sharing a limited profile."
+msgstr "Энэ суралцагч одоогоор хязгаарлагдмал профайлыг хуваалцаж байна."
+
+#: lms/templates/student_profile/share_modal.underscore
+msgid "Share on Mozilla Backpack"
+msgstr "Mozilla Backpack дээр хуваалцах"
+
+#: lms/templates/student_profile/share_modal.underscore
+msgid ""
+"To share your certificate on Mozilla Backpack, you must first have a "
+"Backpack account. Complete the following steps to add your certificate to "
+"Backpack."
+msgstr ""
+"Таны гэрчилгээг Mozilla Backpack дээр хуваалцахын тулд эхлээд та Backpack "
+"данстай байх ёстой. Backpack-д сертификат нэмэхийн тулд дараах алхмуудыг "
+"гүйцэтгэнэ үү."
+
+#: lms/templates/student_profile/share_modal.underscore
+#, python-format
+msgid ""
+"Create a %(link_start)sMozilla Backpack%(link_end)s account, or log in to "
+"your existing account"
+msgstr ""
+"%(link_start)sMozilla Backpac данс үүсгэх%(link_end)s, эсвэл одоо байгаа "
+"акаунт руу нэвтэрч орно уу"
+
+#: lms/templates/student_profile/share_modal.underscore
+#, python-format
+msgid ""
+"%(download_link_start)sDownload this image (right-click or option-click, "
+"save as)%(link_end)s and then %(upload_link_start)supload%(link_end)s it to "
+"your backpack.</li>"
+msgstr ""
+"%(download_link_start)sЭнэ зургийг татаж авах (right-click or option-click, "
+"save as)%(link_end)s Тэгээд %(upload_link_start)sбайршуулах%(link_end)sЭнэ "
+"бол таны backpack.</li>"

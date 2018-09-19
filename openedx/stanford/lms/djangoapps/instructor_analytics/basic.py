@@ -72,6 +72,10 @@ def student_responses(course):
                 elif 'student_answer' in state_dict:
                     raw_answer = state_dict['student_answer']
                     pretty_answers = u"{answer}".format(answer=raw_answer)
+                elif 'attempted' in state_dict and 'completed' in state_dict:  # problem-builder
+                    pretty_answers = "{answer}".format(
+                        answer=state_dict,
+                    )
                 else:
                     raw_answers = {}
                     pretty_answers = None

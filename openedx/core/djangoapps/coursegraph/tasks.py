@@ -161,7 +161,16 @@ def serialize_course(course_id):
 
     # create nodes
     for item in items:
-        fields, block_type = serialize_item(item)
+        try:
+            fields, block_type = serialize_item(item)
+        except Exception as error:
+            log.info(
+                "error serializing: course=%s: error=%s: item=%s",
+                course_key,
+                error,
+                item,
+            )
+            continue
 
         for field_name, value in six.iteritems(fields):
             fields[field_name] = coerce_types(value)

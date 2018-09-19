@@ -57,6 +57,11 @@ from openedx.core.djangolib.markup import HTML, Text
   </div>
   %endif
 
+## This feature intermittently fails for us at Stanford.
+## The system mistakenly thinks that _all_ XBlocks are deprecated.
+## Since we're unsure what's causing this, it's difficult to test, and we don't actually use the feature,
+## we've decided to simply remove it from the page.
+%if False:
     %if deprecated_blocks_info.get('blocks') or deprecated_blocks_info.get('deprecated_enabled_block_types'):
       <div class="wrapper wrapper-alert wrapper-alert-error is-shown">
         <div class="alert announcement">
@@ -106,6 +111,7 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </div>
     %endif
+%endif
 
 </%block>
 

@@ -50,8 +50,12 @@ FEATURES.update({
 })
 INSTALLED_APPS += (
     'openedx.stanford.djangoapps.course_utils',
+    'openedx.stanford.djangoapps.student_utils',
     # Added here to allow translations
     'freetextresponse',
+    'submit_and_compare',
+    'inline_dropdown',
+    'xblockmufi',
 )
 MAKO_TEMPLATES['main'] += glob(STANFORD_ROOT / 'djangoapps/*/templates')
 MAKO_TEMPLATES['main'] += glob(STANFORD_ROOT / 'common/djangoapps/*/templates')

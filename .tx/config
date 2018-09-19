@@ -66,3 +66,57 @@ file_filter = conf/locale/<lang>/LC_MESSAGES/djangojs.po
 source_file = conf/locale/en/LC_MESSAGES/djangojs.po
 source_lang = en
 type = PO
+
+[stanford-openedx.django]
+file_filter = conf/locale/<lang>/LC_MESSAGES/stanford_django.po
+source_file = conf/locale/en/LC_MESSAGES/stanford_django.po
+source_lang = en
+type = PO
+
+[stanford-openedx.djangojs]
+file_filter = conf/locale/<lang>/LC_MESSAGES/stanford_djangojs.po
+source_file = conf/locale/en/LC_MESSAGES/stanford_djangojs.po
+source_lang = en
+type = PO
+
+[stanford-openedx.mako]
+file_filter = conf/locale/<lang>/LC_MESSAGES/stanford_mako.po
+source_file = conf/locale/en/LC_MESSAGES/stanford_mako.po
+source_lang = en
+type = PO
+
+[stanford-openedx.underscore]
+file_filter = conf/locale/<lang>/LC_MESSAGES/stanford_underscore.po
+source_file = conf/locale/en/LC_MESSAGES/stanford_underscore.po
+source_lang = en
+type = PO
+
+[stanford-openedx.theme]
+file_filter = conf/locale/<lang>/LC_MESSAGES/theme.po
+source_file = conf/locale/en/LC_MESSAGES/theme.po
+source_lang = en
+type = PO
+
+[stanford-openedx.tos]
+file_filter = conf/locale/<lang>/LC_MESSAGES/tos.po
+source_file = conf/locale/en/LC_MESSAGES/tos.po
+source_lang = en
+type = PO
+
+[stanford-openedx.privacy]
+file_filter = conf/locale/<lang>/LC_MESSAGES/privacy.po
+source_file = conf/locale/en/LC_MESSAGES/privacy.po
+source_lang = en
+type = PO
+
+[stanford-openedx.honor]
+file_filter = conf/locale/<lang>/LC_MESSAGES/honor.po
+source_file = conf/locale/en/LC_MESSAGES/honor.po
+source_lang = en
+type = PO
+
+[stanford-openedx.copyright]
+file_filter = conf/locale/<lang>/LC_MESSAGES/copyright.po
+source_file = conf/locale/en/LC_MESSAGES/copyright.po
+source_lang = en
+type = PO

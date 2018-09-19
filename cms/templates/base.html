@@ -120,5 +120,6 @@ from openedx.core.djangolib.js_utils import (
     </script>
     <%include file="widgets/segment-io-footer.html" />
     <div class="modal-cover"></div>
+    <%static:optional_include_mako file="body-post.html" is_theming_enabled="True" />
   </body>
 </html>
