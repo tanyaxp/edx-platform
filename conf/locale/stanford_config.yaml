@@ -129,21 +129,18 @@ ignore_dirs:
 # See pavelib/utils/stanford_i18n_helpers.py for details.
 segment:
     theme.po:
-        - tos.po:
-            - lagunita/lms/templates/static_templates/tos.html
+        - tos_and_honor.po:
+            - lagunita/lms/templates/static_templates/tos_and_honor.html
         - privacy.po:
             - lagunita/lms/templates/static_templates/privacy.html
-        - honor.po:
-            - lagunita/lms/templates/static_templates/honor.html
         - copyright.po:
             - lagunita/lms/templates/static_templates/copyright.html
 
 # How should the generate step merge files?
 generate_merge:
     theme.po:
-        - tos.po
+        - tos_and_honor.po
         - privacy.po
-        - honor.po
         - copyright.po
         - theme.po
         - stanford_django.po
