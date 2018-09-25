@@ -103,21 +103,10 @@ ignore_dirs:
     - '*/terrain'
     - '*/spec'
     - '*/tests'
-    - '*/features'
+    - '*/djangoapps/*/features'
     # Directories full of auto-generated JS
     - lms/static/js/i18n
     - cms/static/js/i18n
-    # Features not used by Stanford
-    - 'cms'
-    - 'common/djangoapps/course_mode'
-    - '*/management/commands'
-    - 'common/djangoapps/xblock_django'
-    - 'lms/djangoapps/dashboard'
-    - 'lms/djangoapps/instructor*'
-    - 'lms/djangoapps/teams'
-    - 'lms/templates/wiki'
-    - '*/word_cloud'
-    - 'openedx/stanford/lms/djangoapps/instructor'
 
 # Third-party installed apps that we also extract strings from.  When adding a
 # file here, also add it to the django.po merge files below, and to the
