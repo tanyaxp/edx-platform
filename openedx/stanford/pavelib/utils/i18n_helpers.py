@@ -61,7 +61,7 @@ def extract_platform_mako():
 
 
 def extract_platform_underscore():
-    underscore_config = CONFIG.locale_dir / 'stanford_underscore.cfg'
+    underscore_config = CONFIG.locale_dir / 'babel_underscore.cfg'
     underscore_file = CONFIG.source_messages_dir / 'stanford_underscore.po'
     output = _extract_babel(underscore_config, underscore_file)
     return output
