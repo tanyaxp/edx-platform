@@ -2,22 +2,22 @@
 Computes the data to display on the Instructor Dashboard
 """
 from collections import defaultdict
-from util.json_request import JsonResponse
 import json
 
-from courseware import models
 from django.conf import settings
 from django.db.models import Count
 from django.utils.translation import ugettext as _
+from opaque_keys.edx.locations import Location
+from opaque_keys.edx.locations import SlashSeparatedCourseKey
 
-from xmodule.modulestore.django import modulestore
-from xmodule.modulestore.inheritance import own_metadata
-from instructor_analytics.csvs import create_csv_response
 from analyticsclient.client import Client
 from analyticsclient.exceptions import NotFoundError
+from courseware import models
+from instructor_analytics.csvs import create_csv_response
 from student.models import CourseAccessRole
-from opaque_keys.edx import locator
-from opaque_keys.edx.locations import SlashSeparatedCourseKey
+from util.json_request import JsonResponse
+from xmodule.modulestore.django import modulestore
+from xmodule.modulestore.inheritance import own_metadata
 
 # Used to limit the length of list displayed to the screen.
 MAX_SCREEN_LIST_LENGTH = 250

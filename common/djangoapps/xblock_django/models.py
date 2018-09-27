@@ -2,11 +2,10 @@
 Models.
 """
 
+from config_models.models import ConfigurationModel
 from django.db import models
 from django.db.models import TextField
 from django.utils.translation import ugettext_lazy as _
-
-from config_models.models import ConfigurationModel
 
 
 class XBlockDisableConfig(ConfigurationModel):

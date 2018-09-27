@@ -2,8 +2,9 @@
 Problem Page.
 """
 from bok_choy.page_object import PageObject
-from common.test.acceptance.pages.common.utils import click_css
 from selenium.webdriver.common.keys import Keys
+
+from common.test.acceptance.pages.common.utils import click_css
 
 
 class ProblemPage(PageObject):
@@ -148,7 +149,10 @@ class ProblemPage(PageObject):
         """
         Click the Show Answer button.
         """
-        self.q(css='.problem .show').click()
+        css = '.problem .show'
+        # First make sure that the button visible and can be clicked on.
+        self.scroll_to_element(css)
+        self.q(css=css).click()
         self.wait_for_ajax()
 
     def is_hint_notification_visible(self):
@@ -199,6 +203,15 @@ class ProblemPage(PageObject):
                                          'Waiting for Gentle Alert notification to be visible')
         self.wait_for(lambda: self.q(css='.notification.warning.notification-gentle-alert').focused,
                       'Waiting for the focus to be on the gentle alert notification')
+
+    def wait_for_show_answer_notification(self):
+        """
+        Wait for the show answer Notification to be present
+        """
+        self.wait_for_element_visibility('.notification.general.notification-show-answer',
+                                         'Waiting for Show Answer notification to be visible')
+        self.wait_for(lambda: self.q(css='.notification.general.notification-show-answer').focused,
+                      'Waiting for the focus to be on the show answer notification')
 
     def is_gentle_alert_notification_visible(self):
         """
@@ -428,6 +441,12 @@ class ProblemPage(PageObject):
         for choice in choices_list:
             if not self.q(xpath=choice_status_xpath.format(choice)).is_present():
                 return False
+
+            # Check that there is only a single status span, as there were some bugs with multiple
+            # spans (with various classes) being appended.
+            if not len(self.q(xpath=any_status_xpath.format(choice)).results) == 1:
+                return False
+
         return True
 
     def is_correct_choice_highlighted(self, correct_choices):

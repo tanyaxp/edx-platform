@@ -40,6 +40,18 @@ FEATURES.update({
     #   with user.email in xqueue (Stanford does)
     'SEND_USERS_EMAILADDR_WITH_CODERESPONSE': False,
 })
+FOOTER_DISCLAIMER_TEXT = (
+    'Stanford University pursues the science of learning. '
+    'Online learners are important participants in that pursuit. '
+    'The information we gather from your engagement with our '
+    'instructional offerings makes it possible for faculty, '
+    'researchers, designers and engineers to continuously improve '
+    'their work and, in that process, build learning science.'
+)
+FOOTER_EXTERNAL_COURSES_LINK = {
+    'text': 'Take more courses at online.stanford.edu',
+    'url': 'https://online.stanford.edu',
+}
 # Set this to the TPA provider_id if you want the entire site to be behind TPA
 FORCED_TPA_PROVIDER_ID = ''
 FORUM_MONGO_PARAMS = {
@@ -85,7 +97,10 @@ MAX_ENROLLEES_FOR_METRICS_USING_DB = 100
 MIDDLEWARE_CLASSES += (
     'sneakpeek_deeplink.middleware.SneakPeekDeepLinkMiddleware',
 )
+MKTG_URL_LINK_MAP['BLOG'] = None
 MKTG_URL_LINK_MAP['COPYRIGHT'] = 'copyright'
+MKTG_URL_LINK_MAP['DONATE'] = None
+ORA2_FILEUPLOAD_BACKEND = 'django'
 ORA2_RESPONSES_DOWNLOAD = {
     'STORAGE_TYPE': 'localfs',
     'BUCKET': 'edx-grades',
@@ -99,7 +114,6 @@ PAYMENT_PLATFORM_NAME = 'PAYMENT PLATFORM NAME'
 # The following fields are available in the URL: {course_id} {student_id}
 PROGRESS_SUCCESS_BUTTON_URL = 'http://<domain>/<path>/{course_id}'
 PROGRESS_SUCCESS_BUTTON_TEXT_OVERRIDE = None
-REGISTRATION_EXTRA_FIELDS['privacy_policy'] = 'hidden'
 SHIB_REDIRECT_DOMAIN_WHITELIST = {
     # Mapping of hosts to a list of safe redirect domains from that host
     # (not including itself); e.g.
