@@ -162,7 +162,6 @@ define(['domReady', 'jquery', 'underscore', 'js/utils/cancel_on_escape', 'js/vie
                 e.preventDefault();
                 $('.courses-tab').toggleClass('active', tab === 'courses');
                 $('.libraries-tab').toggleClass('active', tab === 'libraries');
-                $('.programs-tab').toggleClass('active', tab === 'programs');
 
             // Also toggle this course-related notice shown below the course tab, if it is present:
                 $('.wrapper-creationrights').toggleClass('is-hidden', tab !== 'courses');
@@ -179,15 +178,8 @@ define(['domReady', 'jquery', 'underscore', 'js/utils/cancel_on_escape', 'js/vie
 
             $('.action-reload').bind('click', ViewUtils.reload);
 
-            var courseTabHref = $('#course-index-tabs .courses-tab a').attr('href');
-            if (!courseTabHref) {
-                $('#course-index-tabs .courses-tab').bind('click', showTab('courses'));
-            }
-            var libraryTabHref = $('#course-index-tabs .libraries-tab a').attr('href');
-            if (!libraryTabHref) {
-                $('#course-index-tabs .libraries-tab').bind('click', showTab('libraries'));
-            }
-            $('#course-index-tabs .programs-tab').bind('click', showTab('programs'));
+            $('#course-index-tabs .courses-tab').bind('click', showTab('courses'));
+            $('#course-index-tabs .libraries-tab').bind('click', showTab('libraries'));
         };
 
         domReady(onReady);

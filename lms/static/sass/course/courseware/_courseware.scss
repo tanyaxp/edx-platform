@@ -19,6 +19,7 @@ html.video-fullscreen {
   @extend %ui-print-excluded;
 
   margin: ($baseline/2) ($baseline/4) 0 0;
+  float: right;
   overflow: hidden;
 
   &.studio-view {
@@ -107,10 +108,21 @@ html.video-fullscreen {
     display: none;
   }
 
+  main {
+    padding: $baseline;
+  }
+
+  .course-content {
+    padding: 0;
+  }
+
+  .courseware-results-wrapper {
+    padding: ($baseline*2) 3%; // percent allows for smaller padding on mobile
+  }
+
   .course-content,
   .courseware-results-wrapper {
     @extend .content;
-    padding: ($baseline*2) 3%; // percent allows for smaller padding on mobile
     line-height: 1.6;
 
     .xblock {
@@ -446,8 +458,6 @@ html.video-fullscreen {
           }
 
           h2 {
-            @include float(right);
-            @include text-align(right);
             @include border-right(0);
             @include padding-right(0);
             margin: 12px 0 0;
@@ -665,25 +675,6 @@ section.self-assessment {
   }
 }
 
-.sneakpeek-warning {
-  position: relative;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 5px;
-  border: none;
-  background-color: $black;
-  color: $white;
-  line-height: 2em;
-  font-weight: bold;
-  text-align: center;
-}
-.sneakpeek-warning a {
-  padding: 5px;
-  background-color: $white;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
 h4.problem-feedback-label{
   margin-top: 1em;
 }
@@ -699,3 +690,5 @@ h4.problem-feedback-label{
         color: $gray-d3 !important;
     }
 }
+
+@import '../stanford/course/_sneakpeek_courseware.scss';

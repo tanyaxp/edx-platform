@@ -11,9 +11,9 @@ from pytz import UTC
 
 from courseware.tests.factories import StudentModuleFactory
 from lms.djangoapps.instructor_task.models import ReportStore
-from lms.djangoapps.instructor_task.tasks_helper import upload_students_csv
-from lms.djangoapps.instructor_task.tasks_helper import UPDATE_STATUS_FAILED
-from lms.djangoapps.instructor_task.tasks_helper import UPDATE_STATUS_SUCCEEDED
+from lms.djangoapps.instructor_task.tasks_helper.enrollments import upload_students_csv
+from lms.djangoapps.instructor_task.tasks_helper.utils import UPDATE_STATUS_FAILED
+from lms.djangoapps.instructor_task.tasks_helper.utils import UPDATE_STATUS_SUCCEEDED
 from lms.djangoapps.instructor_task.tests.test_base import InstructorTaskCourseTestCase
 from lms.djangoapps.instructor_task.tests.test_base import TestReportMixin
 from opaque_keys.edx.locations import Location
@@ -47,7 +47,7 @@ class TestReportStore(TestReportMixin, InstructorTaskCourseTestCase):
         task_input = {'features': []}
         links = report_store.links_for(self.course.id)
         self.assertEquals(len(links), 0)
-        with patch('lms.djangoapps.instructor_task.tasks_helper._get_current_task'):
+        with patch('lms.djangoapps.instructor_task.tasks_helper.runner._get_current_task'):
             upload_students_csv(None, None, self.course.id, task_input, 'calculated')
         links = report_store.links_for(self.course.id)
         self.assertEquals(len(links), 1)
@@ -106,18 +106,18 @@ class TestInstructorOra2Report(StanfordReportTestCase):
     def test_report_fails_if_error(self):
         with patch('openedx.stanford.lms.djangoapps.instructor_task.tasks_helper.collect_anonymous_ora2_data') as mock_collect_data:
             mock_collect_data.side_effect = KeyError
-            with patch('lms.djangoapps.instructor_task.tasks_helper._get_current_task') as mock_current_task:
+            with patch('lms.djangoapps.instructor_task.tasks_helper.runner._get_current_task') as mock_current_task:
                 mock_current_task.return_value = self.current_task
                 status = push_ora2_responses_to_s3(None, None, self.course.id, {'include_email': 'False'}, 'generated')
                 self.assertEqual(status, UPDATE_STATUS_FAILED)
 
-    @patch('lms.djangoapps.instructor_task.tasks_helper.datetime')
+    @patch('lms.djangoapps.instructor_task.tasks_helper.grades.datetime')
     def test_report_stores_results(self, mock_time):
         start_time = datetime.now(UTC)
         mock_time.now.return_value = start_time
         test_header = ['field1', 'field2']
         test_rows = [['row1_field1', 'row1_field2'], ['row2_field1', 'row2_field2']]
-        with patch('lms.djangoapps.instructor_task.tasks_helper._get_current_task') as mock_current_task:
+        with patch('lms.djangoapps.instructor_task.tasks_helper.runner._get_current_task') as mock_current_task:
             mock_current_task.return_value = self.current_task
             with patch('openedx.stanford.lms.djangoapps.instructor_task.tasks_helper.collect_anonymous_ora2_data') as mock_collect_data:
                 mock_collect_data.return_value = (test_header, test_rows)
@@ -140,18 +140,18 @@ class TestInstructorOra2EmailReport(StanfordReportTestCase):
     def test_report_fails_if_error(self):
         with patch('openedx.stanford.lms.djangoapps.instructor_task.tasks_helper.collect_email_ora2_data') as mock_collect_data:
             mock_collect_data.side_effect = KeyError
-            with patch('lms.djangoapps.instructor_task.tasks_helper._get_current_task') as mock_current_task:
+            with patch('lms.djangoapps.instructor_task.tasks_helper.runner._get_current_task') as mock_current_task:
                 mock_current_task.return_value = self.current_task
                 status = push_ora2_responses_to_s3(None, None, self.course.id, {'include_email': 'True'}, 'generated')
                 self.assertEqual(status, UPDATE_STATUS_FAILED)
 
-    @patch('lms.djangoapps.instructor_task.tasks_helper.datetime')
+    @patch('lms.djangoapps.instructor_task.tasks_helper.grades.datetime')
     def test_report_stores_results(self, mock_time):
         start_time = datetime.now(UTC)
         mock_time.now.return_value = start_time
         test_header = ['field1', 'field2']
         test_rows = [['row1_field1', 'row1_field2'], ['row2_field1', 'row2_field2']]
-        with patch('lms.djangoapps.instructor_task.tasks_helper._get_current_task') as mock_current_task:
+        with patch('lms.djangoapps.instructor_task.tasks_helper.runner._get_current_task') as mock_current_task:
             mock_current_task.return_value = self.current_task
             with patch('openedx.stanford.lms.djangoapps.instructor_task.tasks_helper.collect_email_ora2_data') as mock_collect_data:
                 mock_collect_data.return_value = (test_header, test_rows)
@@ -174,18 +174,18 @@ class TestInstructorCourseForumsReport(StanfordReportTestCase):
     def test_report_fails_if_error(self):
         with patch('openedx.stanford.lms.djangoapps.instructor_task.tasks_helper.collect_course_forums_data') as mock_collect_data:
             mock_collect_data.side_effect = KeyError
-            with patch('lms.djangoapps.instructor_task.tasks_helper._get_current_task') as mock_current_task:
+            with patch('lms.djangoapps.instructor_task.tasks_helper.runner._get_current_task') as mock_current_task:
                 mock_current_task.return_value = self.current_task
                 status = push_course_forums_data_to_s3(None, None, self.course.id, None, 'generated')
                 self.assertEqual(status, UPDATE_STATUS_FAILED)
 
-    @patch('lms.djangoapps.instructor_task.tasks_helper.datetime')
+    @patch('lms.djangoapps.instructor_task.tasks_helper.grades.datetime')
     def test_report_stores_results(self, mock_time):
         start_time = datetime.now(UTC)
         mock_time.now.return_value = start_time
         test_header = ['Date', 'Type', 'Number', 'Up Votes', 'Down Votes', 'Net Points']
         test_rows = [['row1_field1', 'row1_field2'], ['row2_field1', 'row2_field2']]
-        with patch('lms.djangoapps.instructor_task.tasks_helper._get_current_task') as mock_current_task:
+        with patch('lms.djangoapps.instructor_task.tasks_helper.runner._get_current_task') as mock_current_task:
             mock_current_task.return_value = self.current_task
             with patch('openedx.stanford.lms.djangoapps.instructor_task.tasks_helper.collect_course_forums_data') as mock_collect_data:
                 mock_collect_data.return_value = (test_header, test_rows)
@@ -204,18 +204,18 @@ class TestInstructorStudentForumsReport(StanfordReportTestCase):
     def test_report_fails_if_error(self):
         with patch('openedx.stanford.lms.djangoapps.instructor_task.tasks_helper.collect_student_forums_data') as mock_collect_data:
             mock_collect_data.side_effect = KeyError
-            with patch('lms.djangoapps.instructor_task.tasks_helper._get_current_task') as mock_current_task:
+            with patch('lms.djangoapps.instructor_task.tasks_helper.runner._get_current_task') as mock_current_task:
                 mock_current_task.return_value = self.current_task
                 status = push_student_forums_data_to_s3(None, None, self.course.id, None, 'generated')
                 self.assertEqual(status, UPDATE_STATUS_FAILED)
 
-    @patch('lms.djangoapps.instructor_task.tasks_helper.datetime')
+    @patch('lms.djangoapps.instructor_task.tasks_helper.grades.datetime')
     def test_report_stores_results(self, mock_time):
         start_time = datetime.now(UTC)
         mock_time.now.return_value = start_time
         test_header = ['Username', 'Posts', 'Votes']
         test_rows = [['row1_field1', 'row1_field2', 'row1_field3'], ['row2_field1', 'row2_field2', 'row2_field3']]
-        with patch('lms.djangoapps.instructor_task.tasks_helper._get_current_task') as mock_current_task:
+        with patch('lms.djangoapps.instructor_task.tasks_helper.runner._get_current_task') as mock_current_task:
             mock_current_task.return_value = self.current_task
             with patch('openedx.stanford.lms.djangoapps.instructor_task.tasks_helper.collect_student_forums_data') as mock_collect_data:
                 mock_collect_data.return_value = (test_header, test_rows)

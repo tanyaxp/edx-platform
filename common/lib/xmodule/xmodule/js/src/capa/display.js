@@ -177,6 +177,7 @@
             this.showButton.click(this.show);
             this.saveButton = this.$('.action .save');
             this.saveNotification = this.$('.notification-save');
+            this.showAnswerNotification = this.$('.notification-show-answer');
             this.saveButton.click(this.save);
             this.gentleAlertNotification = this.$('.notification-gentle-alert');
             this.submitNotification = this.$('.notification-submit');
@@ -245,8 +246,9 @@
                         totalScore
                     );
                 }
-            } else if (attemptsUsed === 0 || totalScore === 0) {
+            } else if ((attemptsUsed === 0 || totalScore === 0) && curScore === 0) {
                 // Render 'x point(s) possible' if student has not yet attempted question
+                // But if staff has overridden score to a non-zero number, show it
                 if (graded) {
                     progressTemplate = ngettext(
                         // Translators: %(num_points)s is the number of points possible (examples: 1, 3, 10).;
@@ -655,7 +657,7 @@
                     ref = element.files;
                     for (loopI = 0, loopLen = ref.length; loopI < loopLen; loopI++) {
                         file = ref[loopI];
-                        if (allowedFiles.length !== 0 && indexOfHelper.call(allowedFiles, file.name < 0)) {
+                        if (allowedFiles.length !== 0 && indexOfHelper.call(allowedFiles, file.name) < 0) {
                             unallowedFileSubmitted = true;
                             errors.push(edx.StringUtils.interpolate(
                                 gettext('You submitted {filename}; only {allowedFiles} are allowed.'), {
@@ -837,17 +839,8 @@
                 var answers;
                 answers = response.answers;
                 $.each(answers, function(key, value) {
-                    var answer, choice, i, len, results;
-                    if ($.isArray(value)) {
-                        results = [];
-                        for (i = 0, len = value.length; i < len; i++) {
-                            choice = value[i];
-                            results.push(that.$('label[for="input_' + key + '_' + choice + '"]').attr({
-                                correct_answer: 'true'
-                            }));
-                        }
-                        return results;
-                    } else {
+                    var answer;
+                    if (!$.isArray(value)) {
                         answer = that.$('#answer_' + key + ', #solution_' + key);
                         edx.HtmlUtils.setHtml(answer, edx.HtmlUtils.HTML(value));
                         Collapsible.setCollapsibles(answer);
@@ -878,7 +871,7 @@
                         display = that.inputtypeDisplays[$(inputtype).attr('id')];
                         showMethod = that.inputtypeShowAnswerMethods[cls];
                         if (showMethod != null) {
-                            results.push(showMethod(inputtype, display, answers));
+                            results.push(showMethod(inputtype, display, answers, response.correct_status_html));
                         } else {
                             results.push(void 0);
                         }
@@ -892,8 +885,9 @@
                 }
                 that.el.find('.show').attr('disabled', 'disabled');
                 that.updateProgress(response);
-                window.SR.readText(gettext('Answers to this problem are now shown. Navigate through the problem to review it with answers inline.')); // eslint-disable-line max-len
-                that.scroll_to_problem_meta();
+                that.clear_all_notifications();
+                that.showAnswerNotification.show();
+                that.focus_on_notification('show-answer');
             });
         };
 
@@ -901,6 +895,8 @@
             this.submitNotification.remove();
             this.gentleAlertNotification.hide();
             this.saveNotification.hide();
+            this.showAnswerNotification.hide();
+
         };
 
         Problem.prototype.gentle_alert = function(msg) {
@@ -1013,6 +1009,7 @@
                     if (bind) {
                         $(textField).on('input', function() {
                             that.saveNotification.hide();
+                            that.showAnswerNotification.hide();
                             that.submitAnswersAndSubmitButton();
                         });
                     }
@@ -1032,6 +1029,8 @@
                         if (bind) {
                             $(checkboxOrRadio).on('click', function() {
                                 that.saveNotification.hide();
+                                that.el.find('.show').removeAttr('disabled');
+                                that.showAnswerNotification.hide();
                                 that.submitAnswersAndSubmitButton();
                             });
                         }
@@ -1049,6 +1048,7 @@
                 if (bind) {
                     $(selectField).on('change', function() {
                         that.saveNotification.hide();
+                        that.showAnswerNotification.hide();
                         that.submitAnswersAndSubmitButton();
                     });
                 }
@@ -1103,14 +1103,15 @@
                     var $status;
                     $status = $('#status_' + id);
                     if ($status[0]) {
-                        $status.removeAttr('class').addClass('unanswered');
+                        $status.removeAttr('class').addClass('status unanswered');
                     } else {
                         $('<span>', {
-                            class: 'unanswered',
+                            class: 'status unanswered',
                             style: 'display: inline-block;',
                             id: 'status_' + id
                         });
                     }
+                    $element.find('label').find('span.status.correct').remove();
                     return $element.find('label').removeAttr('class');
                 });
             },
@@ -1186,16 +1187,31 @@
         };
 
         Problem.prototype.inputtypeShowAnswerMethods = {
-            choicegroup: function(element, display, answers) {
-                var answer, choice, inputId, i, len, results, $element;
+            choicegroup: function(element, display, answers, correctStatusHtml) {
+                var answer, choice, inputId, i, len, results, $element, $inputLabel, $inputStatus;
                 $element = $(element);
                 inputId = $element.attr('id').replace(/inputtype_/, '');
                 answer = answers[inputId];
                 results = [];
                 for (i = 0, len = answer.length; i < len; i++) {
                     choice = answer[i];
-                    results.push($element.find('#input_' + inputId + '_' + choice).parent('label').
-                        addClass('choicegroup_correct'));
+                    $inputLabel = $element.find('#input_' + inputId + '_' + choice).parent('label');
+                    $inputStatus = $inputLabel.find('#status_' + inputId);
+                    // If the correct answer was already Submitted before "Show Answer" was selected,
+                    // the status HTML will already be present. Otherwise, inject the status HTML.
+
+                    // If the learner clicked a different answer after Submit, their submitted answers
+                    // will be marked as "unanswered". In that case, for correct answers update the
+                    // classes accordingly.
+                    if ($inputStatus.hasClass('unanswered')) {
+                        $inputStatus.removeAttr('class').addClass('status correct');
+                        $inputLabel.addClass('choicegroup_correct');
+                    } else if (!$inputLabel.hasClass('choicegroup_correct')) {
+                        // If the status HTML is not already present (due to clicking Submit), append
+                        // the status HTML for correct answers.
+                        edx.HtmlUtils.append($inputLabel, edx.HtmlUtils.HTML(correctStatusHtml));
+                        results.push($inputLabel.addClass('choicegroup_correct'));
+                    }
                 }
                 return results;
             },

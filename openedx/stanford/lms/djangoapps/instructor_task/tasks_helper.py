@@ -14,12 +14,12 @@ from pymongo.errors import PyMongoError
 from pytz import UTC
 
 from django_comment_client.management_utils import get_mongo_connection_string
-from lms.djangoapps.instructor_task.tasks_helper import upload_csv_to_report_store
+from lms.djangoapps.instructor_task.tasks_helper.utils import upload_csv_to_report_store
 from courseware.courses import get_course_by_id
 from lms.djangoapps.instructor_task.models import PROGRESS
 from lms.djangoapps.instructor_task.models import ReportStore
-from lms.djangoapps.instructor_task.tasks_helper import UPDATE_STATUS_FAILED
-from lms.djangoapps.instructor_task.tasks_helper import UPDATE_STATUS_SUCCEEDED
+from lms.djangoapps.instructor_task.tasks_helper.utils import UPDATE_STATUS_FAILED
+from lms.djangoapps.instructor_task.tasks_helper.utils import UPDATE_STATUS_SUCCEEDED
 from openedx.stanford.lms.djangoapps.instructor_analytics.basic import student_responses
 from util.file import course_filename_prefix_generator
 from util.query import get_read_replica_cursor_if_available
@@ -210,7 +210,7 @@ def _push_csv_responses_to_s3(csv_fn, filename, course_id, action_name):
             'duration_ms': int((current_time - start_time).total_seconds() * 1000),
             'step': curr_step,
         }
-        from lms.djangoapps.instructor_task.tasks_helper import _get_current_task
+        from lms.djangoapps.instructor_task.tasks_helper.runner import _get_current_task
         _get_current_task().update_state(state=PROGRESS, meta=progress)
 
         return progress

@@ -4,8 +4,8 @@ from celery import task
 from django.conf import settings
 from django.utils.translation import ugettext_noop
 
-from lms.djangoapps.instructor_task.tasks_helper import BaseInstructorTask
-from lms.djangoapps.instructor_task.tasks_helper import run_main_task
+from lms.djangoapps.instructor_task.tasks_base import BaseInstructorTask
+from lms.djangoapps.instructor_task.tasks_helper.runner import run_main_task
 
 from openedx.stanford.lms.djangoapps.instructor_task import tasks_helper as helper
 

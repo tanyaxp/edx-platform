@@ -12,21 +12,21 @@ file and check it in at the same time as your model changes. To do that,
 ASSUMPTIONS: modules have unique IDs, even across different module_types
 
 """
-from uuid import uuid4
 import csv
-import json
 import hashlib
+import json
 import os.path
+from uuid import uuid4
 
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.files.base import ContentFile
 from django.db import models, transaction
 
-from openedx.core.storage import get_storage
 from openedx.core.djangoapps.xmodule_django.models import CourseKeyField
-from openedx.stanford.lms.djangoapps.instructor_task.models import DeleteFileMixin
+from openedx.core.storage import get_storage
 
+from openedx.stanford.lms.djangoapps.instructor_task.models import DeleteFileMixin
 
 # define custom states used by InstructorTask
 QUEUING = 'QUEUING'

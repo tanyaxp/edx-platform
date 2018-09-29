@@ -55,13 +55,13 @@ source_file = conf/locale/en/LC_MESSAGES/wiki.po
 source_lang = en
 type = PO
 
-[open-edx-releases.release-ficus]
+[open-edx-releases.release-ginkgo]
 file_filter = conf/locale/<lang>/LC_MESSAGES/django.po
 source_file = conf/locale/en/LC_MESSAGES/django.po
 source_lang = en
 type = PO
- 
-[open-edx-releases.release-ficus-js]
+
+[open-edx-releases.release-ginkgo-js]
 file_filter = conf/locale/<lang>/LC_MESSAGES/djangojs.po
 source_file = conf/locale/en/LC_MESSAGES/djangojs.po
 source_lang = en
@@ -97,21 +97,15 @@ source_file = conf/locale/en/LC_MESSAGES/theme.po
 source_lang = en
 type = PO
 
-[stanford-openedx.tos]
-file_filter = conf/locale/<lang>/LC_MESSAGES/tos.po
-source_file = conf/locale/en/LC_MESSAGES/tos.po
+[stanford-openedx.tos_and_honor]
+file_filter = conf/locale/<lang>/LC_MESSAGES/tos_and_honor.po
+source_file = conf/locale/en/LC_MESSAGES/tos_and_honor.po
 source_lang = en
 type = PO
 
 [stanford-openedx.privacy]
 file_filter = conf/locale/<lang>/LC_MESSAGES/privacy.po
 source_file = conf/locale/en/LC_MESSAGES/privacy.po
-source_lang = en
-type = PO
-
-[stanford-openedx.honor]
-file_filter = conf/locale/<lang>/LC_MESSAGES/honor.po
-source_file = conf/locale/en/LC_MESSAGES/honor.po
 source_lang = en
 type = PO
 

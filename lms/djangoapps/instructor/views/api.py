@@ -5,113 +5,122 @@ JSON views which the instructor dashboard requests.
 
 Many of these GETs may become PUTs in the future.
 """
-import StringIO
+import csv
+import decimal
 import json
 import logging
+import random
 import re
+import string
+import StringIO
 import time
+
+import unicodecsv
 from django.conf import settings
-from django.views.decorators.csrf import ensure_csrf_cookie
-from django.views.decorators.http import require_POST, require_http_methods
-from django.views.decorators.cache import cache_control
-from django.core.exceptions import ValidationError, PermissionDenied
+from django.contrib.auth.models import User
+from django.core.exceptions import ObjectDoesNotExist, PermissionDenied, ValidationError
 from django.core.mail.message import EmailMessage
-from django.core.exceptions import ObjectDoesNotExist
-from django.db import IntegrityError, transaction
 from django.core.urlresolvers import reverse
 from django.core.validators import validate_email
-from django.utils.translation import ugettext as _
+from django.db import IntegrityError, transaction
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseNotFound
-from django.utils.html import strip_tags
 from django.shortcuts import redirect
-import string
-import random
-import unicodecsv
-import decimal
+from django.utils.html import strip_tags
+from django.utils.translation import ugettext as _
+from django.views.decorators.cache import cache_control
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.http import require_http_methods, require_POST
+from opaque_keys import InvalidKeyError
+from opaque_keys.edx.keys import CourseKey, UsageKey
+from opaque_keys.edx.locations import SlashSeparatedCourseKey
+
+import instructor_analytics.basic
+import instructor_analytics.csvs
+import instructor_analytics.distributions
+import lms.djangoapps.instructor.enrollment as enrollment
+import lms.djangoapps.instructor_task.api
+from bulk_email.models import BulkEmailFlag, CourseEmail
+from certificates import api as certs_api
+from certificates.models import CertificateInvalidation, CertificateStatuses, CertificateWhitelist, GeneratedCertificate
+from courseware.access import has_access
+from courseware.courses import get_course_by_id, get_course_with_access
+from courseware.models import StudentModule
+from django_comment_client.utils import has_forum_access
+from django_comment_common.models import FORUM_ROLE_ADMINISTRATOR, FORUM_ROLE_COMMUNITY_TA, FORUM_ROLE_MODERATOR, Role
+from edxmako.shortcuts import render_to_string
+from lms.djangoapps.instructor.access import ROLES, allow_access, list_with_level, revoke_access, update_forum_role
+from lms.djangoapps.instructor.enrollment import (
+    enroll_email,
+    get_email_params,
+    get_user_email_language,
+    send_beta_role_email,
+    send_mail_to_student,
+    unenroll_email
+)
+from lms.djangoapps.instructor.views import INVOICE_KEY
+from lms.djangoapps.instructor.views.instructor_task_helpers import extract_email_features, extract_task_features
+from lms.djangoapps.instructor_task.api import submit_override_score
+from lms.djangoapps.instructor_task.api_helper import AlreadyRunningError
+from lms.djangoapps.instructor_task.models import ReportStore
+from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
+from openedx.core.djangoapps.course_groups.cohorts import is_course_cohorted
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+from openedx.core.djangoapps.user_api.preferences.api import get_user_preference, set_user_preference
+from openedx.core.djangolib.markup import HTML, Text
+from shoppingcart.models import (
+    Coupon,
+    CourseMode,
+    CourseRegistrationCode,
+    CourseRegistrationCodeInvoiceItem,
+    Invoice,
+    RegistrationCodeRedemption
+)
 from student import auth
-from student.roles import CourseSalesAdminRole, CourseFinanceAdminRole
+from student.models import (
+    ALLOWEDTOENROLL_TO_ENROLLED,
+    ALLOWEDTOENROLL_TO_UNENROLLED,
+    DEFAULT_TRANSITION_STATE,
+    ENROLLED_TO_ENROLLED,
+    ENROLLED_TO_UNENROLLED,
+    UNENROLLED_TO_ALLOWEDTOENROLL,
+    UNENROLLED_TO_ENROLLED,
+    UNENROLLED_TO_UNENROLLED,
+    CourseEnrollment,
+    EntranceExamConfiguration,
+    ManualEnrollmentAudit,
+    Registration,
+    UserProfile,
+    anonymous_id_for_user,
+    get_user_by_username_or_email,
+    unique_id_for_user
+)
+from student.roles import CourseFinanceAdminRole, CourseSalesAdminRole
+from submissions import api as sub_api  # installed from the edx-submissions repository
 from util.file import (
-    store_uploaded_file, course_and_time_based_filename_generator,
-    FileValidationException, UniversalNewlineIterator
+    FileValidationException,
+    UniversalNewlineIterator,
+    course_and_time_based_filename_generator,
+    store_uploaded_file
 )
 from util.json_request import JsonResponse, JsonResponseBadRequest
 from util.views import require_global_staff
-from lms.djangoapps.instructor.views.instructor_task_helpers import extract_email_features, extract_task_features
-
-from courseware.access import has_access
-from courseware.courses import get_course_with_access, get_course_by_id
-from django.contrib.auth.models import User
-from django_comment_client.utils import has_forum_access
-from django_comment_common.models import (
-    Role,
-    FORUM_ROLE_ADMINISTRATOR,
-    FORUM_ROLE_MODERATOR,
-    FORUM_ROLE_COMMUNITY_TA,
-)
-from edxmako.shortcuts import render_to_string
-from courseware.models import StudentModule
-from shoppingcart.models import (
-    Coupon,
-    CourseRegistrationCode,
-    RegistrationCodeRedemption,
-    Invoice,
-    CourseMode,
-    CourseRegistrationCodeInvoiceItem,
-)
-from student.models import (
-    CourseEnrollment, unique_id_for_user, anonymous_id_for_user,
-    UserProfile, Registration, EntranceExamConfiguration,
-    ManualEnrollmentAudit, UNENROLLED_TO_ALLOWEDTOENROLL, ALLOWEDTOENROLL_TO_ENROLLED,
-    ENROLLED_TO_ENROLLED, ENROLLED_TO_UNENROLLED, UNENROLLED_TO_ENROLLED,
-    UNENROLLED_TO_UNENROLLED, ALLOWEDTOENROLL_TO_UNENROLLED, DEFAULT_TRANSITION_STATE
-)
-import lms.djangoapps.instructor_task.api
-from lms.djangoapps.instructor_task.api_helper import AlreadyRunningError
-from lms.djangoapps.instructor_task.models import ReportStore
-import lms.djangoapps.instructor.enrollment as enrollment
-from lms.djangoapps.instructor.enrollment import (
-    get_user_email_language,
-    enroll_email,
-    send_mail_to_student,
-    get_email_params,
-    send_beta_role_email,
-    unenroll_email,
-)
-from lms.djangoapps.instructor.access import list_with_level, allow_access, revoke_access, ROLES, update_forum_role
-import instructor_analytics.basic
-import instructor_analytics.distributions
-import instructor_analytics.csvs
-import csv
-from openedx.core.djangoapps.user_api.preferences.api import get_user_preference, set_user_preference
-from openedx.core.djangolib.markup import HTML, Text
-from lms.djangoapps.instructor.views import INVOICE_KEY
-
-from submissions import api as sub_api  # installed from the edx-submissions repository
-
-from certificates import api as certs_api
-from certificates.models import CertificateWhitelist, GeneratedCertificate, CertificateStatuses, CertificateInvalidation
-
-from bulk_email.models import CourseEmail, BulkEmailFlag
-from student.models import get_user_by_username_or_email
+from xmodule.modulestore.django import modulestore
 
 from .tools import (
-    dump_student_extensions,
     dump_module_extensions,
+    dump_student_extensions,
     find_unit,
     get_student_from_identifier,
-    require_student_from_identifier,
     handle_dashboard_error,
     parse_datetime,
+    require_student_from_identifier,
     set_due_date_extension,
-    strip_if_string,
+    strip_if_string
 )
-from opaque_keys.edx.keys import CourseKey, UsageKey
-from opaque_keys.edx.locations import SlashSeparatedCourseKey
-from opaque_keys import InvalidKeyError
-from openedx.core.djangoapps.course_groups.cohorts import is_course_cohorted
-from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 
 log = logging.getLogger(__name__)
+
+TASK_SUBMISSION_OK = 'created'
 
 
 def common_exceptions_400(func):
@@ -759,6 +768,7 @@ def bulk_beta_modify_access(request, course_id):
             error = False
             user_does_not_exist = False
             user = get_student_from_identifier(identifier)
+            user_active = user.is_active
 
             if action == 'add':
                 allow_access(course, user, rolename)
@@ -771,6 +781,7 @@ def bulk_beta_modify_access(request, course_id):
         except User.DoesNotExist:
             error = True
             user_does_not_exist = True
+            user_active = None
         # catch and log any unexpected exceptions
         # so that one error doesn't cause a 500.
         except Exception as exc:  # pylint: disable=broad-except
@@ -792,7 +803,8 @@ def bulk_beta_modify_access(request, course_id):
             results.append({
                 'identifier': identifier,
                 'error': error,
-                'userDoesNotExist': user_does_not_exist
+                'userDoesNotExist': user_does_not_exist,
+                'is_active': user_active
             })
 
     response_payload = {
@@ -1985,7 +1997,7 @@ def reset_student_attempts(request, course_id):
         response_payload['student'] = student_identifier
     elif all_students:
         lms.djangoapps.instructor_task.api.submit_reset_problem_attempts_for_all_students(request, module_state_key)
-        response_payload['task'] = 'created'
+        response_payload['task'] = TASK_SUBMISSION_OK
         response_payload['student'] = 'All Students'
     else:
         return HttpResponseBadRequest()
@@ -2064,7 +2076,7 @@ def reset_student_attempts_for_entrance_exam(request, course_id):  # pylint: dis
     except InvalidKeyError:
         return HttpResponseBadRequest(_("Course has no valid entrance exam section."))
 
-    response_payload = {'student': student_identifier or _('All Students'), 'task': 'created'}
+    response_payload = {'student': student_identifier or _('All Students'), 'task': TASK_SUBMISSION_OK}
     return JsonResponse(response_payload)
 
 
@@ -2114,22 +2126,85 @@ def rescore_problem(request, course_id):
 
     if student:
         response_payload['student'] = student_identifier
-        lms.djangoapps.instructor_task.api.submit_rescore_problem_for_student(
-            request,
-            module_state_key,
-            student,
-            only_if_higher,
-        )
+        try:
+            lms.djangoapps.instructor_task.api.submit_rescore_problem_for_student(
+                request,
+                module_state_key,
+                student,
+                only_if_higher,
+            )
+        except NotImplementedError as exc:
+            return HttpResponseBadRequest(exc.message)
     elif all_students:
-        lms.djangoapps.instructor_task.api.submit_rescore_problem_for_all_students(
-            request,
-            module_state_key,
-            only_if_higher,
-        )
+        try:
+            lms.djangoapps.instructor_task.api.submit_rescore_problem_for_all_students(
+                request,
+                module_state_key,
+                only_if_higher,
+            )
+        except NotImplementedError as exc:
+            return HttpResponseBadRequest(exc.message)
     else:
         return HttpResponseBadRequest()
 
-    response_payload['task'] = 'created'
+    response_payload['task'] = TASK_SUBMISSION_OK
+    return JsonResponse(response_payload)
+
+
+@transaction.non_atomic_requests
+@require_POST
+@ensure_csrf_cookie
+@cache_control(no_cache=True, no_store=True, must_revalidate=True)
+@require_level('instructor')
+@require_post_params(problem_to_reset="problem urlname to reset", score='overriding score')
+@common_exceptions_400
+def override_problem_score(request, course_id):
+    course_key = CourseKey.from_string(course_id)
+    score = strip_if_string(request.POST.get('score'))
+    problem_to_reset = strip_if_string(request.POST.get('problem_to_reset'))
+    student_identifier = request.POST.get('unique_student_identifier', None)
+
+    if not problem_to_reset:
+        return HttpResponseBadRequest("Missing query parameter problem_to_reset.")
+
+    if not student_identifier:
+        return HttpResponseBadRequest("Missing query parameter student_identifier.")
+
+    if student_identifier is not None:
+        student = get_student_from_identifier(student_identifier)
+    else:
+        return _create_error_response(request, "Invalid student ID {}.".format(student_identifier))
+
+    try:
+        usage_key = UsageKey.from_string(problem_to_reset).map_into_course(course_key)
+    except InvalidKeyError:
+        return _create_error_response(request, "Unable to parse problem id {}.".format(problem_to_reset))
+
+    # check the user's access to this specific problem
+    if not has_access(request.user, "instructor", modulestore().get_item(usage_key)):
+        _create_error_response(request, "User {} does not have permission to override scores for problem {}.".format(
+            request.user.id,
+            problem_to_reset
+        ))
+
+    response_payload = {
+        'problem_to_reset': problem_to_reset,
+        'student': student_identifier
+    }
+    try:
+        submit_override_score(
+            request,
+            usage_key,
+            student,
+            score,
+        )
+    except NotImplementedError as exc:  # if we try to override the score of a non-scorable block, catch it here
+        return _create_error_response(request, exc.message)
+
+    except ValueError as exc:
+        return _create_error_response(request, exc.message)
+
+    response_payload['task'] = TASK_SUBMISSION_OK
     return JsonResponse(response_payload)
 
 
@@ -2187,7 +2262,7 @@ def rescore_entrance_exam(request, course_id):
     lms.djangoapps.instructor_task.api.submit_rescore_entrance_exam_for_student(
         request, entrance_exam_key, student, only_if_higher,
     )
-    response_payload['task'] = 'created'
+    response_payload['task'] = TASK_SUBMISSION_OK
     return JsonResponse(response_payload)
 
 
@@ -2516,9 +2591,10 @@ def send_email(request, course_id):
     - 'subject' specifies email's subject
     - 'message' specifies email's content
     """
-    course_id = SlashSeparatedCourseKey.from_deprecated_string(course_id)
+    course_id = CourseKey.from_string(course_id)
 
     if not BulkEmailFlag.feature_enabled(course_id):
+        log.warning(u'Email is not enabled for course %s', course_id)
         return HttpResponseForbidden("Email is not enabled for this course.")
 
     targets = json.loads(request.POST.get("send_to"))
@@ -2530,8 +2606,22 @@ def send_email(request, course_id):
     #
     # If these are None (there is no site configuration enabled for the current site) than
     # the system will use normal system defaults
-    template_name = configuration_helpers.get_value('course_email_template_name')
+    course_overview = CourseOverview.get_from_id(course_id)
     from_addr = configuration_helpers.get_value('course_email_from_addr')
+    if isinstance(from_addr, dict):
+        # If course_email_from_addr is a dict, we are customizing
+        # the email template for each organization that has courses
+        # on the site. The dict maps from addresses by org allowing
+        # us to find the correct from address to use here.
+        from_addr = from_addr.get(course_overview.display_org_with_default)
+
+    template_name = configuration_helpers.get_value('course_email_template_name')
+    if isinstance(template_name, dict):
+        # If course_email_template_name is a dict, we are customizing
+        # the email template for each organization that has courses
+        # on the site. The dict maps template names by org allowing
+        # us to find the correct template to use here.
+        template_name = template_name.get(course_overview.display_org_with_default)
 
     # Create the CourseEmail object.  This is saved immediately, so that
     # any transaction that has been pending up to this point will also be
@@ -2546,6 +2636,8 @@ def send_email(request, course_id):
             from_addr=from_addr
         )
     except ValueError as err:
+        log.exception(u'Cannot create course email for course %s requested by user %s for targets %s',
+                      course_id, request.user, targets)
         return HttpResponseBadRequest(repr(err))
 
     # Submit the task, so that the correct InstructorTask object gets created (for monitoring purposes)
@@ -2950,6 +3042,7 @@ def add_certificate_exception(course_key, student, certificate_exception):
             'notes': certificate_exception.get('notes', '')
         }
     )
+    log.info(u'%s has been added to the whitelist in course %s', student.username, course_key)
 
     generated_certificate = GeneratedCertificate.eligible_certificates.filter(
         user=student,
@@ -3001,6 +3094,7 @@ def remove_certificate_exception(course_key, student):
     except ObjectDoesNotExist:
         # Certificate has not been generated yet, so just remove the certificate exception from white list
         pass
+    log.info(u'%s has been removed from the whitelist in course %s', student.username, course_key)
     certificate_exception.delete()
 
 
@@ -3347,3 +3441,11 @@ def _get_boolean_param(request, param_name):
     values to boolean values.
     """
     return request.POST.get(param_name, False) in ['true', 'True', True]
+
+
+def _create_error_response(request, msg):
+    """
+    Creates the appropriate error response for the current request,
+    in JSON form.
+    """
+    return JsonResponse({"error": _(msg)}, 400)
