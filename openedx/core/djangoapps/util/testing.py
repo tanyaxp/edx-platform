@@ -160,9 +160,9 @@ class TestConditionalContent(ModuleStoreTestCase):
                                                   display_name=self.TEST_SECTION_NAME)
 
         # Create users and partition them
-        self.student_a = UserFactory.create(username='student_a', email='student_a@example.com')
+        self.student_a = UserFactory.create(username='student_a', email='student_a@contrived_example.com')
         CourseEnrollmentFactory.create(user=self.student_a, course_id=self.course.id)
-        self.student_b = UserFactory.create(username='student_b', email='student_b@example.com')
+        self.student_b = UserFactory.create(username='student_b', email='student_b@contrived_example.com')
         CourseEnrollmentFactory.create(user=self.student_b, course_id=self.course.id)
 
         UserCourseTagFactory(
