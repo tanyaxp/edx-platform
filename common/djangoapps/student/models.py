@@ -63,6 +63,10 @@ ENROLL_STATUS_CHANGE = Signal(providing_args=["event", "user", "course_id", "mod
 log = logging.getLogger(__name__)
 AUDIT_LOG = logging.getLogger("audit")
 SessionStore = import_module(settings.SESSION_ENGINE).SessionStore  # pylint: disable=invalid-name
+EXCLUDE_FAKE_USERS_KWARGS = {
+    'user__email__endswith': '.example.com',
+    'user__email__endswith': '@example.com',
+}
 
 # enroll status changed events - signaled to email_marketing.  See email_marketing.tasks for more info
 
@@ -967,8 +971,8 @@ class CourseEnrollmentManager(models.Manager):
         """
         Return a queryset of User for every user enrolled in the course.  If
         `include_inactive` is True, returns both active and inactive enrollees
-        for the course. Otherwise returns actively enrolled users only. If
-        `exclude_fake_email` is True, does not include non-real users e.g.
+        for the course. Otherwise returns actively enrolled users only.
+        If `exclude_fake_email` is True, does not include non-real users e.g.
         LTI users.
         """
         filter_kwargs = {
@@ -977,10 +981,9 @@ class CourseEnrollmentManager(models.Manager):
         if not include_inactive:
             filter_kwargs['courseenrollment__is_active'] = True
 
-        exclude_kwargs = {
-            'email__endswith': '.example.com',
-            'email__endswith': '@example.com',
-        } if exclude_fake_email else {}
+        exclude_kwargs = {}
+        if exclude_fake_email:
+            exclude_kwargs = EXCLUDE_FAKE_USERS_KWARGS
         return User.objects.filter(**filter_kwargs).exclude(**exclude_kwargs)
 
     def enrollment_counts(self, course_id):
@@ -988,10 +991,20 @@ class CourseEnrollmentManager(models.Manager):
         Returns a dictionary that stores the total enrollment count for a course, as well as the
         enrollment count for each individual mode.
         """
+
         # Unfortunately, Django's "group by"-style queries look super-awkward
         query = use_read_replica_if_available(
-            super(CourseEnrollmentManager, self).get_queryset().filter(course_id=course_id, is_active=True).values(
-                'mode').order_by().annotate(Count('mode')))
+            super(CourseEnrollmentManager, self).get_queryset().filter(
+                course_id=course_id,
+                is_active=True,
+            ).exclude(
+                **EXCLUDE_FAKE_USERS_KWARGS
+            ).values(
+                'mode',
+            ).order_by().annotate(
+                Count('mode')
+            )
+        )
         total = 0
         enroll_dict = defaultdict(int)
         for item in query:
