@@ -401,6 +401,7 @@
         keywordValidator.keyword_regex = /%%+[^%]+%%/g;
 
         keywordValidator.keywords = [
+            '%%USERNAME%%', '%%COURSE_ID%%', '%%COURSE_START_DATE%%',
             '%%USER_ID%%', '%%USER_FULLNAME%%', '%%COURSE_DISPLAY_NAME%%', '%%COURSE_END_DATE%%'
         ];
 
