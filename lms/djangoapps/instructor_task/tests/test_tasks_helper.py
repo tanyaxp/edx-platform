@@ -117,7 +117,7 @@ class TestInstructorGradeReport(InstructorGradeReportTestCase):
         super(TestInstructorGradeReport, self).setUp()
         self.course = CourseFactory.create()
 
-    @ddt.data([u'student@example.com', u'ni\xf1o@example.com'])
+    @ddt.data([u'student@contrived_example.com', u'ni\xf1o@contrived_example.com'])
     def test_unicode_emails(self, emails):
         """
         Test that students with unicode characters in emails is handled.
@@ -141,7 +141,7 @@ class TestInstructorGradeReport(InstructorGradeReportTestCase):
         progress dict and uploaded to the report store.
         """
         mock_grades_iter.return_value = [
-            (self.create_student('username', 'student@example.com'), None, TypeError('Cannot grade student'))
+            (self.create_student('username', 'student@contrived_example.com'), None, TypeError('Cannot grade student'))
         ]
         result = CourseGradeReport.generate(None, None, self.course.id, None, 'graded')
         self.assertDictContainsSubset({'attempted': 1, 'succeeded': 0, 'failed': 1}, result)
@@ -322,7 +322,7 @@ class TestInstructorGradeReport(InstructorGradeReportTestCase):
         mock_course_grade.percent = 0
         mock_grades_iter.return_value = [
             (
-                self.create_student('username', 'student@example.com'),
+                self.create_student('username', 'student@contrived_example.com'),
                 mock_course_grade,
                 None,
             )
@@ -404,8 +404,8 @@ class TestInstructorGradeReport(InstructorGradeReportTestCase):
         """
         Test that students with inactive enrollments are included in report.
         """
-        self.create_student('active-student', 'active@example.com')
-        self.create_student('inactive-student', 'inactive@example.com', enrollment_active=False)
+        self.create_student('active-student', 'active@contrived_example.com')
+        self.create_student('inactive-student', 'inactive@contrived_example.com', enrollment_active=False)
 
         self.current_task = Mock()
         self.current_task.update_state = Mock()
@@ -768,7 +768,7 @@ class TestProblemGradeReport(TestReportMixin, InstructorTaskModuleTestCase):
         Test that any grading errors are properly reported in the progress
         dict and uploaded to the report store.
         """
-        student = self.create_student(u'username', u'student@example.com')
+        student = self.create_student(u'username', u'student@contrived_example.com')
         mock_grades_iter.return_value = [
             (student, None, Exception(error_message))
         ]
@@ -791,7 +791,7 @@ class TestProblemGradeReport(TestReportMixin, InstructorTaskModuleTestCase):
         """
         Students with inactive enrollments in a course should be included in Problem Grade Report.
         """
-        inactive_student = self.create_student('inactive-student', 'inactive@example.com', enrollment_active=False)
+        inactive_student = self.create_student('inactive-student', 'inactive@contrived_example.com', enrollment_active=False)
         vertical = ItemFactory.create(
             parent_location=self.problem_section.location,
             category='vertical',
@@ -925,10 +925,8 @@ class TestProblemReportSplitTestContent(TestReportMixin, TestConditionalContent,
             }
         )
 
-        # Create users
-        self.student_a = UserFactory.create(username='student_a', email='student_a@example.com')
+        # Users inherited from TestConditionalContent
         CourseEnrollmentFactory.create(user=self.student_a, course_id=self.course.id)
-        self.student_b = UserFactory.create(username='student_b', email='student_b@example.com')
         CourseEnrollmentFactory.create(user=self.student_b, course_id=self.course.id)
 
         problem_vertical_list = []
