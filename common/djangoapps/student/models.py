@@ -1006,9 +1006,9 @@ class CourseEnrollmentManager(models.Manager):
                 course_id=course_id,
                 is_active=True,
             ).exclude(
-                user__email_endswith='@example.com'
+                user__email__endswith='@example.com'
             ).exclude(
-                user__email_endswith='.example.com'
+                user__email__endswith='.example.com'
             ).values(
                 'mode',
             ).order_by().annotate(
