@@ -63,10 +63,6 @@ ENROLL_STATUS_CHANGE = Signal(providing_args=["event", "user", "course_id", "mod
 log = logging.getLogger(__name__)
 AUDIT_LOG = logging.getLogger("audit")
 SessionStore = import_module(settings.SESSION_ENGINE).SessionStore  # pylint: disable=invalid-name
-EXCLUDE_FAKE_USERS_KWARGS = {
-    'user__email__endswith': '.example.com',
-    'user__email__endswith': '@example.com',
-}
 
 # enroll status changed events - signaled to email_marketing.  See email_marketing.tasks for more info
 
@@ -981,10 +977,22 @@ class CourseEnrollmentManager(models.Manager):
         if not include_inactive:
             filter_kwargs['courseenrollment__is_active'] = True
 
-        exclude_kwargs = {}
+        exclude_kwargs_anon = {}
+        exclude_kwargs_lti = {}
         if exclude_fake_email:
-            exclude_kwargs = EXCLUDE_FAKE_USERS_KWARGS
-        return User.objects.filter(**filter_kwargs).exclude(**exclude_kwargs)
+            exclude_kwargs_anon = {
+                'email__endswith': '@example.com',
+            }
+            exclude_kwargs_lti = {
+                'email__endswith': '.example.com'
+            }
+        return User.objects.filter(
+            **filter_kwargs
+        ).exclude(
+            **exclude_kwargs_anon
+        ).exclude(
+            **exclude_kwargs_lti
+        )
 
     def enrollment_counts(self, course_id):
         """
@@ -998,7 +1006,9 @@ class CourseEnrollmentManager(models.Manager):
                 course_id=course_id,
                 is_active=True,
             ).exclude(
-                **EXCLUDE_FAKE_USERS_KWARGS
+                user__email_endswith='@example.com'
+            ).exclude(
+                user__email_endswith='.example.com'
             ).values(
                 'mode',
             ).order_by().annotate(
