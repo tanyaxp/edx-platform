@@ -113,8 +113,8 @@ class CourseEnrollmentTests(SharedModuleStoreTestCase):
         fake_user = UserFactory.create(email='test@example.com')
         CourseEnrollmentFactory.create(user=fake_user, course_id=self.course.id)
 
-        total_enrolled_users =  CourseEnrollment.objects.users_enrolled_in(self.course.id)
-        actual_enrolled_users =  CourseEnrollment.objects.users_enrolled_in(self.course.id, exclude_fake_email=True)
+        total_enrolled_users = CourseEnrollment.objects.users_enrolled_in(self.course.id)
+        actual_enrolled_users = CourseEnrollment.objects.users_enrolled_in(self.course.id, exclude_fake_email=True)
         self.assertEqual(2, total_enrolled_users.count())
         self.assertEqual(1, actual_enrolled_users.count())
 
