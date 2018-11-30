@@ -191,6 +191,35 @@
                 }
             ];
 
+            if (isShibAuth) {
+                var fullname_index = 1;
+                var email_index = 2;
+                var password_index = 3;
+                var fields = aboutSectionsData[0].fields;
+                fields[fullname_index] = {
+                    view: new AccountSettingsFieldViews.ReadonlyFieldView({
+                        model: userAccountModel,
+                        title: gettext('Full Name'),
+                        valueAttribute: 'name',
+                        helpMessage: gettext(
+                            'The name associated with your SUNet account. Other learners never see your full name.'  // eslint-disable-line max-len
+                        )
+                    })
+                };
+                fields[email_index] = {
+                    view: new AccountSettingsFieldViews.ReadonlyFieldView({
+                        model: userAccountModel,
+                        title: gettext('Email Address'),
+                        valueAttribute: 'email',
+                        helpMessage: StringUtils.interpolate(
+                            gettext('The email address associated with your SUNet account. Communications from {platform_name} and your courses are sent to this address.'),  // eslint-disable-line max-len
+                            {platform_name: platformName}
+                        )
+                    })
+                };
+                fields.splice(password_index, 1);
+            }
+
             // set TimeZoneField to listen to CountryField
             getUserField = function(list, search) {
                 return _.find(list, function(field) {
