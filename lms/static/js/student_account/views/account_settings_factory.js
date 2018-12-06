@@ -191,6 +191,39 @@
                 }
             ];
 
+            (function() {
+                // Using IIFE to keep relevant variable declarations here
+                var fullnameIndex, emailIndex, passwordIndex, basicFields;
+                if (isShibAuth) {
+                    fullnameIndex = 1;
+                    emailIndex = 2;
+                    passwordIndex = 3;
+                    basicFields = aboutSectionsData[0].fields;
+                    basicFields[fullnameIndex] = {
+                        view: new AccountSettingsFieldViews.ReadonlyFieldView({
+                            model: userAccountModel,
+                            title: gettext('Full Name'),
+                            valueAttribute: 'name',
+                            helpMessage: gettext(
+                                'The name associated with your SUNet account. Other learners never see your full name.'  // eslint-disable-line max-len
+                            )
+                        })
+                    };
+                    basicFields[emailIndex] = {
+                        view: new AccountSettingsFieldViews.ReadonlyFieldView({
+                            model: userAccountModel,
+                            title: gettext('Email Address'),
+                            valueAttribute: 'email',
+                            helpMessage: StringUtils.interpolate(
+                                gettext('The email address associated with your SUNet account. Communications from {platform_name} and your courses are sent to this address.'),  // eslint-disable-line max-len
+                                {platform_name: platformName}
+                            )
+                        })
+                    };
+                    basicFields.splice(passwordIndex, 1);
+                }
+            })();
+
             // set TimeZoneField to listen to CountryField
             getUserField = function(list, search) {
                 return _.find(list, function(field) {
