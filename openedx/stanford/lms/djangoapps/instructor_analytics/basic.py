@@ -79,7 +79,7 @@ def student_responses(course):
                 else:
                     raw_answers = {}
                     pretty_answers = None
-                yield problem_component_info + [module.student.username, pretty_answers]
+                yield problem_component_info + [module.student.username, pretty_answers, module.modified.strftime("%Y-%m-%d-%H%M")]
                 if not has_answer:
                     has_answer = True
             if has_answer:

@@ -542,6 +542,6 @@ def upload_ora2_data(
 
 def student_response_rows(course):
     """ Wrapper to return all (header and data) rows for student responses reports for a course """
-    header = ["Section", "Subsection", "Unit", "Problem", "Order In Course", "Location", "Student", "Response"]
+    header = ["Section", "Subsection", "Unit", "Problem", "Order In Course", "Location", "Student", "Response", "Timestamp"]
     rows = chain([header], student_responses(course))
     return rows
