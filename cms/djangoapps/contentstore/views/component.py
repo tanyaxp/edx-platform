@@ -2,37 +2,31 @@ from __future__ import absolute_import
 
 import logging
 
-from django.http import HttpResponseBadRequest, Http404
-from django.contrib.auth.decorators import login_required
-from django.views.decorators.http import require_GET
-from django.core.exceptions import PermissionDenied
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
+from django.core.exceptions import PermissionDenied
+from django.http import Http404, HttpResponseBadRequest
+from django.utils.translation import ugettext as _
+from django.views.decorators.http import require_GET
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.asides import AsideUsageKeyV1, AsideUsageKeyV2
-from xmodule.modulestore.exceptions import ItemNotFoundError
-from edxmako.shortcuts import render_to_response
-
-from xmodule.modulestore.django import modulestore
-
+from opaque_keys.edx.keys import UsageKey
 from xblock.core import XBlock
-from xblock.django.request import webob_to_django_response, django_to_webob_request
+from xblock.django.request import django_to_webob_request, webob_to_django_response
 from xblock.exceptions import NoSuchHandlerError
 from xblock.plugin import PluginMissingError
 from xblock.runtime import Mixologist
 
-from contentstore.utils import get_lms_link_for_item, get_xblock_aside_instance
+from contentstore.utils import get_lms_link_for_item, get_xblock_aside_instance, reverse_course_url
 from contentstore.views.helpers import get_parent_xblock, is_unit, xblock_type_display_name
-from contentstore.views.item import create_xblock_info, add_container_page_publishing_info, StudioEditModuleRuntime
-
-from opaque_keys.edx.keys import UsageKey
-
-from util.keyword_substitution import get_keywords_supported
+from contentstore.views.item import StudioEditModuleRuntime, add_container_page_publishing_info, create_xblock_info
+from edxmako.shortcuts import render_to_response
 from student.auth import has_course_author_access
-from django.utils.translation import ugettext as _
-
-from xblock_django.api import disabled_xblocks, authorable_xblocks
+from util.keyword_substitution import get_keywords_supported
+from xblock_django.api import authorable_xblocks, disabled_xblocks
 from xblock_django.models import XBlockStudioConfigurationFlag
-
+from xmodule.modulestore.django import modulestore
+from xmodule.modulestore.exceptions import ItemNotFoundError
 
 __all__ = [
     'container_handler',
@@ -168,6 +162,7 @@ def container_handler(request, usage_key_string):
                 'subsection': subsection,
                 'section': section,
                 'new_unit_category': 'vertical',
+                'outline_url': '{url}?format=concise'.format(url=reverse_course_url('course_handler', course.id)),
                 'ancestor_xblocks': ancestor_xblocks,
                 'component_templates': component_templates,
                 'xblock_info': xblock_info,
@@ -311,8 +306,9 @@ def get_component_templates(courselike, library=False):
                             )
                         )
 
-        # Add any advanced problem types. Note that these are different xblocks being stored as Advanced Problems.
-        if category == 'problem':
+        # Add any advanced problem types. Note that these are different xblocks being stored as Advanced Problems,
+        # currently not supported in libraries .
+        if category == 'problem' and not library:
             disabled_block_names = [block.name for block in disabled_xblocks()]
             advanced_problem_types = [advanced_problem_type for advanced_problem_type in ADVANCED_PROBLEM_TYPES
                                       if advanced_problem_type['component'] not in disabled_block_names]

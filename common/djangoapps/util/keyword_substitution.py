@@ -29,7 +29,8 @@ Usage:
 from collections import namedtuple
 
 from django.contrib.auth.models import User
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
+
 from student.models import anonymous_id_for_user
 
 Keyword = namedtuple('Keyword', 'func desc')

@@ -5,11 +5,11 @@ import hashlib
 from django.contrib.auth.models import AnonymousUser
 from django.core.cache import cache
 from django.db.models.functions import Lower
-from xmodule.modulestore.tests.django_utils import SharedModuleStoreTestCase
-from xmodule.modulestore.tests.factories import CourseFactory
 
 from student.models import CourseEnrollment
-from student.tests.factories import UserFactory, CourseEnrollmentFactory
+from student.tests.factories import CourseEnrollmentFactory, UserFactory
+from xmodule.modulestore.tests.django_utils import SharedModuleStoreTestCase
+from xmodule.modulestore.tests.factories import CourseFactory
 
 
 class CourseEnrollmentTests(SharedModuleStoreTestCase):
@@ -21,6 +21,7 @@ class CourseEnrollmentTests(SharedModuleStoreTestCase):
     def setUp(self):
         super(CourseEnrollmentTests, self).setUp()
         self.user = UserFactory.create()
+        self.user_2 = UserFactory.create()
 
     def test_enrollment_status_hash_cache_key(self):
         username = 'test-user'
@@ -82,3 +83,48 @@ class CourseEnrollmentTests(SharedModuleStoreTestCase):
         # Modifying enrollments should delete the cached value.
         CourseEnrollmentFactory.create(user=self.user)
         self.assertIsNone(cache.get(CourseEnrollment.enrollment_status_hash_cache_key(self.user)))
+
+    def test_users_enrolled_in_active_only(self):
+        """CourseEnrollment.users_enrolled_in should return only Users with active enrollments when
+        `include_inactive` has its default value (False)."""
+        CourseEnrollmentFactory.create(user=self.user, course_id=self.course.id, is_active=True)
+        CourseEnrollmentFactory.create(user=self.user_2, course_id=self.course.id, is_active=False)
+
+        active_enrolled_users = list(CourseEnrollment.objects.users_enrolled_in(self.course.id))
+        self.assertEqual([self.user], active_enrolled_users)
+
+    def test_users_enrolled_in_all(self):
+        """CourseEnrollment.users_enrolled_in should return active and inactive users when
+        `include_inactive` is True."""
+        CourseEnrollmentFactory.create(user=self.user, course_id=self.course.id, is_active=True)
+        CourseEnrollmentFactory.create(user=self.user_2, course_id=self.course.id, is_active=False)
+
+        all_enrolled_users = list(
+            CourseEnrollment.objects.users_enrolled_in(self.course.id, include_inactive=True)
+        )
+        self.assertListEqual([self.user, self.user_2], all_enrolled_users)
+
+    def test_users_enrolled_with_fake_email(self):
+        """
+        CourseEnrollment.users_enrolled_in should not return users with fake emails
+        when exclude_fake_email=True.
+        """
+        CourseEnrollmentFactory.create(user=self.user, course_id=self.course.id, is_active=True)
+        fake_user = UserFactory.create(email='test@example.com')
+        CourseEnrollmentFactory.create(user=fake_user, course_id=self.course.id)
+
+        total_enrolled_users = CourseEnrollment.objects.users_enrolled_in(self.course.id)
+        actual_enrolled_users = CourseEnrollment.objects.users_enrolled_in(self.course.id, exclude_fake_email=True)
+        self.assertEqual(2, total_enrolled_users.count())
+        self.assertEqual(1, actual_enrolled_users.count())
+
+    def test_enrollment_counts_fake_users_not_counted(self):
+        """
+        CourseEnrollment.enrollment_counts should not return users with fake emails.
+        """
+        CourseEnrollmentFactory.create(user=self.user, course_id=self.course.id, is_active=True)
+        fake_user = UserFactory.create(email='test@example.com')
+        CourseEnrollmentFactory.create(user=fake_user, course_id=self.course.id)
+
+        enrolled_users = CourseEnrollment.objects.enrollment_counts(self.course.id)
+        self.assertDictEqual(enrolled_users, {'audit': 1, 'total': 1})

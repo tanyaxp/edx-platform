@@ -6,8 +6,9 @@ See also lettuce tests in lms/djangoapps/courseware/features/problems.feature
 import ddt
 import random
 import textwrap
-
 from abc import ABCMeta, abstractmethod
+
+import ddt
 from nose import SkipTest
 from nose.plugins.attrib import attr
 from selenium.webdriver import ActionChains
@@ -25,13 +26,11 @@ from capa.tests.response_xml_factory import (
     NumericalResponseXMLFactory,
     OptionResponseXMLFactory,
     StringResponseXMLFactory,
-    SymbolicResponseXMLFactory,
+    SymbolicResponseXMLFactory
 )
-
 from common.test.acceptance.fixtures.course import XBlockFixtureDesc
 from common.test.acceptance.pages.lms.problem import ProblemPage
-from common.test.acceptance.tests.helpers import select_option_by_text
-from common.test.acceptance.tests.helpers import EventsTestMixin
+from common.test.acceptance.tests.helpers import EventsTestMixin, select_option_by_text
 from common.test.acceptance.tests.lms.test_lms_problems import ProblemsTest
 
 
@@ -285,7 +284,7 @@ class ProblemTypeTestMixin(ProblemTypeA11yTestMixin):
         And I should see the problem title is focused
         """
         self.problem_page.click_show()
-        self.problem_page.wait_for_focus_on_problem_meta()
+        self.problem_page.wait_for_show_answer_notification()
 
     @attr(shard=7)
     def test_save_reaction(self):
@@ -587,7 +586,7 @@ class CheckboxProblemTypeTest(CheckboxProblemTypeBase, ProblemTypeTestMixin):
         self.problem_page.click_show()
         self.assertTrue(self.problem_page.is_solution_tag_present())
         self.assertTrue(self.problem_page.is_correct_choice_highlighted(correct_choices=[1, 3]))
-        self.problem_page.wait_for_focus_on_problem_meta()
+        self.problem_page.wait_for_show_answer_notification()
 
 
 class CheckboxProblemTypeNeverShowCorrectnessTest(CheckboxProblemTypeBase, ProblemNeverShowCorrectnessMixin):

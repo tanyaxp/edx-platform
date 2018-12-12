@@ -118,10 +118,10 @@ class TestStudentResponsesAnalyticsBasic(ModuleStoreTestCase):
         )
         course_with_children = modulestore().get_course(self.course.id, depth=4)
         datarows = list(student_responses(course_with_children))
-        self.assertEqual(datarows[0][-1], u'problem_id=student response1')
-        self.assertEqual(datarows[1][-1], u'student response2')
-        self.assertEqual(datarows[2][-1], None)
-        self.assertEqual(datarows[3][-1], u'problem_id=content library response1')
+        self.assertEqual(datarows[0][-2], u'problem_id=student response1')
+        self.assertEqual(datarows[1][-2], u'student response2')
+        self.assertEqual(datarows[2][-2], None)
+        self.assertEqual(datarows[3][-2], u'problem_id=content library response1')
 
     def test_problem_with_no_answer(self):
         section, sub_section, unit, problem = self.create_course_structure()
@@ -135,4 +135,4 @@ class TestStudentResponsesAnalyticsBasic(ModuleStoreTestCase):
         )
         course_with_children = modulestore().get_course(self.course.id, depth=4)
         datarows = list(student_responses(course_with_children))
-        self.assertEqual(datarows[0][-1], None)
+        self.assertEqual(datarows[0][-2], None)

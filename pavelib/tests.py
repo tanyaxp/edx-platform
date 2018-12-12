@@ -1,15 +1,17 @@
 """
 Unit test tasks
 """
-import re
 import os
+import re
 import sys
-from paver.easy import sh, task, cmdopts, needs
-from pavelib.utils.test import suites
-from pavelib.utils.envs import Env
-from pavelib.utils.timer import timed
-from pavelib.utils.passthrough_opts import PassthroughTask
 from optparse import make_option
+
+from paver.easy import cmdopts, needs, sh, task
+
+from pavelib.utils.envs import Env
+from pavelib.utils.passthrough_opts import PassthroughTask
+from pavelib.utils.test import suites
+from pavelib.utils.timer import timed
 
 try:
     from pygments.console import colorize
@@ -184,6 +186,7 @@ def test_lib(options, passthrough_options):
         dest='disable_migrations',
         help="Create tables directly from apps' models. Can also be used by exporting DISABLE_MIGRATIONS=1."
     ),
+    ('processes=', 'p', 'number of processes to use running tests'),
     ('cov_args=', None, 'deprecated in favor of cov-args'),
     make_option(
         '-e', '--extra_args', default='',
@@ -218,6 +221,7 @@ def test_python(options, passthrough_options):
     make_option("--verbose", action="store_const", const=2, dest="verbosity"),
     make_option("-q", "--quiet", action="store_const", const=0, dest="verbosity"),
     make_option("-v", "--verbosity", action="count", dest="verbosity", default=1),
+    ('processes=', 'p', 'number of processes to use running tests'),
     ('cov_args=', None, 'deprecated in favor of cov-args'),
     make_option(
         '-e', '--extra_args', default='',

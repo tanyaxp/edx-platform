@@ -40,6 +40,7 @@ graded status as'status'
 
 import json
 import logging
+import re
 import shlex  # for splitting quoted strings
 import sys
 import time
@@ -48,15 +49,15 @@ from datetime import datetime
 import bleach
 import html5lib
 import pyparsing
-import re
-from calc.preview import latex_preview
-from chem import chemcalc
 from lxml import etree
-from openedx.core.djangolib.markup import HTML, Text
 
 import xqueue_interface
-from xmodule.stringify import stringify_children
+from calc.preview import latex_preview
 from capa.xqueue_interface import XQUEUE_TIMEOUT
+from chem import chemcalc
+from openedx.core.djangolib.markup import HTML, Text
+from xmodule.stringify import stringify_children
+
 from .registry import TagRegistry
 from .util import sanitize_html
 
@@ -329,9 +330,16 @@ class InputTypeBase(object):
         }
 
         # Generate the list of ids to be used with the aria-describedby field.
+        descriptions = list()
+
+        # If there is trailing text, add the id as the first element to the list before adding the status id
+        if 'trailing_text' in self.loaded_attributes and self.loaded_attributes['trailing_text']:
+            trailing_text_id = 'trailing_text_' + self.input_id
+            descriptions.append(trailing_text_id)
+
         # Every list should contain the status id
         status_id = 'status_' + self.input_id
-        descriptions = list([status_id])
+        descriptions.append(status_id)
         descriptions.extend(self.response_data.get('descriptions', {}).keys())
         description_ids = ' '.join(descriptions)
         context.update(

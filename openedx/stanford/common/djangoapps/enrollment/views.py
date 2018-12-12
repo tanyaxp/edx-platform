@@ -31,19 +31,6 @@ from enrollment.views import ApiKeyPermissionMixIn
 from openedx.stanford.common.djangoapps.enrollment.data import get_roster
 
 
-def _enroll(course_key, email, auto_enroll, email_students, email_params, language):
-    enroll_email(
-        course_key, email, auto_enroll, email_students, email_params, language=language
-    )
-    return Response(status=status.HTTP_204_NO_CONTENT)
-
-def _unenroll(course_key, email, email_students, email_params, language):
-    unenroll_email(
-        course_key, email, email_students, email_params, language=language
-    )
-    return Response(status=status.HTTP_204_NO_CONTENT)
-
-
 class EnrollmentRosterView(APIView, ApiKeyPermissionMixIn):
     """
     Read roster for a particular course. (contains PII)
@@ -117,17 +104,12 @@ class EnrollmentRosterView(APIView, ApiKeyPermissionMixIn):
                     'message': u'Invalid email address',
                 },
             )
-        email_students = request.data.get('email_students', False) in ['true', 'True', True]
-        auto_enroll = request.data.get('auto_enroll', False) in ['true', 'True', True]
-        email_params = {}
-        language = None
-        if email_students:
-            course = get_course_by_id(course_key)
-            email_params = get_email_params(course, auto_enroll)
-            if User.objects.filter(email=email).exists():
-                user = User.objects.get(email=email)
-                language = get_user_email_language(user)
-        return _enroll(course_key, email, auto_enroll, email_students, email_params, language)
+
+        email_students, auto_enroll, email_params, language = self.api_params_helper(request, course_key, email)
+        enroll_email(
+            course_key, email, auto_enroll, email_students, email_params, language=language
+        )
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     def delete(self, request, course_id):
         """
@@ -169,14 +151,28 @@ class EnrollmentRosterView(APIView, ApiKeyPermissionMixIn):
                     'message': u'Invalid email address',
                 },
             )
+
+        email_students, auto_enroll, email_params, language = self.api_params_helper(request, course_key, email)
+        unenroll_email(
+            course_key, email, email_students, email_params, language=language
+        )
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def api_params_helper(self, request, course_key, email):
+        """
+        Helper method to get params for enroll/unenroll apis.
+        """
         email_students = request.data.get('email_students', False) in ['true', 'True', True]
-        auto_enroll = request.data.get('auto_enroll', False) in ['true', 'True', True]
+        auto_enroll = request.data.get('auto_enroll', True) in ['true', 'True', True]
         email_params = {}
         language = None
         if email_students:
             course = get_course_by_id(course_key)
             email_params = get_email_params(course, auto_enroll)
-            if User.objects.filter(email=email).exists():
+            try:
                 user = User.objects.get(email=email)
+            except User.DoesNotExist:
+                pass
+            else:
                 language = get_user_email_language(user)
-        return _unenroll(course_key, email, email_students, email_params, language)
+        return email_students, auto_enroll, email_params, language
