@@ -65,7 +65,6 @@ MIDDLEWARE_CLASSES += (
 )
 SHIB_ONLY_SITE = False
 SHIB_REDIRECT_DOMAIN_WHITELIST = {}
-SPLIT_STUDIO_HOME = False
 STATICFILES_DIRS += glob(STANFORD_ROOT / 'djangoapps/*/static')
 STATICFILES_DIRS += glob(STANFORD_ROOT / 'common/djangoapps/*/static')
 STATICFILES_DIRS += glob(STANFORD_ROOT / 'cms/djangoapps/*/static')
