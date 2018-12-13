@@ -44,9 +44,6 @@ FEATURES.update({
     'ALLOW_HIDING_DISCUSSION_TAB': True,
     # Display option to send email confirmation of course enrollment
     'ENABLE_ENROLLMENT_EMAIL': False,
-
-    # warning to instructors about publicly-viewable content
-    'CONTENT_VISIBILITY_NOTICE': True,
 })
 INSTALLED_APPS += (
     'openedx.stanford.djangoapps.course_utils',
