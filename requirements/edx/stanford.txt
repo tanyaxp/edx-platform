@@ -17,4 +17,4 @@ ubcpi-xblock==0.6.2
 git+https://github.com/mfogel/django-settings-context-processor.git
 git+https://github.com/open-craft/problem-builder.git@v2.6.5#egg=xblock-problem-builder==2.6.5
 -e git+https://github.com/Stanford-Online/xblock_3d_viewer.git@b1d6cf90d0909decfae51b7a34fa8baac3666d96#egg=mt3d-xblock
-git+https://github.com/Stanford-Online/xblock-platform-tour.git@v1.0.1#egg=xblock-platform-tour
+git+https://github.com/Stanford-Online/xblock-platform-tour.git@v1.0.1#egg=xblock-platform-tour==1.0.1
