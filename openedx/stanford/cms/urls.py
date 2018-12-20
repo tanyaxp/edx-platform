@@ -34,11 +34,3 @@ if settings.SHIB_ONLY_SITE:
             name='backup_login',
         ),
     ]
-if settings.SPLIT_STUDIO_HOME:
-    urlpatterns += [
-        url(
-            r'^home_library/?$',
-            'contentstore.views.library_listing',
-            name='home_library',
-        ),
-    ]

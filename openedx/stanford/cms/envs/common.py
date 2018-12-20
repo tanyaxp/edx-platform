@@ -44,9 +44,6 @@ FEATURES.update({
     'ALLOW_HIDING_DISCUSSION_TAB': True,
     # Display option to send email confirmation of course enrollment
     'ENABLE_ENROLLMENT_EMAIL': False,
-
-    # warning to instructors about publicly-viewable content
-    'CONTENT_VISIBILITY_NOTICE': True,
 })
 INSTALLED_APPS += (
     'openedx.stanford.djangoapps.course_utils',
@@ -65,7 +62,6 @@ MIDDLEWARE_CLASSES += (
 )
 SHIB_ONLY_SITE = False
 SHIB_REDIRECT_DOMAIN_WHITELIST = {}
-SPLIT_STUDIO_HOME = False
 STATICFILES_DIRS += glob(STANFORD_ROOT / 'djangoapps/*/static')
 STATICFILES_DIRS += glob(STANFORD_ROOT / 'common/djangoapps/*/static')
 STATICFILES_DIRS += glob(STANFORD_ROOT / 'cms/djangoapps/*/static')
