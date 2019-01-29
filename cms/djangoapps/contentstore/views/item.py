@@ -1142,7 +1142,7 @@ def create_xblock_info(xblock, data=None, metadata=None, include_ancestor_info=F
 
     xblock_info = {
         'id': unicode(xblock.location),
-        'display_name': xblock.display_name_with_default,
+        'display_name': unicode(xblock.display_name_with_default),
         'category': xblock.category,
         'has_children': xblock.has_children
     }
