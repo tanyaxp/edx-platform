@@ -1,19 +1,17 @@
 Hi, %%USER_FULLNAME%%!
 
 Thank you for enrolling in %%COURSE_DISPLAY_NAME%%.  You are receiving this
-email from the Stanford Online Team as a confirmation that you have
+email from the Stanford Lagunita Team as a confirmation that you have
 successfully enrolled in %%COURSE_DISPLAY_NAME%%.  The course will
-now appear on your Stanford Online (https://lagunita.stanford.edu/dashboard)
-dashboard.  This course is already under way, so make sure to sign in
-(https://lagunita.stanford.edu/login) and click "View Course" from your dashboard
-in order to get started.  Doing this will take you to the Course Info page for
-more information.
+now appear on your Stanford Lagunita dashboard
+(https://lagunita.stanford.edu/dashboard).  This course is already under way,
+so make sure to sign in (https://lagunita.stanford.edu/login) and click "View
+Course" from your dashboard in order to get started.
 
-Have more questions?  Please visit the course's About page or review some
-frequently asked questions in the Help Center at
-https://stanfordonline.zendesk.com, or send the Stanford Online
-course support team a message by clicking on the Help tab that displays on all
-https://lagunita.stanford.edu pages.
+Have more questions? Please visit the Help Center by clicking on the Help
+link that displays on all Lagunita pages or by going to
+https://stanfordonline.zendesk.com. You can also contact the Stanford
+Lagunita platform support team via the Help Center.
 
 See you soon!
-The Stanford Online Team
+The Lagunita Team
