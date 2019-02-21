@@ -149,3 +149,5 @@ from openedx.core.djangolib.markup import HTML
 <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
     DateUtilFactory.transform(iterationKey=".localized-datetime");
 </%static:require_module_async>
+
+<%static:optional_include_mako file="instructor/instructor_dashboard_bottom.html" is_theming_enabled="True" />
