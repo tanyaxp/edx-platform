@@ -49,6 +49,7 @@ from openedx.core.djangolib.js_utils import (
     <%include file="widgets/segment-io.html" />
 
     <%block name="header_extras"></%block>
+    <%static:optional_include_mako file="head-extra.html" is_theming_enabled="True" />
   </head>
 
   <body class="${static.dir_rtl()} <%block name='bodyclass'></%block> lang_${LANGUAGE_CODE}">

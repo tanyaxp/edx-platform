@@ -6,6 +6,8 @@
   from django.utils.translation import ugettext as _
   from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled, released_languages
 %>
+<%static:optional_include_mako file="header-pre.html" is_theming_enabled="True" />
+
 <div class="wrapper-header wrapper" id="view-top">
   <header class="primary" role="banner">
 
