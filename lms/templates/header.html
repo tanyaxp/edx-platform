@@ -1,4 +1,5 @@
 ## mako
 <%page expression_filter="h" args="online_help_token"/>
 <%namespace name='static' file='static_content.html'/>
+<%static:optional_include_mako file="header-pre.html" is_theming_enabled="True" />
 <%include file="${static.get_template_path(relative_path='navigation/navigation.html')}"  args="online_help_token=online_help_token"  />
