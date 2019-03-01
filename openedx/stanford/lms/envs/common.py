@@ -114,6 +114,7 @@ PAYMENT_PLATFORM_NAME = 'PAYMENT PLATFORM NAME'
 # The following fields are available in the URL: {course_id} {student_id}
 PROGRESS_SUCCESS_BUTTON_URL = 'http://<domain>/<path>/{course_id}'
 PROGRESS_SUCCESS_BUTTON_TEXT_OVERRIDE = None
+SEARCH_FILTER_GENERATOR = 'openedx.stanford.lms.lib.courseware_search.lms_filter_generator.TileSearchFilterGenerator'
 SHIB_REDIRECT_DOMAIN_WHITELIST = {
     # Mapping of hosts to a list of safe redirect domains from that host
     # (not including itself); e.g.
