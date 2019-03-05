@@ -28,6 +28,7 @@ from django.views.decorators.http import condition
 from django.views.generic.base import TemplateView
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
 from path import Path as path
+from six import text_type
 import sys
 
 import dashboard.git_import as git_import
