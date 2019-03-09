@@ -27,6 +27,7 @@ jobs:
     - run: curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
     - run: sudo apt-get update
     - run: sudo apt-get upgrade
+    - run: mkdir -p ~/.cache || true
     - run:
         command: |
           if ! [[ -d ~/.cache/apt/archives ]]; then
