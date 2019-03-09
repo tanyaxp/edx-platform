@@ -24,7 +24,7 @@ yui-compressor
 graphviz
 libgraphviz-dev
 graphviz-dev
-mysql-server
+# mysql-server
 libmysqlclient-dev
 libgeos-dev
 libreadline6
