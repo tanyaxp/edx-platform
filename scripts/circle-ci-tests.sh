@@ -31,6 +31,43 @@ export NO_PREREQ_INSTALL='true'
 
 EXIT=0
 
+function test_system() {
+    system=${1}
+    test_id=${2}
+    flags='--with-flaky --cov-args="-p" --with-xunitmp'
+    paver test_system -s "${system}" -t "${test_id}" ${flags}
+    return ${?}
+}
+function test_system_children() {
+    system=${1}
+    parent=${2}
+    parent=$(echo ${parent} | sed 's/\./\//g')
+    exit_code=0
+    for app in $(find "${parent}" -mindepth 1 -maxdepth 1 -type d | tr '/' '.' | sort); do
+        echo "TEST: ${app}"
+        case ${app} in
+            # FAIL/ERROR
+            common.djangoapps.django_comment_common) ;&
+            common.djangoapps.pipeline_mako) ;&
+            common.djangoapps.status) ;&
+            common.djangoapps.terrain) ;&
+            common.djangoapps.track) ;&
+            lms.djangoapps.branding) ;&
+            lms.djangoapps.ccx) ;&
+            openedx.core.djangoapps.cors_csrf) ;&
+            openedx.features.course_experience) ;&
+            # SEG_FAULT
+            lms.djangoapps.mobile_api)
+                continue
+                ;;
+            *)
+                test_system "${system}" "${app}" || exit_code=1
+                ;;
+        esac
+    done
+    return ${exit_code}
+}
+
 if [ "$CIRCLE_NODE_TOTAL" == "1" ] ; then
     echo "Only 1 container is being used to run the tests."
     echo "To run in more containers, configure parallelism for this repo's settings "
@@ -48,22 +85,22 @@ else
     # Split up the tests to run in parallel on 4 containers
     case $CIRCLE_NODE_INDEX in
         0)  # run the quality metrics
+            mkdir -p reports
             echo "Finding fixme's and storing report..."
-            paver find_fixme > fixme.log || { cat fixme.log; EXIT=1; }
+            paver find_fixme > reports/fixme.log || { cat reports/fixme.log; EXIT=1; }
 
             echo "Finding pep8 violations and storing report..."
-            paver run_pep8 > pep8.log || { cat pep8.log; EXIT=1; }
+            paver run_pep8 > reports/pep8.log || { cat reports/pep8.log; EXIT=1; }
 
             echo "Finding pylint violations and storing in report..."
             # HACK: we need to print something to the console, otherwise circleci
             # fails and aborts the job because nothing is displayed for > 10 minutes.
-            paver run_pylint -l $PYLINT_THRESHOLD | tee pylint.log || EXIT=1
+            paver run_pylint -l $PYLINT_THRESHOLD | tee reports/pylint.log || EXIT=1
 
-            mkdir -p reports
             PATH=$PATH:node_modules/.bin
 
             echo "Finding ESLint violations and storing report..."
-            paver run_eslint -l $ESLINT_THRESHOLD > eslint.log || { cat eslint.log; EXIT=1; }
+            paver run_eslint -l $ESLINT_THRESHOLD > reports/eslint.log || { cat reports/eslint.log; EXIT=1; }
 
             # Run quality task. Pass in the 'fail-under' percentage to diff-quality
             paver run_quality -p 100 || EXIT=1
@@ -71,19 +108,39 @@ else
             echo "Running code complexity report (python)."
             paver run_complexity > reports/code_complexity.log || echo "Unable to calculate code complexity. Ignoring error."
 
+            test_system lms openedx.stanford || EXIT=1
+            test_system_children lms openedx.features || EXIT=1
+            test_system lms openedx.tests || EXIT=1
+            test_system lms lms.tests || EXIT=1
+            test_system lms lms.lib || EXIT=1
+            test_system_children lms common.djangoapps || EXIT=1
             exit $EXIT
             ;;
 
         1)  # run all of the lms unit tests
-            paver test_system -s lms --with-flaky --cov-args="-p" --with-xunitmp
+            test_system_children lms lms.djangoapps || EXIT=1
+            exit $EXIT
             ;;
 
         2)  # run all of the cms unit tests
-            paver test_system -s cms --with-flaky --cov-args="-p" --with-xunitmp
+            test_system cms openedx.stanford.cms || EXIT=1
+            test_system cms openedx.stanford.common || EXIT=1
+            test_system cms openedx.stanford.djangoapps || EXIT=1
+            test_system_children cms openedx.core.djangoapps || EXIT=1
+            test_system cms openedx.core.djangolib || EXIT=1
+            test_system cms openedx.core.lib || EXIT=1
+            test_system cms openedx.tests || EXIT=1
+            test_system cms cms || EXIT=1
+            test_system_children cms common.djangoapps || EXIT=1
+            exit $EXIT
             ;;
 
         3)  # run the commonlib unit tests
-            paver test_lib --with-flaky --cov-args="-p" --with-xunitmp
+            paver test_lib --with-flaky --cov-args="-p" --with-xunitmp || EXIT=1
+            test_system lms openedx.core.lib || EXIT=1
+            test_system lms openedx.core.djangolib || EXIT=1
+            test_system_children lms openedx.core.djangoapps || EXIT=1
+            exit $EXIT
             ;;
 
         *)
