@@ -300,15 +300,6 @@ class Users(SysadminDashboardView):
         self.datatable['data'] = [[_('Total number of users'),
                                    User.objects.all().count()]]
 
-        self.msg += u'<h2>{0}</h2>'.format(
-            _('Courses loaded in the modulestore')
-        )
-        self.msg += u'<ol>'
-        for course in self.get_courses():
-            self.msg += u'<li>{0} ({1})</li>'.format(
-                escape(course.id.to_deprecated_string()), course.location.to_deprecated_string())
-        self.msg += u'</ol>'
-
     def get(self, request):
 
         if not request.user.is_staff:
@@ -471,12 +462,12 @@ class Courses(SysadminDashboardView):
         msg += u"<pre>{0}</pre>".format(escape(ret))
         return msg
 
-    def make_datatable(self):
+    def make_datatable(self, courses=None):
         """Creates course information datatable"""
 
         data = []
-
-        for course in self.get_courses():
+        courses = courses or self.get_courses()
+        for course in courses:
             gdir = course.id.course
             data.append([course.display_name, course.id.to_deprecated_string()]
                         + self.git_info_for_course(gdir))
@@ -549,7 +540,7 @@ class Courses(SysadminDashboardView):
                         _('Deleted'), course.location.to_deprecated_string(), course.id.to_deprecated_string(), course.display_name)
 
         context = {
-            'datatable': self.make_datatable(),
+            'datatable': self.make_datatable(courses.values()),
             'msg': self.msg,
             'djangopid': os.getpid(),
             'modeflag': {'courses': 'active-section'},
