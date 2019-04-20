@@ -11,11 +11,10 @@ from django.contrib.auth.decorators import login_required
 from edxmako.shortcuts import render_to_response
 
 from contentstore.views.helpers import xblock_studio_url
+from contentstore.views.course import get_course_and_check_access
 from opaque_keys.edx.keys import CourseKey
 from xmodule.modulestore.django import modulestore
-
 from student.auth import has_course_author_access
-from ..course import get_course_and_check_access
 
 
 class BulkSettingsUtil():
@@ -117,10 +116,7 @@ class BulkSettingsUtil():
 
 log = logging.getLogger(__name__)
 
-__all__ = ['utility_bulksettings_handler']
-
 COMPONENT_TYPES = ['discussion', 'html', 'problem', 'video']
-
 SECTION_SETTING_MAP = {'start': 'Release Date'}
 SUBSECTION_SETTING_MAP = {'start': 'Release', 'due': 'Due', 'format': 'Type'}
 CATEGORY_SETTING_MAP = BulkSettingsUtil.CATEGORY_SETTING_MAP
