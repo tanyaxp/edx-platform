@@ -9,13 +9,11 @@ from django.views.decorators.http import require_http_methods
 from edxmako.shortcuts import render_to_response
 from util.json_request import JsonResponse
 
-from contentstore.utils import reverse_course_url
+from openedx.stanford.cms.djangoapps.contentstore.views.helpers import reverse_course_url
 from xmodule.modulestore.django import modulestore
 from opaque_keys.edx.keys import CourseKey
 
 from student.auth import has_course_author_access
-
-__all__ = ['utility_handler']
 
 
 # pylint: disable=unused-argument
@@ -72,9 +70,7 @@ def expand_utility_action_url(course_module, utility):
     The method does a copy of the input utility and does not modify the input argument.
     """
     expanded_utility = copy.deepcopy(utility)
-
     for item in expanded_utility.get('items'):
         url_prefix = item.get('action_url')
         item['action_url'] = reverse_course_url(url_prefix, course_module.id)
-
     return expanded_utility
