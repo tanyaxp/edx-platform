@@ -26,13 +26,11 @@ from xmodule.video_module.transcripts_utils import (
 )
 from xmodule.video_module import manage_video_subtitles_save
 
-from ..transcripts_ajax import get_transcripts_presence
-from ..course import get_course_and_check_access
+from contentstore.views.transcripts_ajax import get_transcripts_presence
+from contentstore.views.course import get_course_and_check_access
 
 
 log = logging.getLogger(__name__)
-
-__all__ = ['utility_captions_handler']
 
 
 # pylint: disable=unused-argument

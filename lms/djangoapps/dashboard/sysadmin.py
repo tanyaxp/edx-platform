@@ -311,7 +311,6 @@ class Users(SysadminDashboardView):
             'msg': self.msg,
             'djangopid': os.getpid(),
             'modeflag': {'users': 'active-section'},
-            'edx_platform_version': getattr(settings, 'EDX_PLATFORM_VERSION_STRING', ''),
         }
         return render_to_response(self.template_name, context)
 
@@ -363,7 +362,6 @@ class Users(SysadminDashboardView):
             'msg': self.msg,
             'djangopid': os.getpid(),
             'modeflag': {'users': 'active-section'},
-            'edx_platform_version': getattr(settings, 'EDX_PLATFORM_VERSION_STRING', ''),
         }
         return render_to_response(self.template_name, context)
 
@@ -492,7 +490,6 @@ class Courses(SysadminDashboardView):
             'msg': self.msg,
             'djangopid': os.getpid(),
             'modeflag': {'courses': 'active-section'},
-            'edx_platform_version': getattr(settings, 'EDX_PLATFORM_VERSION_STRING', ''),
         }
         return render_to_response(self.template_name, context)
 
@@ -544,7 +541,6 @@ class Courses(SysadminDashboardView):
             'msg': self.msg,
             'djangopid': os.getpid(),
             'modeflag': {'courses': 'active-section'},
-            'edx_platform_version': getattr(settings, 'EDX_PLATFORM_VERSION_STRING', ''),
         }
         return render_to_response(self.template_name, context)
 
@@ -581,7 +577,6 @@ class Staffing(SysadminDashboardView):
             'msg': self.msg,
             'djangopid': os.getpid(),
             'modeflag': {'staffing': 'active-section'},
-            'edx_platform_version': getattr(settings, 'EDX_PLATFORM_VERSION_STRING', ''),
         }
         return render_to_response(self.template_name, context)
 

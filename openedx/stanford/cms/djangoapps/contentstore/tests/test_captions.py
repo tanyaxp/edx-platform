@@ -12,9 +12,9 @@ from django.conf import settings
 
 from xmodule.video_module import transcripts_utils
 from contentstore.tests.utils import CourseTestCase
-from contentstore.utils import reverse_course_url
 from contentstore.views.utilities.captions import get_videos
 from openedx.core.djangoapps.contentserver.caching import del_cached_content
+from openedx.stanford.cms.djangoapps.contentstore.views.helpers import reverse_course_url
 from xmodule.modulestore.django import modulestore
 from xmodule.contentstore.django import contentstore, _CONTENTSTORE
 from xmodule.contentstore.content import StaticContent

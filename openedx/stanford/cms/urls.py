@@ -10,15 +10,18 @@ urlpatterns = [
     ),
     url(
         r'^utilities/{}$'.format(settings.COURSE_KEY_PATTERN),
-        'contentstore.views.utility_handler',
+        'openedx.stanford.cms.djangoapps.contentstore.views.utility.utility_handler',
+        name='utility_handler',
     ),
     url(
         r'^utility/captions/{}$'.format(settings.COURSE_KEY_PATTERN),
-        'contentstore.views.utility_captions_handler',
+        'openedx.stanford.cms.djangoapps.contentstore.views.utilities.captions.utility_captions_handler',
+        name='utility_captions_handler',
     ),
     url(
         r'^utility/bulksettings/{}$'.format(settings.COURSE_KEY_PATTERN),
-        'contentstore.views.utility_bulksettings_handler',
+        'openedx.stanford.cms.djangoapps.contentstore.views.utilities.bulksettings.utility_bulksettings_handler',
+        name='utility_bulksettings_handler',
     ),
 ]
 if settings.SHIB_ONLY_SITE:

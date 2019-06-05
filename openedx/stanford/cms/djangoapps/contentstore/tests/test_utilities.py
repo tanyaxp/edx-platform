@@ -1,13 +1,13 @@
 """ Unit tests for utility methods in views.py. """
 from django.conf import settings
 from xmodule.modulestore.django import modulestore
-from contentstore.utils import reverse_course_url
 from contentstore.views.utility import expand_utility_action_url
 from xmodule.modulestore.tests.factories import CourseFactory
 
 import json
 import mock
 from cms.djangoapps.contentstore.tests.utils import CourseTestCase
+from openedx.stanford.cms.djangoapps.contentstore.views.helpers import reverse_course_url
 
 
 class UtilitiesTestCase(CourseTestCase):
