@@ -12,11 +12,9 @@ from student.auth import has_course_author_access
 from util.json_request import JsonResponse
 from xmodule.capa_base import CapaFields
 from xmodule.modulestore.django import modulestore
-
 from opaque_keys.edx.keys import CourseKey
 
 from cms.djangoapps.contentstore.utils import reverse_course_url
-
 from .tasks import bulk_update_problem_settings
 
 SHOW_ANSWER_OPTIONS = [
@@ -41,7 +39,7 @@ def _utility_bulkupdate_get_handler(course_key_string):
         course_key_string
     )
     course_outline_url = reverse_course_url(
-        "course_handler",
+        'course_handler',
         course_key_string
     )
     bulkupdate_url = reverse(

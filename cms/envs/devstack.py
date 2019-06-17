@@ -61,7 +61,7 @@ DJFS = {
 ################################# CELERY ######################################
 
 # By default don't use a worker, execute tasks as if they were local functions
-CELERY_ALWAYS_EAGER = False
+CELERY_ALWAYS_EAGER = True
 FEATURES['ENABLE_SERVICE_STATUS'] = True
 
 ################################ DEBUG TOOLBAR ################################

@@ -73,11 +73,8 @@ define([
                 errors.push(VALIDATION_ERROR_MESSAGES.showAnswer);
             }
             if (errors.length > 0) {
-                errors.forEach(function(error) {
-                    errorString += error + ' ';
-                });
+                errorString = errors.join(' ');
                 $('.error-message-text').text(errorString).show();
-                console.error(errors);
                 return false;
             }
             return true;
@@ -96,7 +93,6 @@ define([
             }
             $('.error-message-text').text(errMsg);
             $errorMessage.removeClass('is-hidden');
-            console.error('Error in making POST request', errMsg);
         }
 
         /**
@@ -104,7 +100,6 @@ define([
          */
         function onSuccess() {
             $successMessage.removeClass('is-hidden');
-            console.log('Successfully made POST request');
         }
 
         /**
