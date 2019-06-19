@@ -81,7 +81,7 @@ define([
         }
 
         /**
-         * Displays error message on POST request error
+         * Displays error message on request error
          */
         function onError(xhr) {
             var errMsg;
@@ -96,13 +96,6 @@ define([
         }
 
         /**
-         * Displays success message on successful POST request
-         */
-        function onSuccess() {
-            $successMessage.removeClass('is-hidden');
-        }
-
-        /**
          * Gets and validates settings data and makes POST request to BulkUpdate
          */
         function onSubmit() {
@@ -111,18 +104,12 @@ define([
             if (validateData(data)) {
                 $submitBtn.prop('disabled', true);
                 $.ajax({
-                    type: "POST",
+                    type: 'POST',
                     data: data,
                     url: bulkupdateUrl,
-                    complete: function() {
-                        $submitBtn.prop('disabled', false);
-                    },
-                    error: function(xhr){
-                        onError(xhr);
-                    },
-                    success: function(){
-                        onSuccess();
-                    },
+                    complete: $submitBtn.prop('disabled', false),
+                    error: onError(xhr),
+                    success: $successMessage.removeClass('is-hidden'),
                     dataType: 'json'
                 });
             }

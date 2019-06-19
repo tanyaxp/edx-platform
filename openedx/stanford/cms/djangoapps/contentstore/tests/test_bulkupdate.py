@@ -2,17 +2,15 @@
 Unit tests for bulk update problem settings utility
 """
 
-import ddt
-import mock
-
 from django.core import mail
-
 from xmodule.modulestore.django import modulestore
 from xmodule.modulestore.tests.factories import CourseFactory
 
-from cms.djangoapps.contentstore.tests.utils import CourseTestCase
-from contentstore.utils import reverse_course_url
+import ddt
+import mock
 
+from cms.djangoapps.contentstore.tests.utils import CourseTestCase
+from cms.djangoapps.contentstore.utils import reverse_course_url
 from ..views.utilities.bulkupdate import SHOW_ANSWER_OPTIONS
 from ..views.utilities.tasks import bulk_update_problem_settings
 
@@ -38,7 +36,7 @@ class BulkUpdateTest(CourseTestCase):
         store = modulestore()
         problems = store.get_items(
             self.course.id,
-            qualifiers={"category": 'problem'},
+            qualifiers={'category': 'problem'},
         )
         for problem in problems:
             if store.has_published_version(problem):
@@ -151,7 +149,7 @@ class BulkUpdateTest(CourseTestCase):
 
         problems = store.get_items(
             self.course.id,
-            qualifiers={"category": 'problem'},
+            qualifiers={'category': 'problem'},
         )
         for problem in problems:
             if settings['maxAttempts']:
@@ -179,6 +177,6 @@ class BulkUpdateTest(CourseTestCase):
                 mail.outbox[count].subject
             )
             self.assertIn(
-                "Your bulk update on the {} course has successfully completed.".format(self.course.display_name),
+                'Your bulk update on the {} course has successfully completed.'.format(self.course.display_name),
                 mail.outbox[count].body
             )
