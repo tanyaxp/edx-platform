@@ -8,6 +8,12 @@ STANFORD_ROOT = REPO_ROOT / 'openedx/stanford'
 # This is actually just a base email.  We'll make it 'noreply+<username>@example.com' to ensure uniqueness
 ANONYMOUS_USER_EMAIL = 'noreply@example.com'
 API_DATE_FORMAT = '%Y-%m-%d'
+
+# Additional queue for grades backfill task (persistent grades).
+GRADES_BACKFILL_QUEUE = 'edx.core.grades_backfill'
+CELERY_QUEUES.update({
+    GRADES_BACKFILL_QUEUE: {},
+})
 COURSE_FORUMS_DOWNLOAD_ROUTING_KEY = HIGH_MEM_QUEUE
 COURSE_MODE_DEFAULTS = {
     'bulk_sku': None,
