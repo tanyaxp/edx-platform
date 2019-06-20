@@ -108,7 +108,9 @@ else
             echo "Running code complexity report (python)."
             paver run_complexity > reports/code_complexity.log || echo "Unable to calculate code complexity. Ignoring error."
 
-            test_system lms openedx.stanford || EXIT=1
+            test_system lms openedx.stanford.common || EXIT=1
+            test_system lms openedx.stanford.djangoapps || EXIT=1
+            test_system lms openedx.stanford.lms || EXIT=1
             test_system_children lms openedx.features || EXIT=1
             test_system lms openedx.tests || EXIT=1
             test_system lms lms.tests || EXIT=1
