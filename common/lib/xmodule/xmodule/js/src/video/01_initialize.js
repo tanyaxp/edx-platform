@@ -701,7 +701,6 @@ function(VideoPlayer, i18n, moment, _) {
             newSpeed = map[newSpeed];
             this.speed = _.contains(this.speeds, newSpeed) ? newSpeed : '1.0';
         }
-        this.speed = parseFloat(this.speed);
     }
 
     function getVideoMetadata(url, callback) {

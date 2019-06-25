@@ -216,8 +216,7 @@ function(Component) {
         },
 
         appendContent: function(content) {
-            var $content = $(content);
-            this.getElement().append($content);
+            this.getElement().append(content);
             return this;
         },
 
@@ -247,8 +246,8 @@ function(Component) {
         },
 
         open: function() {
-            var $menu = (this.isRendered) ? this.getElement() : this.populateElement();
-            this.container.append($menu);
+            var menu = (this.isRendered) ? this.getElement() : this.populateElement();
+            this.container.append(menu);
             AbstractItem.prototype.open.call(this);
             this.overlay.show(this.container);
             return this;
@@ -355,8 +354,7 @@ function(Component) {
         },
 
         show: function(container) {
-            var $elem = $(this.getElement());
-            $(container).append($elem);
+            $(container).append(this.getElement());
             this.delegateEvents();
             return this;
         },
@@ -391,36 +389,30 @@ function(Component) {
         },
 
         createElement: function() {
-            var $spanElem,
-                $listElem,
-                $element = $('<li />', {
-                    class: ['submenu-item', 'menu-item', this.options.prefix + 'submenu-item'].join(' '),
-                    'aria-expanded': 'false',
-                    'aria-haspopup': 'true',
-                    'aria-labelledby': 'submenu-item-label-' + this.id,
-                    role: 'menuitem',
-                    tabindex: -1
-                });
-
-            $spanElem = $('<span />', {
-                id: 'submenu-item-label-' + this.id,
-                text: this.options.label
-            });
-            this.label = $spanElem.appendTo($element);
-
-            $listElem = $('<ol />', {
-                class: ['submenu', this.options.prefix + 'submenu'].join(' '),
-                role: 'menu'
+            var element = $('<li />', {
+                'class': ['submenu-item', 'menu-item', this.options.prefix + 'submenu-item'].join(' '),
+                'aria-expanded': 'false',
+                'aria-haspopup': 'true',
+                'aria-labelledby': 'submenu-item-label-' + this.id,
+                'role': 'menuitem',
+                'tabindex': -1
             });
 
-            this.list = $listElem.appendTo($element);
+            this.label = $('<span />', {
+                'id': 'submenu-item-label-' + this.id,
+                'text': this.options.label
+            }).appendTo(element);
+
+            this.list = $('<ol />', {
+                'class': ['submenu', this.options.prefix + 'submenu'].join(' '),
+                'role': 'menu'
+            }).appendTo(element);
 
             return element;
         },
 
         appendContent: function(content) {
-            var $content = $(content);
-            this.list.append($content);
+            this.list.append(content);
             return this;
         },
 
@@ -635,7 +627,7 @@ function(Component) {
                 }, {
                     label: i18n.Speed,
                     items: _.map(state.speeds, function(speed) {
-                        var isSelected = parseFloat(speed) === state.speed;
+                        var isSelected = speed === state.speed;
                         return {label: speed + 'x', callback: speedCallback, speed: speed, isSelected: isSelected};
                     }),
                     initialize: function(menuitem) {
