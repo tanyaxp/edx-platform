@@ -1,7 +1,7 @@
 """ Unit tests for utility methods in views.py. """
 from django.conf import settings
+from openedx.stanford.cms.djangoapps.contentstore.views.utility import expand_utility_action_url
 from xmodule.modulestore.django import modulestore
-from contentstore.views.utility import expand_utility_action_url
 from xmodule.modulestore.tests.factories import CourseFactory
 
 import json
