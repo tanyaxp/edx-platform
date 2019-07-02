@@ -10,11 +10,11 @@ from mock import patch
 from django.test.utils import override_settings
 from django.conf import settings
 
+from cms.djangoapps.contentstore.tests.utils import CourseTestCase
 from xmodule.video_module import transcripts_utils
-from contentstore.tests.utils import CourseTestCase
-from contentstore.views.utilities.captions import get_videos
 from openedx.core.djangoapps.contentserver.caching import del_cached_content
 from openedx.stanford.cms.djangoapps.contentstore.views.helpers import reverse_course_url
+from openedx.stanford.cms.djangoapps.contentstore.views.utilities.captions import get_videos
 from xmodule.modulestore.django import modulestore
 from xmodule.contentstore.django import contentstore, _CONTENTSTORE
 from xmodule.contentstore.content import StaticContent
@@ -136,7 +136,7 @@ class TestCheckcaptions(Basetranscripts):
             # Mocks downloading from youtube by saving straight into modulestore
             self.save_subs_to_store(subs, youtube_id)
 
-        with patch('contentstore.views.utilities.captions.download_youtube_subs') as youtube_download:
+        with patch('openedx.stanford.cms.djangoapps.contentstore.views.utilities.captions.download_youtube_subs') as youtube_download:
             youtube_download.side_effect = mock_youtube_download
             link = self.captions_url
             data = {
