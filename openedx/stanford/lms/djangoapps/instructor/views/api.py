@@ -203,13 +203,13 @@ def get_student_responses_view(request, course_id):
         api.request_report(request, course_key, 'student_responses')
     except AlreadyRunningError:
         status = _(
-            'A student responses report generation task is already in progress. '
+            'A learner responses report generation task is already in progress. '
             'Check the "Pending Instructor Tasks" table for the status of the task. '
             'When completed, the report will be available for download '
             'in the table below.'
         )
     else:
-        status = _('The student responses report is being generated.')
+        status = _('The learner responses report is being generated.')
     response = JsonResponse({
         'status': status,
     })
