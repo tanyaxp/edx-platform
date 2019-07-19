@@ -6,6 +6,7 @@ from __future__ import unicode_literals
 
 from django.conf import settings
 from django.db import models
+from django.db.models import Q
 
 USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
@@ -48,3 +49,21 @@ class Info(models.Model):
             submitted_marketing_optin=self.submitted_marketing_optin,
         )
         return message
+
+    @classmethod
+    def need_subscribed(cls):
+        """
+        Return a filtered list of users pending subscription to marketing list
+        """
+        infos = cls.objects.filter(
+            requested_marketing_optin=True,
+            submitted_marketing_optin=False,
+            user__is_active=True,
+        )
+        infos = infos.exclude(
+            Q(user__email='') |
+            Q(user__email=None) |
+            Q(user__email__endswith='@example.com') |
+            Q(user__email__endswith='.example.com')
+        )
+        return infos
