@@ -244,14 +244,14 @@ class TestSites(SharedModuleStoreTestCase, LoginEnrollmentTestCase):
         url = reverse('about_course', args=[self.course_with_visibility.id.to_deprecated_string()])
         resp = self.client.get(url)
         self.assertEqual(resp.status_code, 200)
-        self.assertIn("Enroll in {}".format(self.course_with_visibility.id.course), resp.content)
+        self.assertIn(u"Enroll Now", resp.content.decode(resp.charset))
         self.assertNotIn("Add {} to Cart ($10)".format(self.course_with_visibility.id.course), resp.content)
 
         # now try on the site
         url = reverse('about_course', args=[self.course_with_visibility.id.to_deprecated_string()])
         resp = self.client.get(url, HTTP_HOST=settings.MICROSITE_TEST_HOSTNAME)
         self.assertEqual(resp.status_code, 200)
-        self.assertNotIn("Enroll in {}".format(self.course_with_visibility.id.course), resp.content)
+        self.assertNotIn(u"Enroll Now", resp.content.decode(resp.charset))
         self.assertIn("Add {} to Cart <span>($10 USD)</span>".format(
             self.course_with_visibility.id.course
         ), resp.content)

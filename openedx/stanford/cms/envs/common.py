@@ -36,11 +36,20 @@ COURSE_UTILITIES = [
                 'action_text': 'View Problem Settings',
                 'action_external': False,
             },
+            {
+                'short_description': 'Bulk update problem settings',
+                'long_description': (
+                    'This utility will allow you to bulk update settings for all existing problems '
+                    'and set them as the default for future problems in Advanced Settings.'
+                ),
+                'action_url': 'utility_bulkupdate_handler',
+                'action_text': 'Update Problem Settings',
+                'action_external': False,
+            },
         ],
     }
 ]
 FEATURES.update({
-    'ALLOW_COURSE_RERUNS': False,
     'ALLOW_HIDING_DISCUSSION_TAB': True,
     # Display option to send email confirmation of course enrollment
     'ENABLE_ENROLLMENT_EMAIL': False,
