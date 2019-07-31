@@ -10,6 +10,9 @@ from openedx.stanford.lms.envs.common import (
 
 STANFORD_ROOT = REPO_ROOT / 'openedx/stanford'
 
+CELERY_IMPORTS = (
+    'openedx.stanford.cms.djangoapps.contentstore.views.utilities.tasks',
+)
 COPYRIGHT_EMAIL = 'copyright@example.com'
 COURSE_UTILITIES = [
     # Todo: add aws entries for this
