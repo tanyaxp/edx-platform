@@ -95,6 +95,8 @@ def _utility_bulkupdate_post_handler(request, course_key_string):
                 status=400,
             )
         else:
+            if max_attempts == 0:
+                max_attempts = None
             modified_settings['max_attempts'] = max_attempts
 
     if showanswer:

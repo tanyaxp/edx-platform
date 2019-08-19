@@ -13,6 +13,7 @@ define([
             $successMessage = $('.view-bulkupdate .server-message-wrapper .success-server-message'),
             SHOW_ANSWER_OPTIONS = [],
             VALIDATION_ERROR_MESSAGES = {
+                nothingSet: gettext('No value set for any field. Please enter a value.'),
                 maxAttempts: gettext('MaxAttempts must be a non-negative integer. Please enter a different value.'),
                 showAnswer: gettext('Not a valid value for showAnswer. Please enter a different value.')
             };
@@ -62,18 +63,19 @@ define([
                 maxAttempts = data.maxAttempts,
                 showAnswer = data.showAnswer;
 
-            if (!maxAttempts && maxAttempts !== 0 && !showAnswer) {
-                return false;
+            if (maxAttempts === '' && showAnswer === '') {
+                errors.push(VALIDATION_ERROR_MESSAGES.nothingSet);
             }
             if (maxAttempts && maxAttempts < 0) {
                 errors.push(VALIDATION_ERROR_MESSAGES.maxAttempts);
             }
-            if (SHOW_ANSWER_OPTIONS.indexOf(showAnswer) < 0) {
+            if (showAnswer && SHOW_ANSWER_OPTIONS.indexOf(showAnswer) < 0) {
                 errors.push(VALIDATION_ERROR_MESSAGES.showAnswer);
             }
             if (errors.length > 0) {
                 errorString = errors.join(' ');
-                $('.error-message-text').text(errorString).show();
+                $('.error-message-text').text(errorString);
+                $errorMessage.removeClass('is-hidden');
                 return false;
             }
             return true;

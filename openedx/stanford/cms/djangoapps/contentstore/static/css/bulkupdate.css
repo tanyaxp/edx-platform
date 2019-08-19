@@ -1,0 +1,21 @@
+#bulk-update .setting-input-block,
+#bulk-update .list-actions {
+    padding-top: 15px;
+    margin-top: 25px;
+    border-top: 1px solid #e5e5e5;
+}
+
+#bulk-update .setting-input-block label {
+    padding-right: 25px;
+    font-size: 1em;
+}
+
+#bulk-update .server-message-wrapper {
+    padding: 25px 10px 0 10px;
+}
+#bulk-update .server-message .icon {
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    line-height: 20px;
+}
